@@ -89,7 +89,7 @@ async function fillPlz(page, plz) {
   for (const sel of selectors) {
     try {
       const el = page.locator(sel).first();
-      await el.waitFor({ state: 'visible', timeout: 3000 });
+      await el.waitFor({ state: 'visible', timeout: 8000 });
       await el.click();
       await el.fill('');
       await el.type(plz, { delay: 50 });
@@ -123,7 +123,7 @@ async function fillGeburtsdatumHalter(page, datum) {
   for (const sel of selectors) {
     try {
       const el = page.locator(sel).first();
-      await el.waitFor({ state: 'visible', timeout: 3000 });
+      await el.waitFor({ state: 'visible', timeout: 8000 });
       await el.click();
       await el.fill('');
       await el.type(datum, { delay: 50 });
@@ -147,7 +147,7 @@ async function angularFillRobust(page, fieldLabel, selectors, value) {
   for (const sel of selectors) {
     try {
       const el = page.locator(sel).first();
-      await el.waitFor({ state: 'visible', timeout: 3000 });
+      await el.waitFor({ state: 'visible', timeout: 6000 });
       await el.click();
       await el.fill('');
       await el.type(value, { delay: 50 });
@@ -245,12 +245,12 @@ function mapGroessePattern(groesse) {
 
 async function acceptCookies(page) {
   try {
-    await page.getByRole('button', { name: /Nur erforderliche Cookies/i }).click({ timeout: 6000 });
-    await page.waitForTimeout(800);
+    await page.getByRole('button', { name: /Nur erforderliche Cookies/i }).click({ timeout: 10000 });
+    await page.waitForTimeout(1500);
   } catch (_) {
     // Fallback: DOM-Remove
     await page.evaluate(() => document.getElementById('onetrust-consent-sdk')?.remove());
-    await page.waitForTimeout(400);
+    await page.waitForTimeout(800);
   }
 }
 
@@ -369,37 +369,108 @@ async function saveResultScreenshot(page, downloadsDir) {
 }
 
 async function parseTarife(page) {
-  // Strategie 1: Allianz TKV Ergebnisseite — Tarif-Cards direkt aus DOM
-  const parsed = await page.evaluate(() => {
+  // Strategie 1: nx-card / nx-tile DOM-Struktur (Angular nx-Komponenten)
+  const parsed1 = await page.evaluate(() => {
+    const tarifNamen = ['Basis', 'Smart', 'Komfort', 'Premium', 'OP-Schutz', 'Vollschutz', 'Optimal', 'Best'];
     const results = [];
 
-    // Alle Preis-Matches aus dem Seitentext sammeln mit Kontext
+    // Selektoren für Tarif-Cards in Allianz nx-Angular-Komponenten
+    const cardSelectors = [
+      'nx-card', 'nx-tile', '[class*="tarif-card"]', '[class*="product-card"]',
+      '[class*="TarifCard"]', '[class*="ProductCard"]', '[class*="offer-card"]',
+      '[data-testid*="tarif"]', '[data-testid*="product"]',
+      '.tarif', '.produkt', '.product', '.plan-card', '.rate-card'
+    ];
+
+    for (const sel of cardSelectors) {
+      const cards = [...document.querySelectorAll(sel)];
+      if (cards.length === 0) continue;
+
+      for (const card of cards) {
+        const text = card.innerText || '';
+        if (!text.trim()) continue;
+
+        // Preis aus dieser Card extrahieren
+        const preisMatch = text.match(/(\d{1,3}[.,]\d{2})\s*[€EUR]/);
+        if (!preisMatch) continue;
+
+        // Tarif-Name aus dieser Card
+        let tarifName = '';
+        const nameEl = card.querySelector(
+          'h1,h2,h3,h4,[class*="title"],[class*="name"],[class*="heading"],[class*="tarif-name"],[class*="product-name"]'
+        );
+        if (nameEl) {
+          tarifName = nameEl.innerText.trim();
+        } else {
+          // Fallback: ersten Tarif-Namen im Text finden
+          const found = tarifNamen.find(n => text.includes(n));
+          tarifName = found || '';
+        }
+
+        if (!tarifName) continue;
+
+        // Leistungen aus dieser Card
+        const leistungen = [];
+        const listItems = card.querySelectorAll('li, [class*="benefit"], [class*="feature"], [class*="leistung"]');
+        for (const li of listItems) {
+          const t = li.innerText.trim();
+          if (t && t.length > 3 && t.length < 150) leistungen.push(t);
+          if (leistungen.length >= 5) break;
+        }
+
+        results.push({
+          name: tarifName,
+          preis: preisMatch[1].replace(',', '.') + ' €/Monat',
+          leistungen: leistungen.slice(0, 5)
+        });
+      }
+
+      if (results.length > 0) break;
+    }
+
+    return results;
+  });
+
+  if (parsed1.length > 0) {
+    console.log('[parseTarife] Strategie 1 (nx-cards) erfolgreich:', parsed1.length, 'Tarife');
+    return parsed1;
+  }
+
+  // Strategie 2: Allianz TKV Ergebnisseite — Tarif-Namen gefolgt von Preisen im innerText
+  const parsed2 = await page.evaluate(() => {
+    const results = [];
     const allText = document.body.innerText || '';
+    const tarifNamen = ['Basis', 'Smart', 'Komfort', 'Premium', 'OP-Schutz', 'Vollschutz', 'Optimal', 'Best'];
 
-    // Tarif-Namen die Allianz für TKV nutzt
-    const tarifNamen = ['Basis', 'Smart', 'Komfort', 'Premium', 'OP-Schutz', 'Vollschutz'];
-
-    // Preise + vorhergehenden Tarif-Namen extrahieren
     const lines = allText.split('\n').map(l => l.trim()).filter(Boolean);
     let currentTarif = null;
+    let lastTarifIdx = -1;
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
       // Tarif-Name gefunden?
-      const isName = tarifNamen.find(n => line === n || line.startsWith(n + ' '));
-      if (isName) { currentTarif = isName; continue; }
+      const isName = tarifNamen.find(n =>
+        line === n || line.startsWith(n + ' ') || line.startsWith(n + '-')
+      );
+      if (isName) { currentTarif = isName; lastTarifIdx = i; continue; }
 
-      // Preis-Zeile gefunden?
-      const preisMatch = line.match(/^(\d{1,3}[.,]\d{2})\s*€/);
+      // Preis-Zeile gefunden? (flexibler: erlaubt auch "ab X,XX €" oder mitten in Zeile)
+      const preisMatch = line.match(/(\d{1,3}[.,]\d{2})\s*[€EUR]/);
       if (preisMatch && currentTarif) {
-        // Leistungen: nächste Zeilen bis zum nächsten Tarif-Namen
         const leistungen = [];
-        for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
+        for (let j = i + 1; j < Math.min(i + 15, lines.length); j++) {
           if (tarifNamen.find(n => lines[j] === n || lines[j].startsWith(n + ' '))) break;
-          if (lines[j].length > 5 && lines[j].length < 120) leistungen.push(lines[j]);
+          if (lines[j].length > 5 && lines[j].length < 150 &&
+              !lines[j].match(/^\d{1,3}[.,]\d{2}\s*[€EUR]/)) {
+            leistungen.push(lines[j]);
+          }
         }
-        results.push({ name: currentTarif, preis: preisMatch[1] + ' €/Monat', leistungen: leistungen.slice(0, 5) });
+        results.push({
+          name: currentTarif,
+          preis: preisMatch[1].replace(',', '.') + ' €/Monat',
+          leistungen: leistungen.slice(0, 5)
+        });
         currentTarif = null;
       }
     }
@@ -407,22 +478,71 @@ async function parseTarife(page) {
     return results;
   });
 
-  if (parsed.length > 0) return parsed;
+  if (parsed2.length > 0) {
+    console.log('[parseTarife] Strategie 2 (text-lines) erfolgreich:', parsed2.length, 'Tarife');
+    return parsed2;
+  }
 
-  // Strategie 2: Alle Preise aus Seitentext
-  const bodyText = await page.evaluate(() => document.body.innerText);
-  const preisMatches = [...(bodyText || '').matchAll(/(\d{1,3}[.,]\d{2})\s*€\s*(?:monat(?:lich)?|\/\s*Monat)?/gi)];
-  const uniquePreise = [...new Set(preisMatches.map(m => m[0].trim()))];
-
-  if (uniquePreise.length > 0) {
+  // Strategie 3: Alle Preis-Treffer aus Seitentext + nx-price-Elemente
+  const parsed3 = await page.evaluate(() => {
+    const results = [];
     const namen = ['Basis', 'Smart', 'Komfort', 'Premium'];
-    return uniquePreise.slice(0, 4).map((preis, idx) => ({
+
+    // nx-price Elemente direkt auslesen
+    const priceEls = [
+      ...document.querySelectorAll(
+        'nx-price, [class*="price"], [class*="preis"], [class*="amount"], [class*="betrag"]'
+      )
+    ];
+
+    const seenPrices = new Set();
+    for (const el of priceEls) {
+      const t = el.innerText.trim();
+      const m = t.match(/(\d{1,3}[.,]\d{2})/);
+      if (m && !seenPrices.has(m[1])) {
+        seenPrices.add(m[1]);
+        results.push(m[1]);
+      }
+      if (results.length >= 4) break;
+    }
+
+    // Fallback: body-Text regex
+    if (results.length === 0) {
+      const bodyText = document.body.innerText || '';
+      const matches = [...bodyText.matchAll(/(\d{1,3}[.,]\d{2})\s*[€EUR]\s*(?:monat(?:lich)?|\/\s*Monat)?/gi)];
+      const unique = [...new Set(matches.map(m => m[1]))];
+      results.push(...unique.slice(0, 4));
+    }
+
+    return results.map((preis, idx) => ({
       name: namen[idx] || `Tarif ${idx + 1}`,
-      preis,
+      preis: preis.replace(',', '.') + ' €/Monat',
+      leistungen: []
+    }));
+  });
+
+  if (parsed3.length > 0) {
+    console.log('[parseTarife] Strategie 3 (price-elements) erfolgreich:', parsed3.length, 'Tarife');
+    return parsed3;
+  }
+
+  // Strategie 4: Warte noch 5s, dann nochmal Strategie 2 probieren (langsame Seite)
+  await page.waitForTimeout(5000);
+  const bodyText2 = await page.evaluate(() => document.body.innerText || '');
+  const allMatches = [...bodyText2.matchAll(/(\d{1,3}[.,]\d{2})\s*[€EUR]\s*(?:monat(?:lich)?|\/\s*Monat)?/gi)];
+  const uniquePreise2 = [...new Set(allMatches.map(m => m[1]))];
+
+  if (uniquePreise2.length > 0) {
+    console.log('[parseTarife] Strategie 4 (delayed bodyText) erfolgreich:', uniquePreise2.length, 'Preise');
+    const namen2 = ['Basis', 'Smart', 'Komfort', 'Premium'];
+    return uniquePreise2.slice(0, 4).map((preis, idx) => ({
+      name: namen2[idx] || `Tarif ${idx + 1}`,
+      preis: preis.replace(',', '.') + ' €/Monat',
       leistungen: []
     }));
   }
 
+  console.warn('[parseTarife] Alle Strategien fehlgeschlagen — Screenshot gespeichert');
   return [{
     name: 'Tarif',
     preis: 'Preis nicht auslesbar',
@@ -507,8 +627,13 @@ async function runSingleAttempt(input, config) {
   try {
     await page.goto(ALLIANZ_URL, { waitUntil: 'domcontentloaded', timeout: DEFAULT_TIMEOUT });
 
-    // Warten bis JS-App geladen ist (Angular bootstrapping)
-    await page.waitForTimeout(3000);
+    // Warten bis Angular-App gebootstrappt ist (kann auf langsamen Servern 5-8 Sek. dauern)
+    await page.waitForTimeout(2000);
+    await page.waitForFunction(
+      () => document.querySelector('nx-formfield, [formcontrolname], app-root') !== null,
+      { timeout: 20000 }
+    ).catch(() => {});
+    await page.waitForTimeout(2000);
 
     // Cloudflare-Challenge prüfen
     const title = (await page.title()).toLowerCase();
