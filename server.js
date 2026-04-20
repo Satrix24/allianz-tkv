@@ -225,6 +225,48 @@ app.get('/api/health', (_req, res) => {
   res.json({ ok: true, service: 'allianz-tkv', port: PORT });
 });
 
+// Scraping proxy — fetches external URLs and returns cleaned text
+// Used by salesaipilot edge function to bypass cloud IP blocks
+app.post('/api/scrape', async (req, res) => {
+  const { url } = req.body || {};
+  if (!url || typeof url !== 'string') {
+    return res.status(400).json({ ok: false, error: 'url required' });
+  }
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Cache-Control': 'no-cache',
+      },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok) {
+      return res.json({ ok: false, error: `HTTP ${response.status}` });
+    }
+    const html = await response.text();
+    const content = html
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/<nav[\s\S]*?<\/nav>/gi, '')
+      .replace(/<header[\s\S]*?<\/header>/gi, '')
+      .replace(/<footer[\s\S]*?<\/footer>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s{2,}/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .trim()
+      .slice(0, 4000);
+    res.json({ ok: true, content });
+  } catch (err) {
+    res.json({ ok: false, error: String(err) });
+  }
+});
+
 app.get('/api/test', async (_req, res) => {
   try {
     const testInput = normalizeInput({
