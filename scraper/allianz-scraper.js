@@ -56,9 +56,9 @@ function validateInput(data) {
 }
 
 // Angular-aware fill: type + dispatch events so ngModel picks up the value
-async function angularFill(page, selector, value) {
+async function angularFill(page, selector, value, timeoutMs = 8000) {
   const input = page.locator(selector).first();
-  await input.click({ timeout: 8000 });
+  await input.click({ timeout: timeoutMs });
   await input.fill('');
   await input.type(value, { delay: 60 });
   await input.evaluate((el) => {
@@ -69,9 +69,133 @@ async function angularFill(page, selector, value) {
   await page.waitForTimeout(200);
 }
 
+// Robust PLZ fill with fallback selector chain
+async function fillPlz(page, plz) {
+  const selectors = [
+    '[name="plz"]',
+    '[formcontrolname="plz"]',
+    'input[formcontrolname="plz"]',
+    'input[type="text"][formcontrolname="plz"]',
+    '[placeholder*="PLZ"]',
+    '[placeholder*="Postleitzahl"]',
+    'input[aria-label*="PLZ"]',
+    'input[aria-label*="Postleitzahl"]',
+    '.plz input',
+    'app-plz input',
+    'nx-formfield[label*="PLZ"] input',
+    'nx-formfield[label*="Postleitzahl"] input',
+  ];
+
+  for (const sel of selectors) {
+    try {
+      const el = page.locator(sel).first();
+      await el.waitFor({ state: 'visible', timeout: 3000 });
+      await el.click();
+      await el.fill('');
+      await el.type(plz, { delay: 50 });
+      await el.evaluate((node) => {
+        node.dispatchEvent(new Event('input', { bubbles: true }));
+        node.dispatchEvent(new Event('change', { bubbles: true }));
+        node.dispatchEvent(new Event('blur', { bubbles: true }));
+      });
+      console.log(`[PLZ] Filled with selector: ${sel}`);
+      return;
+    } catch (_) {
+      console.log(`[PLZ] Selector failed: ${sel}`);
+    }
+  }
+  throw new Error('PLZ-Feld nicht gefunden — alle Selektoren fehlgeschlagen');
+}
+
+// Robust Geburtsdatum-Halter fill with fallback selector chain
+async function fillGeburtsdatumHalter(page, datum) {
+  const selectors = [
+    '[name="geburtsdatum"]',
+    '[formcontrolname="geburtsdatum"]',
+    'input[formcontrolname="birthdate"]',
+    '[name="birthdate"]',
+    '[placeholder*="Geburtsdatum"]',
+    '[placeholder*="TT.MM.JJJJ"]',
+    'input[aria-label*="Geburtsdatum"]',
+    'nx-formfield[label*="Geburtsdatum"] input',
+  ];
+
+  for (const sel of selectors) {
+    try {
+      const el = page.locator(sel).first();
+      await el.waitFor({ state: 'visible', timeout: 3000 });
+      await el.click();
+      await el.fill('');
+      await el.type(datum, { delay: 50 });
+      await el.evaluate((node) => {
+        node.dispatchEvent(new Event('input', { bubbles: true }));
+        node.dispatchEvent(new Event('change', { bubbles: true }));
+        node.dispatchEvent(new Event('blur', { bubbles: true }));
+      });
+      console.log(`[GebDatum Halter] Filled with selector: ${sel}`);
+      return;
+    } catch (_) {
+      console.log(`[GebDatum Halter] Selector failed: ${sel}`);
+    }
+  }
+  // Final fallback: angularFill with original selector (let it throw with proper message)
+  throw new Error('Geburtsdatum-Halter-Feld nicht gefunden — alle Selektoren fehlgeschlagen');
+}
+
+// Generic robust fill: tries a list of selectors in order
+async function angularFillRobust(page, fieldLabel, selectors, value) {
+  for (const sel of selectors) {
+    try {
+      const el = page.locator(sel).first();
+      await el.waitFor({ state: 'visible', timeout: 3000 });
+      await el.click();
+      await el.fill('');
+      await el.type(value, { delay: 50 });
+      await el.evaluate((node) => {
+        node.dispatchEvent(new Event('input', { bubbles: true }));
+        node.dispatchEvent(new Event('change', { bubbles: true }));
+        node.dispatchEvent(new Event('blur', { bubbles: true }));
+      });
+      console.log(`[${fieldLabel}] Filled with selector: ${sel}`);
+      return;
+    } catch (_) {
+      console.log(`[${fieldLabel}] Selector failed: ${sel}`);
+    }
+  }
+  throw new Error(`${fieldLabel}-Feld nicht gefunden — alle Selektoren fehlgeschlagen`);
+}
+
 // Click nx-dropdown and select an option by text
 async function selectNxDropdown(page, name, optionText) {
-  await page.locator(`nx-dropdown[name="${name}"]`).evaluate((el) => el.click());
+  // Try nx-dropdown first, then standard select fallback
+  const nxDropdown = page.locator(`nx-dropdown[name="${name}"]`);
+  const nxExists = await nxDropdown.count().catch(() => 0);
+  if (nxExists > 0) {
+    await nxDropdown.evaluate((el) => el.click());
+  } else {
+    // Fallback: try select element or div[role="combobox"]
+    const fallbacks = [
+      `select[name="${name}"]`,
+      `[formcontrolname="${name}"]`,
+      `[ng-reflect-name="${name}"]`,
+    ];
+    let opened = false;
+    for (const fb of fallbacks) {
+      try {
+        const el = page.locator(fb).first();
+        const cnt = await el.count().catch(() => 0);
+        if (cnt > 0) {
+          await el.click({ timeout: 3000 });
+          opened = true;
+          break;
+        }
+      } catch (_) {}
+    }
+    if (!opened) {
+      console.warn(`[Dropdown] nx-dropdown[name="${name}"] not found, attempting direct click`);
+      await nxDropdown.evaluate((el) => el.click());
+    }
+  }
   await page.waitForTimeout(800);
   await page.locator('[role="option"]').filter({ hasText: optionText }).first().click({ timeout: 5000 });
   await page.waitForTimeout(400);
@@ -131,17 +255,26 @@ async function acceptCookies(page) {
 }
 
 async function fillForm(page, data) {
-  // 1. PLZ + Halter-Geburtsdatum
-  await angularFill(page, '[name="plz"]', data.plz);
-  await angularFill(page, '[name="geburtsdatum"]', data.geburtsdatumHalter);
+  // 1. PLZ + Halter-Geburtsdatum (using robust fallback-chain selectors)
+  await fillPlz(page, data.plz);
+  await fillGeburtsdatumHalter(page, data.geburtsdatumHalter);
 
   // 2. Tierart + Geschlecht Dropdowns
   await selectNxDropdown(page, 'animalType', mapTierartOption(data.tierart));
   await selectNxDropdown(page, 'animalGender', mapGeschlechtOption(data.geschlecht));
 
-  // 3. Tiername + Tiergeburtsdatum
-  await angularFill(page, '[name="animalName"]', data.tiername);
-  await angularFill(page, '[name="animalBirthdate"]', data.geburtsdatumTier);
+  // 3. Tiername + Tiergeburtsdatum (with robust fallback)
+  await angularFillRobust(page, 'tiername', [
+    '[name="animalName"]',
+    '[formcontrolname="animalName"]',
+    'input[aria-label*="Name"]',
+  ], data.tiername);
+  await angularFillRobust(page, 'tiergeburtsdatum', [
+    '[name="animalBirthdate"]',
+    '[formcontrolname="animalBirthdate"]',
+    '[formcontrolname="birthdate"][name!="geburtsdatum"]',
+    '[placeholder*="Geburtsdatum"][name!="geburtsdatum"]',
+  ], data.geburtsdatumTier);
 
   // 4. Rasse wählen
   const isMischling = !data.rasseWert || data.rasseWert === 'MISCHLING';
