@@ -1,0 +1,293 @@
+{
+  "title": "Privatschutz Kombivorteil berechnen | Allianz",
+  "url": "https://www.allianz.de/recht-und-eigentum/privatschutz/rechner/#/",
+  "headings": [
+    {
+      "tag": "h1",
+      "id": null,
+      "cls": "nx-margin-bottom-0 u-padding-bottom-10 nx-heading--section",
+      "text": "Der Allianz Privatschutz Rechner"
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "input",
+      "id": "headerFlyoutSearchAgencyName",
+      "cls": "c-textinput__field c-textinput__field--floating js-floating__input c-agency-context-flyout__search-agency_textfield__nam",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "headerFlyoutSearchAgencyAddress",
+      "cls": "c-textinput__field c-textinput__field--floating js-floating__input c-agency-context-flyout__search-agency_textfield__add",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "nx-input-0",
+      "cls": "hide-number-arrows cdk-text-field-autofill-monitored c-input nx-input ng-untouched ng-pristine ng-invalid",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "nx-input-2",
+      "cls": "nowrap cdk-text-field-autofill-monitored c-input nx-input ng-untouched ng-pristine ng-invalid",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "nx-input-1",
+      "cls": "cdk-text-field-autofill-monitored c-input nx-input ng-untouched ng-pristine ng-invalid",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "nx-radio-2-0.u7vx8m3ts1-input",
+      "cls": "nx-radio__input",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "nx-radio-3-0.ki5um8ipb4-input",
+      "cls": "nx-radio__input",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "nx-radio-4-0.qpgcs4dnmgr-input",
+      "cls": "nx-radio__input",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "cf-chl-widget-oge3f_response",
+      "cls": "",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "ot-group-id-2",
+      "cls": "category-switch-handler",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "ot-group-id-4",
+      "cls": "category-switch-handler",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "vendor-search-handler",
+      "cls": "",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "chkbox-id",
+      "cls": "category-filter-handler",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "select-all-hosts-groups-handler",
+      "cls": "",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "select-all-vendor-groups-handler",
+      "cls": "",
+      "text": ""
+    },
+    {
+      "tag": "input",
+      "id": "select-all-vendor-leg-handler",
+      "cls": "",
+      "text": ""
+    }
+  ],
+  "buttons": [
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "azde-flyout__trigger c-azde-header__agency-trigger",
+      "text": "Ansprechpartner:in vor Ort finden"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-azde-header__tied-agent__close c-icon c-icon--close u-hidden-medium-up c-link",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-agency-context-flyout__action c-link",
+      "text": "Alle Öffnungszeiten"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-agency-context-flyout__action c-link",
+      "text": "Nachricht senden"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-agency-context-flyout__action c-link",
+      "text": "Termin vereinbaren"
+    },
+    {
+      "tag": "button",
+      "id": "headerFlyoutSearchAgencySubmit",
+      "cls": "c-button",
+      "text": "Suche jetzt starten"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-azde-dialog__close c-icon c-icon--close",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "azde-flyout__trigger c-azde-header__mobile-buttons__btn c-azde-header__mobile-buttons__phone u-hidden-medium-up",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "azde-flyout__trigger c-user-login-info__link is-tracking-source",
+      "text": "Anmelden Abmelden Mein Konto"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-user-login-info__close c-icon c-icon--close u-hidden-medium-up c-link",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-button u-margin-bottom-0 u-margin-top-0 js-login",
+      "text": "Anmelden"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-button c-button--secondary c-maz-account-overview u-margin-bottom-md u-margin-top-0",
+      "text": "Kontoübersicht"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-button u-margin-bottom-0 u-margin-top-0 c-azde-header__logout-link js-logout",
+      "text": "Abmelden"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-button c-button--secondary c-maz-account-overview u-margin-bottom-md u-margin-top-0",
+      "text": "Kontoübersicht"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-button u-margin-bottom-0 u-margin-top-0 c-azde-header__logout-link js-logout",
+      "text": "Abmelden"
+    },
+    {
+      "tag": "nxt-step-base",
+      "id": null,
+      "cls": "nxt-step-base is-selectable ng-star-inserted",
+      "text": "1Daten eingeben"
+    },
+    {
+      "tag": "nxt-step-base",
+      "id": null,
+      "cls": "nxt-step-base is-selectable ng-star-inserted",
+      "text": "2Angebot erhalten"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "nxt-popover-icon__button ng-star-inserted",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "nxt-popover-icon__button ng-star-inserted",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "nx-button u-margin-none nx-button--emphasis nx-button--medium",
+      "text": "Jetzt Tarif berechnen"
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-user-assistant__stage__dummy-focus",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-user-assistant__stage__close-button c-icon c-icon--close",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": null,
+      "cls": "c-icon c-icon--chevron-left c-user-assistant__stage__back-button",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": "user-assistant__module::Button::UserAssistantIcon",
+      "cls": "c-button c-user-assistant__avatar c-user-assistant__module",
+      "text": ""
+    },
+    {
+      "tag": "div",
+      "id": null,
+      "cls": "c-carousel__three-column__prev c-carousel__flexible__prev u-text-right u-hidden-small-down",
+      "text": ""
+    },
+    {
+      "tag": "div",
+      "id": null,
+      "cls": "c-carousel__three-column__next c-carousel__flexible__next u-text-left u-hidden-small-down",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "id": "intermediary-carousel::Button::Ansprechpartner-übernehmen",
+      "cls": "c-button c-intermediary-carousel__close-button",
+      "text": "ÜBERNEHMEN"
+    },
+    {
+      "tag": "button",
+      "id": "onetrust-reject-all-handler",
+      "cls": "",
+      "text": "Nur erforderliche Cookies akzeptieren"
+    },
+    {
+      "tag": "button",
+      "id": "onetrust-accept-btn-handler",
+      "cls": "",
+      "text": "Alle Cookies akzeptieren"
+    },
+    {
+      "tag": "button",
+      "id": "onetrust-pc-btn-handler",
+      "cls": "",
+      "text": "Cookie-Einstellungen öffnen"
+    }
+  ],
+  "bodySnippet": "0800 4 710 201 Mo-Fr 8-20 Uhr, Sa 9-18 Uhr Ansprechpartner:in vor Ort finden Meine Allianz Anmelden 1 Daten eingeben 2 Angebot erhalten Individuell absichern und sparen Der Allianz Privatschutz Rechner Mein Haushalt befindet sich in Postleitzahl und die Wohnfläche beträgt Wohnfläche m² . Ich bin am Geburtsdatum geboren und möchte Versicherte Personen mich selbst versichern. Wo befindet sich Ihr Haushalt? Mehrfamilienhaus Einfamilienhaus als Eigentum Einfamilienhaus zur Miete JETZT TARIF BERECHNEN Startseite Recht, Wohnen und Eigentum Privatschutz Kombi Privatschutz Kombivorteil berechnen Impressum Datenschutz Barrierefreiheit Cookies Nutzungsbedingungen © Allianz 2026"
+}

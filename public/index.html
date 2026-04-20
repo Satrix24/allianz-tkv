@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allianz Privatschutz Angebot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner" aria-hidden="true"></div>
+    <p>Ihre Preise werden berechnet...</p>
+  </div>
+
+  <div id="errorContainer" class="error-container hidden">
+    <div class="error-icon">⚠</div>
+    <h2>Angebot nicht gefunden</h2>
+    <p>Der Link ist ungültig oder abgelaufen. Bitte fordere ein neues Angebot an.</p>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="header">
+      <div class="logo-badge" aria-label="Allianz Logo">
+        <svg viewBox="0 0 170 42" class="allianz-logo" role="img" aria-label="Allianz">
+          <text x="0" y="30" font-family="Inter, -apple-system, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#003781">Allianz</text>
+        </svg>
+      </div>
+      <div class="product-title">Privatschutz</div>
+    </header>
+
+    <section class="hero">
+      <h1 id="customerName">Ihr persönliches Privatschutz-Angebot</h1>
+      <p class="hero-subtitle">Drei starke Tarife für Ihr Zuhause – transparent, fair und direkt vergleichbar.</p>
+      <div class="hero-tags">
+        <span id="tagPlz" class="tag">PLZ: -</span>
+        <span id="tagWohnflaeche" class="tag">Wohnfläche: -</span>
+        <span id="tagFamilienstand" class="tag">Familienstand: -</span>
+      </div>
+    </section>
+
+    <section class="billing-toggle" aria-label="Beitragsmodus">
+      <span class="toggle-label active">Monatlich</span>
+      <button class="toggle-switch" type="button" aria-label="Monatlich und Jährlich umschalten" title="UI-Toggle – Berechnung bleibt monatlich">
+        <span></span>
+      </button>
+      <span class="toggle-label">Jährlich</span>
+    </section>
+
+    <main class="cards-wrap" id="tarifCards">
+      <article class="tarif-card" data-plan="Basis">
+        <h2>Basis</h2>
+        <div class="price-block">
+          <div class="price-main"><span id="preisBasis">-</span> <small>/Monat</small></div>
+        </div>
+
+        <ul class="summary-list" id="summaryBasis">
+          <li>Grundschutz für Hausrat</li>
+          <li>Haftpflicht-Basisschutz</li>
+          <li>Rechtsschutz-Basispaket</li>
+        </ul>
+
+        <button class="btn btn-secondary select-plan" data-plan="Basis">Basis auswählen</button>
+      </article>
+
+      <article class="tarif-card" data-plan="Smart">
+        <h2>Smart</h2>
+        <div class="price-block">
+          <div class="price-main"><span id="preisSmart">-</span> <small>/Monat</small></div>
+        </div>
+
+        <ul class="summary-list" id="summarySmart">
+          <li>Starker Schutz für Alltag & Zuhause</li>
+          <li>Solide Leistungen in allen 3 Bereichen</li>
+          <li>Preis-Leistungs-Sieger</li>
+        </ul>
+
+        <button class="btn btn-secondary select-plan" data-plan="Smart">Smart auswählen</button>
+      </article>
+
+      <article class="tarif-card featured" data-plan="Komfort">
+        <div class="featured-badge">Empfohlen</div>
+        <h2>Komfort</h2>
+        <div class="price-block">
+          <div id="komfortOriginal" class="price-original hidden"></div>
+          <div class="price-main"><span id="preisKomfort">-</span> <small>/Monat</small></div>
+          <div id="komfortSpecial" class="special-price-note hidden">Zum Smart-Preis</div>
+          <div id="komfortSaving" class="saving-note hidden"></div>
+        </div>
+
+        <ul class="summary-list" id="summaryKomfort">
+          <li>Top-Schutz bei Hausrat</li>
+          <li>Top-Schutz bei Haftpflicht</li>
+          <li>Top-Schutz bei Rechtsschutz</li>
+        </ul>
+
+        <button class="btn btn-primary select-plan" data-plan="Komfort">Komfort auswählen</button>
+
+        <button id="komfortToggle" class="highlights-toggle" type="button">Exklusive Komfort-Highlights anzeigen</button>
+        <div id="komfortHighlights" class="komfort-highlights collapsed">
+          <h3>Exklusive Komfort-Highlights</h3>
+          <ul>
+            <li><strong>Handwerker-Service:</strong> Sofort-Hilfe bei Notfällen</li>
+            <li><strong>Haftpflicht:</strong> Erweiterte Deckung inkl. Forderungsausfall</li>
+            <li><strong>Hausrat:</strong> Premium-Schutz inkl. Elementarbausteinen</li>
+            <li><strong>Rechtsschutz:</strong> Erweiterte juristische Leistungen</li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <section class="addons">
+      <h2>Optionale Add-ons</h2>
+
+      <div class="addon-grid">
+        <div class="addon-card">
+          <h3>🚲 Fahrradschutz</h3>
+          <p><strong>Basic:</strong> <span id="addonBikeBasic">-</span> /Monat</p>
+          <p><strong>Premium:</strong> <span id="addonBikePremium">-</span> /Monat</p>
+        </div>
+
+        <div class="addon-card">
+          <h3>🪟 Glasschutz</h3>
+          <p><strong>Hausrat:</strong> <span id="addonGlassHousehold">-</span> /Monat</p>
+          <p><strong>Gebäude:</strong> <span id="addonGlassBuilding">-</span> /Monat</p>
+        </div>
+
+        <div class="addon-card">
+          <h3>🌩 Extremwetterschutz</h3>
+          <p><strong>Monatlich:</strong> <span id="addonWeather">-</span> /Monat</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      Selbstbeteiligung in jeder Versicherung: 150 €
+    </footer>
+  </div>
+
+  <div id="stickyCta" class="sticky-cta hidden">
+    <div>
+      <small>Unverbindliche Beratung</small>
+      <span id="stickyLabel">Komfort wählen</span>
+    </div>
+    <a id="stickyLink" href="#" class="btn btn-primary">Jetzt beraten lassen</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

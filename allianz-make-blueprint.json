@@ -1,0 +1,63 @@
+{
+  "name": "Allianz Privatschutz — Meta Lead → Angebot",
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "parameters": {
+        "hook": 0,
+        "maxResults": 1
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": { "x": 0, "y": 0 },
+        "restore": {
+          "parameters": {
+            "hook": { "label": "Neuen Webhook erstellen" }
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": false,
+        "useNewZLibDeCompression": true
+      },
+      "mapper": {
+        "url": "https://eating-boxes-sen-intl.trycloudflare.com/api/webhook/privatschutz",
+        "method": "POST",
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" }
+        ],
+        "bodyType": "raw",
+        "contentType": "application/json",
+        "body": "{\"name\":\"{{1.name}}\",\"telefon\":\"{{1.phone_number}}\",\"email\":\"{{1.email}}\",\"plz\":\"{{1.plz}}\",\"wohnflaeche\":\"{{1.wohnflaeche}}\",\"familienstand\":\"{{1.familienstand}}\",\"geburtsdatum\":\"{{1.geburtsdatum}}\"}",
+        "timeout": 90
+      },
+      "metadata": { "designer": { "x": 300, "y": 0 } }
+    },
+    {
+      "id": 3,
+      "module": "http:TransformBody",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "type": "json"
+      },
+      "metadata": { "designer": { "x": 600, "y": 0 } }
+    }
+  ],
+  "metadata": {
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "sequential": false
+    }
+  }
+}

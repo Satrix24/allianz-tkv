@@ -1,0 +1,2640 @@
+{
+  "streetTxt": "",
+  "streetHtml": "<nx-dropdown _ngcontent-ng-c1678210823=\"\" role=\"combobox\" aria-haspopup=\"listbox\" formcontrolname=\"street\" data-cs-override-id=\"nlf-form-street\" name=\"straße\" filterplaceholder=\"Straße suchen\" _nghost-ng-c157055559=\"\" aria-required=\"false\" aria-labelledby=\"nx-dropdown-rendered-2\" aria-controls=\"nx-dropdown-modal-3\" aria-invalid=\"false\" aria-expanded=\"true\" aria-disabled=\"false\" tabindex=\"0\" class=\"nx-dropdown ng-untouched ng-pristine ng-invalid has-focus\"><div _ngcontent-ng-c157055559=\"\" cdkoverlayorigin=\"\" class=\"nx-dropdown__container\" style=\"user-select: none;\"><div _ngcontent-ng-c157055559=\"\" class=\"nx-dropdown__rendered\" id=\"nx-dropdown-rendered-2\"><!----><!----></div><div _ngcontent-ng-c157055559=\"\" class=\"nx-dropdown__icon\"><nx-icon _ngcontent-ng-c157055559=\"\" name=\"chevron-down\" aria-hidden=\"true\" class=\"nx-dropdown__chevron ndbx-icon nx-icon--chevron-down nx-icon--auto\" _nghost-ng-c3864889385=\"\" data-nx-icon-name=\"chevron-down\"></nx-icon></div></div><!----><!----><!----></nx-d",
+  "overlayEls": [
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-container",
+      "id": null,
+      "role": null,
+      "txt": "Adam-Hönig-StraßeAdelharzer WegAggensteinstraßeAkoswegAlbert-Ott-StraßeAlbert-Wehr-PlatzAlemannenwegAlfred-Kunz-StraßeAllgäuer StraßeAlpenrosenstraßeAlpenstraßeAm Alten HolzplatzAm KönigsplatzAm SchlößleAm StadtparkAm TheaterAn der LützelburgAn der StadtmauerAn der SuttAn der WebereiAnkergässeleAnwandenAuf'm PlätzleAugust-Fischer-PlatzAybühlwegBahnhofplatzBahnhofstraßeBarbara-Hackl-StraßeBeethoven"
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-0",
+      "role": null,
+      "txt": ""
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-1",
+      "role": null,
+      "txt": ""
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-2",
+      "role": null,
+      "txt": ""
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-3",
+      "role": null,
+      "txt": ""
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-4",
+      "role": null,
+      "txt": ""
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-5",
+      "role": null,
+      "txt": ""
+    },
+    {
+      "tag": "div",
+      "cls": "cdk-overlay-pane",
+      "id": "cdk-overlay-6",
+      "role": null,
+      "txt": "Adam-Hönig-StraßeAdelharzer WegAggensteinstraßeAkoswegAlbert-Ott-StraßeAlbert-Wehr-PlatzAlemannenwegAlfred-Kunz-StraßeAllgäuer StraßeAlpenrosenstraßeAlpenstraßeAm Alten HolzplatzAm KönigsplatzAm SchlößleAm StadtparkAm TheaterAn der LützelburgAn der StadtmauerAn der SuttAn der WebereiAnkergässeleAnwandenAuf'm PlätzleAugust-Fischer-PlatzAybühlwegBahnhofplatzBahnhofstraßeBarbara-Hackl-StraßeBeethoven"
+    },
+    {
+      "tag": "ul",
+      "cls": "nx-dropdown__panel-body",
+      "id": "nx-dropdown-modal-3",
+      "role": "listbox",
+      "txt": "Adam-Hönig-StraßeAdelharzer WegAggensteinstraßeAkoswegAlbert-Ott-StraßeAlbert-Wehr-PlatzAlemannenwegAlfred-Kunz-StraßeAllgäuer StraßeAlpenrosenstraßeAlpenstraßeAm Alten HolzplatzAm KönigsplatzAm SchlößleAm StadtparkAm TheaterAn der LützelburgAn der StadtmauerAn der SuttAn der WebereiAnkergässeleAnwandenAuf'm PlätzleAugust-Fischer-PlatzAybühlwegBahnhofplatzBahnhofstraßeBarbara-Hackl-StraßeBeethoven"
+    }
+  ],
+  "allOptions": [
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted nx-dropdown-item--active",
+      "id": "nx-dropdown-item-4",
+      "txt": "Adam-Hönig-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Adam-Hönig-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-5",
+      "txt": "Adelharzer Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Adelharzer Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-6",
+      "txt": "Aggensteinstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Aggensteinstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-7",
+      "txt": "Akosweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Akosweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-8",
+      "txt": "Albert-Ott-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Albert-Ott-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-9",
+      "txt": "Albert-Wehr-Platz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Albert-Wehr-Platz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-10",
+      "txt": "Alemannenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Alemannenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-11",
+      "txt": "Alfred-Kunz-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Alfred-Kunz-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-12",
+      "txt": "Allgäuer Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Allgäuer Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-13",
+      "txt": "Alpenrosenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Alpenrosenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-14",
+      "txt": "Alpenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Alpenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-15",
+      "txt": "Am Alten Holzplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Am Alten Holzplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-16",
+      "txt": "Am Königsplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Am Königsplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-17",
+      "txt": "Am Schlößle"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Am Schlößle"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-18",
+      "txt": "Am Stadtpark"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Am Stadtpark"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-19",
+      "txt": "Am Theater"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Am Theater"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-20",
+      "txt": "An der Lützelburg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "An der Lützelburg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-21",
+      "txt": "An der Stadtmauer"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "An der Stadtmauer"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-22",
+      "txt": "An der Sutt"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "An der Sutt"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-23",
+      "txt": "An der Weberei"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "An der Weberei"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-24",
+      "txt": "Ankergässele"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ankergässele"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-25",
+      "txt": "Anwanden"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Anwanden"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-26",
+      "txt": "Auf'm Plätzle"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Auf'm Plätzle"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-27",
+      "txt": "August-Fischer-Platz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "August-Fischer-Platz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-28",
+      "txt": "Aybühlweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Aybühlweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-29",
+      "txt": "Bahnhofplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Bahnhofplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-30",
+      "txt": "Bahnhofstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Bahnhofstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-31",
+      "txt": "Barbara-Hackl-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Barbara-Hackl-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-32",
+      "txt": "Beethovenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Beethovenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-33",
+      "txt": "Bei den Birken"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Bei den Birken"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-34",
+      "txt": "Bei der Rose"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Bei der Rose"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-35",
+      "txt": "Beim Sudhaus"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Beim Sudhaus"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-36",
+      "txt": "Birkensteig"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Birkensteig"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-37",
+      "txt": "Blenksteig"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Blenksteig"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-38",
+      "txt": "Bodmanstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Bodmanstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-39",
+      "txt": "Boleite"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Boleite"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-40",
+      "txt": "Boleitestäffele"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Boleitestäffele"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-41",
+      "txt": "Braut- und Bahrweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Braut- und Bahrweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-42",
+      "txt": "Brennergasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Brennergasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-43",
+      "txt": "Buchenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Buchenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-44",
+      "txt": "Burghalde"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Burghalde"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-45",
+      "txt": "Burghaldegasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Burghaldegasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-46",
+      "txt": "Burgstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Burgstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-47",
+      "txt": "Bäckerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Bäckerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-48",
+      "txt": "Calgeerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Calgeerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-49",
+      "txt": "Dornierstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Dornierstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-50",
+      "txt": "Dornstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Dornstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-51",
+      "txt": "Dreifaltigkeitsweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Dreifaltigkeitsweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-52",
+      "txt": "Düwellstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Düwellstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-53",
+      "txt": "Eberhard-Schobacher-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Eberhard-Schobacher-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-54",
+      "txt": "Eberhardstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Eberhardstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-55",
+      "txt": "Eicher Kapellenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Eicher Kapellenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-56",
+      "txt": "Eicher Ringweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Eicher Ringweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-57",
+      "txt": "Eicher Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Eicher Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-58",
+      "txt": "Ellharter Steig"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ellharter Steig"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-59",
+      "txt": "Ellharter Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ellharter Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-60",
+      "txt": "Entengässchen"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Entengässchen"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-61",
+      "txt": "Erlenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Erlenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-62",
+      "txt": "Ertingerweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ertingerweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-63",
+      "txt": "Estionenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Estionenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-64",
+      "txt": "Feichtmayrstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Feichtmayrstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-65",
+      "txt": "Ferdinand-Beutel-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ferdinand-Beutel-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-66",
+      "txt": "Fischersteige"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Fischersteige"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-67",
+      "txt": "Fischerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Fischerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-68",
+      "txt": "Fischerösch"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Fischerösch"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-69",
+      "txt": "Franz-Köpf-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Franz-Köpf-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-70",
+      "txt": "Freitreppe"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Freitreppe"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-71",
+      "txt": "Freudenberg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Freudenberg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-72",
+      "txt": "Freudenbergunterführung"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Freudenbergunterführung"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-73",
+      "txt": "Freudental"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Freudental"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-74",
+      "txt": "Föhrenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Föhrenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-75",
+      "txt": "Gaishornweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Gaishornweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-76",
+      "txt": "Gebirgsjägerweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Gebirgsjägerweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-77",
+      "txt": "Gerberstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Gerberstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-78",
+      "txt": "Goethestraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Goethestraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-79",
+      "txt": "Grabengasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Grabengasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-80",
+      "txt": "Grüntenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Grüntenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-81",
+      "txt": "Gutenbergstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Gutenbergstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-82",
+      "txt": "Hasengasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hasengasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-83",
+      "txt": "Haslach"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Haslach"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-84",
+      "txt": "Haslacher Berg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Haslacher Berg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-85",
+      "txt": "Haslacher Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Haslacher Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-86",
+      "txt": "Haubenschloßplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Haubenschloßplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-87",
+      "txt": "Haubenschloßstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Haubenschloßstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-88",
+      "txt": "Heggener Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heggener Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-89",
+      "txt": "Heidengässele"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heidengässele"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-90",
+      "txt": "Heinrich-Findelkind-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heinrich-Findelkind-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-91",
+      "txt": "Heinrichgasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heinrichgasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-92",
+      "txt": "Heinz-Schubert-Platz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heinz-Schubert-Platz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-93",
+      "txt": "Heinz-Templer-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heinz-Templer-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-94",
+      "txt": "Herbststraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Herbststraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-95",
+      "txt": "Herkomerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Herkomerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-96",
+      "txt": "Hermann-von-Barth-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hermann-von-Barth-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-97",
+      "txt": "Hermannstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hermannstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-98",
+      "txt": "Heydeckerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Heydeckerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-99",
+      "txt": "Hieberstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hieberstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-100",
+      "txt": "Hildegardplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hildegardplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-101",
+      "txt": "Hirnbeinstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hirnbeinstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-102",
+      "txt": "Hirschsteig"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hirschsteig"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-103",
+      "txt": "Hirschstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hirschstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-104",
+      "txt": "Hochvogelstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Hochvogelstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-105",
+      "txt": "Horchlerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Horchlerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-106",
+      "txt": "Höfatsweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Höfatsweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-107",
+      "txt": "Illerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Illerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-108",
+      "txt": "Im Allmey"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Im Allmey"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-109",
+      "txt": "Im Bucharts"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Im Bucharts"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-110",
+      "txt": "Im Moos"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Im Moos"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-111",
+      "txt": "Im Steufzgen"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Im Steufzgen"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-112",
+      "txt": "Immenstädter Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Immenstädter Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-113",
+      "txt": "In der Brandstatt"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "In der Brandstatt"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-114",
+      "txt": "In der Eich"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "In der Eich"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-115",
+      "txt": "In der Klims"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "In der Klims"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-116",
+      "txt": "Jenischstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Jenischstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-117",
+      "txt": "Johann-Schütz-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Johann-Schütz-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-118",
+      "txt": "Jägerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Jägerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-119",
+      "txt": "Jörg-Lederer-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Jörg-Lederer-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-120",
+      "txt": "Kanalweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Kanalweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-121",
+      "txt": "Karrerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Karrerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-122",
+      "txt": "Kaurus"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Kaurus"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-123",
+      "txt": "Keplerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Keplerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-124",
+      "txt": "Keselstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Keselstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-125",
+      "txt": "Kesselgasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Kesselgasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-126",
+      "txt": "Klostersteige"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Klostersteige"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-127",
+      "txt": "Konebergweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Konebergweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-128",
+      "txt": "Konrad-Zuse-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Konrad-Zuse-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-129",
+      "txt": "Kotterner Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Kotterner Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-130",
+      "txt": "Kronenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Kronenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-131",
+      "txt": "Krottenkopfstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Krottenkopfstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-132",
+      "txt": "Königsplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Königsplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-133",
+      "txt": "Königstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Königstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-134",
+      "txt": "Leichtleweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Leichtleweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-135",
+      "txt": "Lessingstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Lessingstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-136",
+      "txt": "Lindauer Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Lindauer Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-137",
+      "txt": "Lindenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Lindenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-138",
+      "txt": "Linggstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Linggstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-139",
+      "txt": "Lohgässele"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Lohgässele"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-140",
+      "txt": "Lugemannsweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Lugemannsweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-141",
+      "txt": "Lützelburgweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Lützelburgweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-142",
+      "txt": "Maler-Lochbihler-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Maler-Lochbihler-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-143",
+      "txt": "Manzweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Manzweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-144",
+      "txt": "Margaretha-und-Josefinen-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Margaretha-und-Josefinen-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-145",
+      "txt": "Mauergässele"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Mauergässele"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-146",
+      "txt": "Mehlstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Mehlstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-147",
+      "txt": "Michael-Beer-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Michael-Beer-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-148",
+      "txt": "Mittelgasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Mittelgasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-149",
+      "txt": "Mittlere Eicher Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Mittlere Eicher Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-150",
+      "txt": "Mozartstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Mozartstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-151",
+      "txt": "Mühlberg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Mühlberg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-152",
+      "txt": "Nebelhornstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Nebelhornstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-153",
+      "txt": "Ober'm Stadtweiher"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ober'm Stadtweiher"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-154",
+      "txt": "Obere Eicher Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Obere Eicher Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-155",
+      "txt": "Oberstdorfer Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Oberstdorfer Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-156",
+      "txt": "Oertelweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Oertelweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-157",
+      "txt": "Pater-Odilo-Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Pater-Odilo-Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-158",
+      "txt": "Paul-Diethei-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Paul-Diethei-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-159",
+      "txt": "Pfaudlerweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Pfaudlerweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-160",
+      "txt": "Poststraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Poststraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-161",
+      "txt": "Promenadestraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Promenadestraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-162",
+      "txt": "Pulvergasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Pulvergasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-163",
+      "txt": "Rathausplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Rathausplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-164",
+      "txt": "Rathausstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Rathausstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-165",
+      "txt": "Reichsstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Reichsstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-166",
+      "txt": "Residenzplatz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Residenzplatz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-167",
+      "txt": "Sallerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Sallerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-168",
+      "txt": "Salzstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Salzstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-169",
+      "txt": "Scheibenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Scheibenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-170",
+      "txt": "Schellenbergstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schellenbergstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-171",
+      "txt": "Schillerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schillerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-172",
+      "txt": "Schlößlepassage"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schlößlepassage"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-173",
+      "txt": "Schraudolphstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schraudolphstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-174",
+      "txt": "Schwabenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schwabenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-175",
+      "txt": "Schwaighauser Weg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schwaighauser Weg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-176",
+      "txt": "Schwedenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schwedenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-177",
+      "txt": "Schützenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Schützenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-178",
+      "txt": "Seeanger"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Seeanger"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-179",
+      "txt": "Seibäumen"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Seibäumen"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-180",
+      "txt": "Serrostraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Serrostraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-181",
+      "txt": "Seuterstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Seuterstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-182",
+      "txt": "Sigmund-Ullmann-Platz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Sigmund-Ullmann-Platz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-183",
+      "txt": "Spiehlerweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Spiehlerweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-184",
+      "txt": "St.-Mang-Platz"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "St.-Mang-Platz"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-185",
+      "txt": "Steinbergweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Steinbergweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-186",
+      "txt": "Steufzgen"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Steufzgen"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-187",
+      "txt": "Steufzger Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Steufzger Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-188",
+      "txt": "Storchenstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Storchenstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-189",
+      "txt": "Strigelstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Strigelstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-190",
+      "txt": "Stuibenweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Stuibenweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-191",
+      "txt": "Sängerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Sängerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-192",
+      "txt": "Säulingweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Säulingweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-193",
+      "txt": "Theaterstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Theaterstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-194",
+      "txt": "Tierzuchtstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Tierzuchtstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-195",
+      "txt": "Trettachweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Trettachweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-196",
+      "txt": "Ulrich-Mair-Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Ulrich-Mair-Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-197",
+      "txt": "Unten an der Iller"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Unten an der Iller"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-198",
+      "txt": "Unter'm Bucharts"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Unter'm Bucharts"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-199",
+      "txt": "Untere Eicher Straße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Untere Eicher Straße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-200",
+      "txt": "Verhelstweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Verhelstweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-201",
+      "txt": "Vicariweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Vicariweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-202",
+      "txt": "Vindelicierweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Vindelicierweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-203",
+      "txt": "Vogtstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Vogtstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-204",
+      "txt": "Vor'm Stadtweiher"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Vor'm Stadtweiher"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-205",
+      "txt": "Völkstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Völkstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-206",
+      "txt": "Waltenbergerallee"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Waltenbergerallee"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-207",
+      "txt": "Wartenseestraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Wartenseestraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-208",
+      "txt": "Webergasse"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Webergasse"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-209",
+      "txt": "Weißholzstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Weißholzstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-210",
+      "txt": "Wiesberg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Wiesberg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-211",
+      "txt": "Wiesstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Wiesstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-212",
+      "txt": "Zucalliweg"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Zucalliweg"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-213",
+      "txt": "Zugspitzstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Zugspitzstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-214",
+      "txt": "Zwanzigerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Zwanzigerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-215",
+      "txt": "Zwingerstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Zwingerstraße"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-216",
+      "txt": "Über'm Mäuerle"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Über'm Mäuerle"
+    },
+    {
+      "tag": "nx-dropdown-item",
+      "cls": "ng-star-inserted",
+      "id": "nx-dropdown-item-217",
+      "txt": "Üblherstraße"
+    },
+    {
+      "tag": "div",
+      "cls": "nx-dropdown-results__option",
+      "id": null,
+      "txt": "Üblherstraße"
+    }
+  ],
+  "bodySnippet": "0800 4 710 201 Mo-Fr 8-20 Uhr, Sa 9-18 Uhr Ansprechpartner:in vor Ort finden Meine Allianz Anmelden 1 Daten eingeben 2 Angebot erhalten Individuell absichern und sparen Der Allianz Privatschutz Rechner Mein Haushalt befindet sich in Postleitzahl Kempten (Allgäu), Straße Hausnummer und die Wohnfläche beträgt Wohnfläche m² . Ich bin am Geburtsdatum geboren und möchte Versicherte Personen mich selbst versichern. Wo befindet sich Ihr Haushalt? Mehrfamilienhaus Einfamilienhaus als Eigentum Einfamilienhaus zur Miete In welchem Stockwerk befindet sich Ihr Haushalt im Mehrfamilienhaus? 1. Stock oder höher Erdgeschoss/Keller JETZT TARIF BERECHNEN Startseite Recht, Wohnen und Eigentum Privatschutz Kombi Privatschutz Kombivorteil berechnen Impressum Datenschutz Barrierefreiheit Cookies Nutzungsbedingungen © Allianz 2026 Adam-Hönig-Straße Adelharzer Weg Aggensteinstraße Akosweg Albert-Ott-Straße Albert-Wehr-Platz Alemannenweg Alfred-Kunz-Straße Allgäuer Straße Alpenrosenstraße Alpenstraße Am Alten Holzplatz Am Königsplatz Am Schlößle Am Stadtpark Am Theater An der Lützelburg An der Stadtmauer An der Sutt An der Weberei Ankergässele Anwanden Auf'm Plätzle August-Fischer-Platz Aybühlweg Bahnhofplatz Bahnhofstraße Barbara-Hackl-Straße Beethovenstraße Bei den Birken Bei der Rose Beim Sudhaus Birkensteig Blenksteig Bodmanstraße Boleite Boleitestäffele Braut- und Bahrweg Brennergasse Buchenweg Burghalde Burghaldegasse Burgstraße Bäckerstraße Calgeerstraße Dornierstraße Dornstraße Dreifaltigkeitsweg Düwellstraße Eberhard-Schobacher-Weg Eberhardstraße Eicher Kapellenweg Eicher Ringweg Eicher Straße Ellharter Steig Ellharter Straße Entengässchen Erlenweg Ertingerweg Estionenweg Feichtmayrstraße Ferdinand-Beutel-Weg Fischersteige Fischerstraße Fischerösch Franz-Köpf-Weg Freitreppe Freudenberg Freudenbergunterführung Freudental Föhrenweg Gaishornweg Gebirgsjägerweg Gerberstraße Goethestraße Grabengasse Grüntenweg Gutenbergstraße Hasengasse Haslach Haslacher Berg Haslacher Straße Haubenschloßplatz Haubenschloßstraße Heggener Straße Heidengässele Heinrich-Findelkind-Weg Heinrichgasse Heinz-Schubert-Platz Heinz-Templer-Weg Herbststraße Herkomerstraße Hermann-von-Barth-Straße Hermannstraße Heydeckerstraße Hieberstraße Hildegardplatz Hirnbeinstraße Hirschsteig Hirschstraße Hochvogelstraße Horchlerstraße Höfatsweg Illerstraße Im Allmey Im Bucharts Im Moos Im Steufzgen Immenstädter Straße In der Brandstatt In der Eich In der Klims Jenischstraße Johann-Schütz-Straße Jägerstraße Jörg-Lederer-Weg Kanalweg Karrerstraße Kaurus Keplerstraße Keselstraße Kesselgasse Klostersteige Konebergweg Konrad-Zuse-Weg Kotterner Straße Kronenstraße Krottenkopfstraße Königsplatz Königstraße Leichtleweg Lessingstraße Lindauer Straße Lindenweg Linggstraße Lohgässele Lugemannsweg Lützelburgweg Maler-Lochbihler-Straße Manzweg Margaretha-und-Josefinen-Weg Mauergässele Mehlstraße Michael-Beer-Straße Mittelgasse Mittlere Eicher Straße Mozartstraße Mühlberg Nebelhornstraße Ober'm Stadtweiher Obere Eicher"
+}

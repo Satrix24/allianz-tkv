@@ -1,0 +1,8 @@
+node_modules/
+.env
+npm-debug.log*
+
+# Runtime output
+downloads/*.pdf
+downloads/errors/*.png
+downloads/errors/*.html

@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-04-12",
+    "Basis": 16.77,
+    "Smart": 49.02,
+    "Komfort": 130.16,
+    "input": {
+      "plz": "80331",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    }
+  }
+]

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allianz Tierkrankenversicherung Angebot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --allianz-blue: #003781;
+      --allianz-light: #f2f6ff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #dbe5f2;
+      --success: #0f766e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    .loading, .error {
+      max-width: 520px;
+      margin: 80px auto;
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 24px rgba(0, 55, 129, 0.08);
+    }
+
+    .hidden { display: none !important; }
+
+    .header {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(0, 55, 129, 0.08);
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      color: var(--allianz-blue);
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: var(--allianz-blue);
+      color: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.92;
+    }
+
+    .meta {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .meta span {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .tarif-name {
+      color: var(--allianz-blue);
+      font-size: 20px;
+      font-weight: 800;
+      margin: 0 0 10px;
+    }
+
+    .price {
+      margin: 0 0 12px;
+      font-size: 30px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .price small {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #334155;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 92px;
+    }
+
+    .cta {
+      margin-top: 14px;
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      background: var(--allianz-blue);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 11px 14px;
+    }
+
+    .contact {
+      margin-top: 16px;
+      text-align: center;
+      color: var(--success);
+      font-weight: 600;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="loading" class="loading">Angebot wird geladen…</div>
+    <div id="error" class="error hidden">
+      <h2>Angebot nicht gefunden</h2>
+      <p>Der Link ist ungültig oder abgelaufen. Bitte lasse ein neues Angebot berechnen.</p>
+    </div>
+
+    <div id="app" class="hidden">
+      <header class="header">
+        <h2 class="logo">Allianz</h2>
+        <div class="subtitle">Tierkrankenversicherung</div>
+      </header>
+
+      <section class="hero">
+        <h1 id="heroTitle">Ihr persönliches TKV-Angebot</h1>
+        <p>Vergleichen Sie die verfügbaren Tarife und wählen Sie den passenden Schutz für Ihr Tier.</p>
+        <div class="meta">
+          <span id="metaTierart">Tierart: -</span>
+          <span id="metaTiername">Tiername: -</span>
+        </div>
+      </section>
+
+      <section id="tarife" class="grid"></section>
+      <div class="contact">Unverbindliche Beratung durch das Allianz Team</div>
+    </div>
+  </div>
+
+  <script>
+    function getCode() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('code');
+    }
+
+    function esc(value) {
+      return String(value ?? '').replace(/[&<>\"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function renderTarif(tarif) {
+      const leistungen = Array.isArray(tarif.leistungen) && tarif.leistungen.length
+        ? tarif.leistungen.slice(0, 6).map((item) => `<li>${esc(item)}</li>`).join('')
+        : '<li>Leistungsdetails folgen im Beratungsgespräch</li>';
+
+      return `
+        <article class="card">
+          <h3 class="tarif-name">${esc(tarif.name || 'Tarif')}</h3>
+          <p class="price">${esc(tarif.preis || 'Preis auf Anfrage')} <small>/Monat</small></p>
+          <ul>${leistungen}</ul>
+          <a class="cta" href="#kontakt">Jetzt Kontakt aufnehmen</a>
+        </article>
+      `;
+    }
+
+    async function init() {
+      const loading = document.getElementById('loading');
+      const error = document.getElementById('error');
+      const app = document.getElementById('app');
+
+      const code = getCode();
+      if (!code) {
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+        return;
+      }
+
+      try {
+        const response = await fetch(`/api/tkv/offer/${encodeURIComponent(code)}`);
+        if (!response.ok) throw new Error('Offer not found');
+
+        const offer = await response.json();
+        const input = offer.input || {};
+        const tarife = Array.isArray(offer.tarife) ? offer.tarife : [];
+
+        document.getElementById('heroTitle').textContent = `TKV-Angebot für ${input.tiername || 'Ihr Tier'}`;
+        document.getElementById('metaTierart').textContent = `Tierart: ${input.tierart || '-'}`;
+        document.getElementById('metaTiername').textContent = `Tiername: ${input.tiername || '-'}`;
+
+        const tarifeContainer = document.getElementById('tarife');
+        tarifeContainer.innerHTML = tarife.length
+          ? tarife.map(renderTarif).join('')
+          : '<article class="card"><h3 class="tarif-name">Keine Tarife gefunden</h3><p>Bitte Angebot neu berechnen.</p></article>';
+
+        loading.classList.add('hidden');
+        app.classList.remove('hidden');
+      } catch (_e) {
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "allianz-tkv",
+  "version": "1.0.0",
+  "description": "Allianz Tierkrankenversicherung Angebotsrechner mit Playwright-Scraper und Express-Frontend",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "playwright": "^1.53.2",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

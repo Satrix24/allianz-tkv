@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TKV Rechner – Allianz Tierkrankenversicherung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root { --blue: #003781; --blue-dark: #002a63; --border: #dbe3ef; --bg: #f3f6fb; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: "Inter", sans-serif; background: radial-gradient(circle at top, #eef4ff, var(--bg) 50%); color: #0f172a; }
+      .page { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+      .card { width: 100%; max-width: 660px; background: #fff; border-radius: 18px; box-shadow: 0 14px 40px rgba(0,31,84,.12); border: 1px solid #e7edf7; overflow: hidden; }
+      .header { display: flex; align-items: center; gap: 14px; padding: 22px 26px; border-bottom: 1px solid #e8eef7; }
+      .logo { width: 40px; height: 40px; border-radius: 10px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; flex-shrink: 0; }
+      .header h1 { margin: 0; font-size: 1.2rem; font-weight: 700; color: var(--blue); }
+      form { padding: 24px 26px 28px; }
+      .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: #94a3b8; margin: 20px 0 12px; border-top: 1px solid #f1f5f9; padding-top: 18px; }
+      .section-title:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .field { margin-bottom: 14px; }
+      .field label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; color: #1e293b; }
+      .field input, .field select { width: 100%; height: 46px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--border); font-size: 15px; font-family: inherit; outline: none; transition: border-color .15s, box-shadow .15s; background: #fff; }
+      .field input:focus, .field select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,55,129,.1); }
+      .field small { display: block; margin-top: 5px; color: #64748b; font-size: 12px; }
+      /* Radio groups */
+      .radio-group { display: flex; gap: 8px; flex-wrap: wrap; }
+      .radio-opt { flex: 1; min-width: 120px; }
+      .radio-opt input[type=radio] { display: none; }
+      .radio-opt label { display: block; padding: 10px 14px; border-radius: 10px; border: 1.5px solid var(--border); font-size: 14px; font-weight: 500; cursor: pointer; text-align: center; transition: all .15s; background: #fff; color: #475569; }
+      .radio-opt input[type=radio]:checked + label { border-color: var(--blue); background: #eef4ff; color: var(--blue); font-weight: 600; }
+      .radio-opt label:hover { border-color: #7ba7d4; }
+      /* Illness checkboxes */
+      .illness-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
+      .illness-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #334155; }
+      .illness-item input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--blue); cursor: pointer; }
+      /* Searchable dropdown */
+      .search-select { position: relative; }
+      .search-input { width: 100%; height: 46px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--border); font-size: 15px; font-family: inherit; outline: none; transition: border-color .15s, box-shadow .15s; background: #fff; }
+      .search-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,55,129,.1); }
+      .dropdown-list { display: none; position: absolute; z-index: 100; top: calc(100% + 4px); left: 0; right: 0; background: #fff; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,31,84,.12); max-height: 220px; overflow-y: auto; }
+      .dropdown-list.open { display: block; }
+      .dropdown-item { padding: 10px 12px; font-size: 14px; cursor: pointer; }
+      .dropdown-item:hover { background: #eef4ff; color: var(--blue); }
+      /* Submit */
+      .submit { width: 100%; border: 0; border-radius: 12px; background: var(--blue); color: #fff; font-size: 16px; font-weight: 700; padding: 14px; cursor: pointer; transition: background .2s; margin-top: 20px; }
+      .submit:hover { background: var(--blue-dark); }
+      .submit:disabled { opacity: .7; cursor: not-allowed; }
+      .loading { display: none; margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: #eef4ff; color: var(--blue); font-weight: 600; align-items: center; gap: 10px; }
+      .loading.active { display: inline-flex; }
+      .spinner { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(0,55,129,.25); border-top-color: var(--blue); animation: spin .75s linear infinite; flex-shrink: 0; }
+      .error-banner { display: none; margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: #fef3f2; border: 1px solid #fecdca; color: #b42318; font-size: 14px; font-weight: 600; }
+      .error-banner.active { display: block; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @media (max-width: 580px) { .row { grid-template-columns: 1fr; } .header, form { padding-left: 18px; padding-right: 18px; } .illness-list { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <div class="logo">Allianz</div>
+          <h1>Tierkrankenversicherung&thinsp;— Tarifrechner</h1>
+        </header>
+        <form id="form" novalidate>
+
+          <p class="section-title">Halter</p>
+          <div class="row">
+            <div class="field">
+              <label for="plz">PLZ</label>
+              <input id="plz" type="text" inputmode="numeric" placeholder="z.B. 87435" maxlength="5" required />
+            </div>
+            <div class="field">
+              <label for="geb_halter">Geburtsdatum Halter</label>
+              <input id="geb_halter" type="text" placeholder="TT.MM.JJJJ" required />
+            </div>
+          </div>
+
+          <p class="section-title">Tier</p>
+          <div class="row">
+            <div class="field">
+              <label for="tierart">Tierart</label>
+              <select id="tierart">
+                <option value="Hund">Hund</option>
+                <option value="Katze">Katze</option>
+                <option value="Pferd">Pferd</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="geschlecht">Geschlecht</label>
+              <select id="geschlecht">
+                <option value="männlich">männlich</option>
+                <option value="weiblich">weiblich</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="tiername">Tiername</label>
+              <input id="tiername" type="text" placeholder="z.B. Max" required />
+            </div>
+            <div class="field">
+              <label for="geb_tier">Tiergeburtsdatum</label>
+              <input id="geb_tier" type="text" placeholder="TT.MM.JJJJ" required />
+            </div>
+          </div>
+
+          <div class="field" id="rasseField">
+            <label>Rasse <span style="color:#94a3b8;font-weight:400">(Tippen zum Suchen)</span></label>
+            <div class="search-select">
+              <input type="text" class="search-input" id="rasseSearch" placeholder="Mischling / Rasse unbekannt" autocomplete="off" />
+              <input type="hidden" id="rasseWert" value="MISCHLING" />
+              <div class="dropdown-list" id="rasseDropdown"></div>
+            </div>
+          </div>
+
+          <div class="field" id="groesseField">
+            <label>Größe (Schulterhöhe)</label>
+            <div class="radio-group">
+              <div class="radio-opt"><input type="radio" name="groesse" id="g1" value="0 - 44 cm" checked /><label for="g1">Klein (0–44 cm)</label></div>
+              <div class="radio-opt"><input type="radio" name="groesse" id="g2" value="45 - 120 cm" /><label for="g2">Groß (45–120 cm)</label></div>
+            </div>
+          </div>
+
+          <p class="section-title">Gesundheit</p>
+          <div class="field">
+            <label>Hatte das Tier in den letzten 24 Monaten:</label>
+            <div class="illness-list">
+              <label class="illness-item"><input type="checkbox" name="illness" value="Krankheiten" /> Krankheiten</label>
+              <label class="illness-item"><input type="checkbox" name="illness" value="Fehlentwicklungen" /> Fehlentwicklungen</label>
+              <label class="illness-item"><input type="checkbox" name="illness" value="Symptome" /> Symptome</label>
+              <label class="illness-item"><input type="checkbox" name="illness" value="Diagnosen" /> Diagnosen / Befunde</label>
+              <label class="illness-item"><input type="checkbox" name="illness" value="Unfallfolgen" /> Unfallfolgen</label>
+              <label class="illness-item"><input type="checkbox" name="illness" value="Beeinträchtigungen" /> Beeinträchtigungen</label>
+              <label class="illness-item"><input type="checkbox" name="illness" value="Verhaltensauffälligkeiten" /> Verhaltensauffälligkeiten</label>
+            </div>
+            <small>Nichts angekreuzt = keine Vorerkrankungen</small>
+          </div>
+
+          <p class="section-title">Tarif</p>
+          <div class="field">
+            <label>Versicherungsschutz</label>
+            <div class="radio-group">
+              <div class="radio-opt"><input type="radio" name="coverageType" id="c1" value="OP-Schutz" checked /><label for="c1">OP-Schutz</label></div>
+              <div class="radio-opt"><input type="radio" name="coverageType" id="c2" value="Vollschutz" /><label for="c2">Vollschutz</label></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Priorität bei der Tarifauswahl</label>
+            <div class="radio-group">
+              <div class="radio-opt"><input type="radio" name="tarifsAuswahlVorgang" id="t1" value="Basis-Schutz" /><label for="t1">Basis-Schutz</label></div>
+              <div class="radio-opt"><input type="radio" name="tarifsAuswahlVorgang" id="t2" value="Günstiger Preis" /><label for="t2">Günstiger Preis</label></div>
+              <div class="radio-opt"><input type="radio" name="tarifsAuswahlVorgang" id="t3" value="Bestes Preis-Leistungs-Verhältnis" checked /><label for="t3">Bestes P/L</label></div>
+              <div class="radio-opt"><input type="radio" name="tarifsAuswahlVorgang" id="t4" value="Bestmögliche Leistungsabdeckung" /><label for="t4">Max. Leistung</label></div>
+            </div>
+          </div>
+
+          <button class="submit" id="submitBtn" type="submit">Tarif berechnen</button>
+          <div class="loading" id="loading"><span class="spinner"></span><span>Ihr Tarif wird berechnet... Ca. 60 Sekunden.</span></div>
+          <div class="error-banner" id="errorBanner"></div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+    const RASSEN = {"hunde": [{"wert": "H001", "text": "Aidi (Marokkanischer Schäferhund)"}, {"wert": "H004", "text": "Anglo-français de petite vénerie"}, {"wert": "H005", "text": "Ariégeois"}, {"wert": "H006", "text": "Azawakh (Tuaregwindhund)"}, {"wert": "H007", "text": "Barbet"}, {"wert": "H009", "text": "Bärenhund"}, {"wert": "H010", "text": "Barsoi (Russischer Windhund)"}, {"wert": "H011", "text": "Basenji (Congo Dog)"}, {"wert": "H013", "text": "Basset Griffon"}, {"wert": "H014", "text": "Beagle"}, {"wert": "H015", "text": "Beagle Harrier"}, {"wert": "H016", "text": "Bergamasker Hirtenhund"}, {"wert": "H018", "text": "Berger de Brie (Briard)"}, {"wert": "H019", "text": "Berger de Picaderie"}, {"wert": "H021", "text": "Bernhardiner"}, {"wert": "H023", "text": "Billy"}, {"wert": "H025", "text": "Bobtail (Old English Sheepdog)"}, {"wert": "H026", "text": "Bologneser (Bichon Bolognais)"}, {"wert": "H027", "text": "Bolonka Zwetna"}, {"wert": "H029", "text": "Bouvier des Flandres"}, {"wert": "H030", "text": "Deutscher Boxer"}, {"wert": "H031", "text": "Bracke"}, {"wert": "H033", "text": "Broholmer"}, {"wert": "H034", "text": "Buhund"}, {"wert": "H035", "text": "Bulldogge"}, {"wert": "H036", "text": "Cane Corso (Italienische Bulldogge)"}, {"wert": "H043", "text": "Australian Cattle Dog"}, {"wert": "H044", "text": "Chien d'Artois"}, {"wert": "H045", "text": "Chihuahua"}, {"wert": "H047", "text": "Chow-Chow"}, {"wert": "H049", "text": "Cirneco dell'Etna (Sizilianische Bracke)"}, {"wert": "H051", "text": "Bearded Collie"}, {"wert": "H052", "text": "Border Collie"}, {"wert": "H053", "text": "Black and Tan Coonhound"}, {"wert": "H055", "text": "Coton de Tuléar"}, {"wert": "H056", "text": "Dackel (Teckel)"}, {"wert": "H057", "text": "Dalmatiner"}, {"wert": "H058", "text": "Deerhound"}, {"wert": "H059", "text": "Deutsch Drahthaar"}, {"wert": "H060", "text": "Deutsch Kurzhaar"}, {"wert": "H061", "text": "Deutsch Langhaar"}, {"wert": "H062", "text": "Deutsch Stichelhaar"}, {"wert": "H063", "text": "Dingo"}, {"wert": "H064", "text": "Dobermann"}, {"wert": "H065", "text": "Dogge"}, {"wert": "H066", "text": "Dogo Argentino"}, {"wert": "H068", "text": "Schwedische Dachsbracke (Drever)"}, {"wert": "H069", "text": "Dunker"}, {"wert": "H076", "text": "Eurasier (Wolf-Chow)"}, {"wert": "H077", "text": "Fila Brasileiro (Brasilianischer Mastiff)"}, {"wert": "H078", "text": "American Foxhound"}, {"wert": "H079", "text": "English Foxhound"}, {"wert": "H080", "text": "Galgo Español (Spanischer Windhund)"}, {"wert": "H081", "text": "Grand anglo-français"}, {"wert": "H082", "text": "Grand bleu de Gascogne"}, {"wert": "H083", "text": "Grand Gascon Saintongeois"}, {"wert": "H084", "text": "Greyhound (Polnischer Windhund)"}, {"wert": "H085", "text": "Griffon"}, {"wert": "H086", "text": "Belgischer Griffon"}, {"wert": "H089", "text": "Grönlandhund"}, {"wert": "H090", "text": "Haldenstövare"}, {"wert": "H091", "text": "Hamiltonstövare (Hamilton Bracke)"}, {"wert": "H092", "text": "Harrier"}, {"wert": "H093", "text": "Harzer Fuchs"}, {"wert": "H094", "text": "Havanerser"}, {"wert": "H097", "text": "Hovawart"}, {"wert": "H098", "text": "Altdänischer Vorstehhund (Gammel Dansk Honsehund)"}, {"wert": "H099", "text": "Husky"}, {"wert": "H100", "text": "Hygenhund"}, {"wert": "H101", "text": "Islandhund (Isländischer Spitz, Isländischer Schäferhund)"}, {"wert": "H102", "text": "Japan Chin (Japan Spitz)"}, {"wert": "H104", "text": "Kanaan Hund (Canaan Dog)"}, {"wert": "H107", "text": "Komodor"}, {"wert": "H108", "text": "Kooikerhondje (Holländischer Entenlockhund)"}, {"wert": "H109", "text": "Korea Jindo Dog"}, {"wert": "H111", "text": "Kuvasz"}, {"wert": "H112", "text": "Lagotto Romagnolo"}, {"wert": "H113", "text": "Laika"}, {"wert": "H114", "text": "Landseer"}, {"wert": "H118", "text": "Schweizerischer Laufhund"}, {"wert": "H119", "text": "Leonberger"}, {"wert": "H120", "text": "Lhasa Apso"}, {"wert": "H121", "text": "Löwchen (Petit Chien Lion)"}, {"wert": "H123", "text": "Lurcher"}, {"wert": "H124", "text": "Magyar Vizsla"}, {"wert": "H125", "text": "Malteser"}, {"wert": "H127", "text": "Bullmastiff"}, {"wert": "H128", "text": "Mastin de los Pirineos"}, {"wert": "H130", "text": "Mastino Napoletano (Italienische Dogge)"}, {"wert": "H134", "text": "Mops (Pug)"}, {"wert": "H135", "text": "Mudi (Ungarischer Schäferhund)"}, {"wert": "H136", "text": "Großer Münsterländer"}, {"wert": "H137", "text": "Kleiner Münsterländer"}, {"wert": "H138", "text": "Nackt-/Schopfhund"}, {"wert": "H139", "text": "Neufundländer"}, {"wert": "H141", "text": "Otterhound"}, {"wert": "H143", "text": "Perdiguero de Burgos"}, {"wert": "H144", "text": "Perro de agua Español (Spanischer Wasserhund)"}, {"wert": "H145", "text": "Petit bleu de Gascogne"}, {"wert": "H146", "text": "Petit Gascon Saintongeois"}, {"wert": "H147", "text": "Pharaonenhund"}, {"wert": "H148", "text": "Pinscher"}, {"wert": "H149", "text": "Affenpinscher"}, {"wert": "H150", "text": "Zwergpinscher (Rehpinscher)"}, {"wert": "H151", "text": "Podenco"}, {"wert": "H152", "text": "Podengo"}, {"wert": "H153", "text": "Podengo (klein)"}, {"wert": "H154", "text": "Pointer"}, {"wert": "H157", "text": "Porcelaine"}, {"wert": "H158", "text": "Großpudel"}, {"wert": "H159", "text": "Kleinpudel"}, {"wert": "H160", "text": "Toy Pudel"}, {"wert": "H161", "text": "Zwergpudel"}, {"wert": "H162", "text": "Pudelpointer"}, {"wert": "H163", "text": "Puli (Ungarischer Hirtenhund)"}, {"wert": "H164", "text": "Pumi"}, {"wert": "H166", "text": "Rafeiro do Alentejo"}, {"wert": "H167", "text": "Rauhbart"}, {"wert": "H168", "text": "Chesapeake Bay Retriever"}, {"wert": "H169", "text": "Curly Coated Retriever"}, {"wert": "H170", "text": "Flat Coated Retriever"}, {"wert": "H171", "text": "Golden Retriever"}, {"wert": "H172", "text": "Labardor Retriever"}, {"wert": "H173", "text": "Novascotia Duck Tolling Retriever"}, {"wert": "H174", "text": "Rhodesian RIdgeback"}, {"wert": "H176", "text": "Rottweiler"}, {"wert": "H177", "text": "Russkiy Toy"}, {"wert": "H179", "text": "Saluki (Persischer Windhund)"}, {"wert": "H180", "text": "Samojede"}, {"wert": "H181", "text": "Sarplaninac (Judoslawischer Hirtenhund)"}, {"wert": "H182", "text": "Altdeutscher Schäferhund"}, {"wert": "H183", "text": "Belgischer Schäferhund"}, {"wert": "H184", "text": "Deutscher Schäferhund"}, {"wert": "H185", "text": "Holländischer Schäferhund"}, {"wert": "H186", "text": "Karst Schäferhund (Kraski Ovcar)"}, {"wert": "H187", "text": "Katalanischer Schäferhund"}, {"wert": "H188", "text": "Kroatischer Schäferhund"}, {"wert": "H190", "text": "Maremmen-Abruzzen-Schäferhund"}, {"wert": "H191", "text": "Tatra Schäferhund"}, {"wert": "H193", "text": "Kaukasischer Schäferhund"}, {"wert": "H195", "text": "Südrussischer Schäferhund"}, {"wert": "H196", "text": "Zentralasiatischer Schäferhund"}, {"wert": "H197", "text": "Schapendoes"}, {"wert": "H198", "text": "Schillerstövare (Schillerbracke)"}, {"wert": "H199", "text": "Schipperke"}, {"wert": "H200", "text": "Schnauzer"}, {"wert": "H201", "text": "Zwergschnauzer"}, {"wert": "H202", "text": "Bayerischer Gebirgsschweisshund"}, {"wert": "H203", "text": "Hannoverscher Schweisshund"}, {"wert": "H204", "text": "Segugio Maremmano"}, {"wert": "H206", "text": "Setter"}, {"wert": "H207", "text": "Shar Pei"}, {"wert": "H211", "text": "Australian Shepherd (Aussie)"}, {"wert": "H213", "text": "Shih Tzu"}, {"wert": "H214", "text": "Shikoku"}, {"wert": "H215", "text": "Sloughi (Arabischer Windhund)"}, {"wert": "H216", "text": "Slovensky Cuvac"}, {"wert": "H217", "text": "Smalandsstövare"}, {"wert": "H218", "text": "American Cocker Spaniel"}, {"wert": "H219", "text": "American Water Spaniel"}, {"wert": "H220", "text": "Cavalier King Charles Spaniel"}, {"wert": "H221", "text": "Clumber Spaniel"}, {"wert": "H223", "text": "English Springer Spaniel"}, {"wert": "H225", "text": "Irish Water Spaniel"}, {"wert": "H226", "text": "King Charles Spaniel"}, {"wert": "H228", "text": "Sussex Spaniel"}, {"wert": "H229", "text": "Tibet Spaniel"}, {"wert": "H230", "text": "Welsh Springer Spaniel"}, {"wert": "H232", "text": "Spitz"}, {"wert": "H234", "text": "Taiwan Hund"}, {"wert": "H236", "text": "Airedale Terrier"}, {"wert": "H237", "text": "American Staffordshire Terrier"}, {"wert": "H239", "text": "Australian Silky Terrier"}, {"wert": "H240", "text": "Bedlington Terrier"}, {"wert": "H241", "text": "Border Terrier"}, {"wert": "H242", "text": "Boston Terrier"}, {"wert": "H244", "text": "Bullterrier"}, {"wert": "H246", "text": "Cesky Terrier"}, {"wert": "H247", "text": "Dandie Dinmont Terrier"}, {"wert": "H248", "text": "Deutscher Jagdterrier"}, {"wert": "H249", "text": "English Toy Terrier"}, {"wert": "H250", "text": "Foxterrier (Drathaar, Rauhaar)"}, {"wert": "H251", "text": "Fox Terrier (Glatthaar)"}, {"wert": "H252", "text": "Glen Of Imaal Terrier"}, {"wert": "H253", "text": "Irish Terrier"}, {"wert": "H255", "text": "Jack Russel Terrier"}, {"wert": "H256", "text": "Japanischer Terrier (Nippon-Terrier)"}, {"wert": "H257", "text": "Kerry Blue Terrier"}, {"wert": "H258", "text": "Lakeland Terrier"}, {"wert": "H259", "text": "Lucas Terrier"}, {"wert": "H260", "text": "Manchester Terrier"}, {"wert": "H261", "text": "Norfolk Terrier"}, {"wert": "H262", "text": "Norwich Terrier"}, {"wert": "H263", "text": "Parson Russel Terrier"}, {"wert": "H265", "text": "Schwarzer Terrier"}, {"wert": "H266", "text": "Scottish Terrier"}, {"wert": "H268", "text": "Skye Terrier"}, {"wert": "H271", "text": "Welsh Terrier"}, {"wert": "H272", "text": "West Highland White Terrier"}, {"wert": "H273", "text": "Westfalen-Terrier"}, {"wert": "H274", "text": "Yorkshire Terrier"}, {"wert": "H275", "text": "Tornjak"}, {"wert": "H276", "text": "Tosa Inu"}, {"wert": "H277", "text": "Moskauer Wachhund"}, {"wert": "H278", "text": "Deutscher Wachtelhund"}, {"wert": "H279", "text": "Wäller"}, {"wert": "H280", "text": "Weimaraner"}, {"wert": "H282", "text": "Whippet"}, {"wert": "H283", "text": "Afghanischer Windhund"}, {"wert": "H287", "text": "Wolfshund"}, {"wert": "H290", "text": "Alano Español"}, {"wert": "H291", "text": "Labradoodle"}, {"wert": "H292", "text": "Prager Rattler"}, {"wert": "H293", "text": "Puggle"}, {"wert": "H294", "text": "Ratero"}, {"wert": "H295", "text": "Boerboel"}, {"wert": "H303", "text": "Akita-Inu"}, {"wert": "H318", "text": "Karelischer Bärenhund"}, {"wert": "H319", "text": "Germanischer Bärenhund"}, {"wert": "H330", "text": "Basset Fauve de Bretagne"}, {"wert": "H331", "text": "Basset Hound"}, {"wert": "H332", "text": "Basset Griffon Vendéen, Petit (B.G.V., Kleiner)"}, {"wert": "H338", "text": "Beauceron (Bas Rouge)"}, {"wert": "H345", "text": "Pyrenäenschäferhund"}, {"wert": "H346", "text": "Pyrenäen-Schäferhund"}, {"wert": "H352", "text": "Bichon Frise"}, {"wert": "H355", "text": "Bloodhound"}, {"wert": "H362", "text": "Bolonka Tsvetnaya"}, {"wert": "H366", "text": "Balkanbracke"}, {"wert": "H367", "text": "Brandlbracke"}, {"wert": "H370", "text": "Braque de Bourbonnais"}, {"wert": "H371", "text": "Braque d'Auvergne"}, {"wert": "H372", "text": "Französischer Vorstehhund - Typus Gascogne"}, {"wert": "H375", "text": "Alpenländische Bracke"}, {"wert": "H379", "text": "Old English Bulldog"}, {"wert": "H380", "text": "Französische Bulldogge"}, {"wert": "H381", "text": "American Bulldog"}, {"wert": "H387", "text": "Portugiesischer Schäferhund"}, {"wert": "H388", "text": "Griffon Nivernais (Grand Griffon Nivernais, Chien de Pays)"}, {"wert": "H389", "text": "Portugiesischer Treibhund"}, {"wert": "H390", "text": "Portugiesischer Wasserhund"}, {"wert": "H392", "text": "Zavod"}, {"wert": "H393", "text": "Carpathian Sheepdog"}, {"wert": "H394", "text": "Rumänischer Schäferhund"}, {"wert": "H408", "text": "Uruguayischer Cimarron"}, {"wert": "H414", "text": "Langhaar Collie"}, {"wert": "H415", "text": "Kurzhaar Collie"}, {"wert": "H423", "text": "Welsh Corgi (Cardigan)"}, {"wert": "H424", "text": "Welsh Corgi (Pembroke)"}, {"wert": "H427", "text": "Kurzhaardackel"}, {"wert": "H428", "text": "Rauhhaardackel"}, {"wert": "H429", "text": "Langhaardackel"}, {"wert": "H430", "text": "Zwergdackel"}, {"wert": "H439", "text": "Maliki (Anatolischer Hirtenhund)"}, {"wert": "H445", "text": "Dogge (Deutsche, Dänische, Ulmer,  Englische, Hatzrüde, Saupacker, Große)"}, {"wert": "H446", "text": "Bordeauxdogge (Dogge, Bordeaux-, Dogge de Bordeaux)"}, {"wert": "H447", "text": "Argentinische Dogge"}, {"wert": "H449", "text": "Kanarische Dogge (Perro de Presa Canario)"}, {"wert": "H451", "text": "Tibet Dogge"}, {"wert": "H454", "text": "Drent'Scher Hühnerhund"}, {"wert": "H459", "text": "Norwegischer Elchhund (Norsk Elghund)"}, {"wert": "H460", "text": "Schwedischer Elchhund"}, {"wert": "H461", "text": "Groß-Elo"}, {"wert": "H462", "text": "Klein-Elo"}, {"wert": "H465", "text": "Brittany Spaniel"}, {"wert": "H467", "text": "Französischer Spaniel"}, {"wert": "H468", "text": "Picardie Spaniel"}, {"wert": "H484", "text": "Griffon Korthals (Vorstehhund, Französischer Rauhhaariger, Griffon d'arrét á poil dur, Korthals, Griffon á poil dur)"}, {"wert": "H485", "text": "Griffon Nivernais (Grand Griffon Nivernais, Chien de Pays)"}, {"wert": "H486", "text": "Griffon á poil Laineux (Griffon Boulet, Griffon, Französischer Wollhaariger, Griffon, French Wolly-haired Pointing, Grifón de muestra de pelo lanoso Francés)"}, {"wert": "H487", "text": "Griffon Vendéen (Griffon Vendéen, Grand, Griffon Vendéen, Großer, Griffon Vendéen, Briquet)"}, {"wert": "H490", "text": "Barbancon"}, {"wert": "H491", "text": "Petit Barbacon"}, {"wert": "H504", "text": "Kangal"}, {"wert": "H510", "text": "Akbas"}, {"wert": "H515", "text": "Hokkaido-Ken"}, {"wert": "H519", "text": "Alaskan Husky"}, {"wert": "H540", "text": "Kelpie"}, {"wert": "H542", "text": "Kishu-Inu"}, {"wert": "H549", "text": "Jindo-kyon"}, {"wert": "H555", "text": "Schwedischer Lapphund"}, {"wert": "H556", "text": "Finnischer Lapplandhirtenhund (Rentierhund, Lappländischer, Lapinporoika)"}, {"wert": "H560", "text": "Griechische Bracke"}, {"wert": "H575", "text": "Norsk Lundehund"}, {"wert": "H577", "text": "Hungarian Wirehaired Vizsla"}, {"wert": "H581", "text": "(Old) English Mastiff"}, {"wert": "H585", "text": "Pyrenäenhund"}, {"wert": "H586", "text": "Spanischer Mastiff (Spanische Dogge)"}, {"wert": "H607", "text": "Afrikanischer Nackthund"}, {"wert": "H608", "text": "Chinesischer Nackthund (Schopfhund)"}, {"wert": "H609", "text": "Mexikanischer Nackthund"}, {"wert": "H610", "text": "Peruanischer Nackthund"}, {"wert": "H612", "text": "Petit chien courant suisse"}, {"wert": "H618", "text": "Fellterrier"}, {"wert": "H621", "text": "Pekinese"}, {"wert": "H635", "text": "Pharaoh Hound"}, {"wert": "H638", "text": "Deutscher Pinscher"}, {"wert": "H639", "text": "Mittelschlag Pinscher"}, {"wert": "H641", "text": "Miniatur Pinscher (Minipin)"}, {"wert": "H643", "text": "Mini- Dobermann"}, {"wert": "H646", "text": "Podenco Ibicenco"}, {"wert": "H648", "text": "Podengo (groß, mittelgroß)"}, {"wert": "H654", "text": "English Pointer"}, {"wert": "H656", "text": "Polnischer Niederungshütehund"}, {"wert": "H659", "text": "Königspudel"}, {"wert": "H668", "text": "Labrador"}, {"wert": "H674", "text": "Mah Tai (Thai Ridgeback)"}, {"wert": "H675", "text": "Puh Quoc Hund"}, {"wert": "H697", "text": "Groenendael"}, {"wert": "H698", "text": "Tervueren"}, {"wert": "H699", "text": "Malinois"}, {"wert": "H700", "text": "Laekenois"}, {"wert": "H711", "text": "Perro de pastor Mallorquin"}, {"wert": "H727", "text": "Berger Blanc Suisse (Weißer Schäferhund)"}, {"wert": "H743", "text": "Belgischer Schiffer Spitz"}, {"wert": "H744", "text": "Mittelschnauzer"}, {"wert": "H745", "text": "Riesenschnauzer"}, {"wert": "H753", "text": "Appenzeller Sennenhund (Appenzellerhund, Appezöller Bläss)"}, {"wert": "H754", "text": "Berner Sennenhund"}, {"wert": "H755", "text": "Entlebucher Sennenhund"}, {"wert": "H756", "text": "Großer Schweizer Sennenhund (Great Swiss Mountain Dog, Grand bouvier suisse)"}, {"wert": "H757", "text": "English Setter"}, {"wert": "H758", "text": "Gordon Setter"}, {"wert": "H760", "text": "Irish Setter"}, {"wert": "H763", "text": "Sheltie"}, {"wert": "H767", "text": "Shiba Inu"}, {"wert": "H785", "text": "Cockerspaniel"}, {"wert": "H794", "text": "Papillon (Schmetterlingshündchen)"}, {"wert": "H795", "text": "Phalene"}, {"wert": "H801", "text": "Spinone"}, {"wert": "H803", "text": "Deutscher Spitz (Deutsche Spitze)"}, {"wert": "H804", "text": "Großspitz"}, {"wert": "H805", "text": "Mittelspitz"}, {"wert": "H806", "text": "Kleinspitz"}, {"wert": "H807", "text": "Pomeranian"}, {"wert": "H809", "text": "Finnenspitz"}, {"wert": "H811", "text": "Friesischer Vorstehhund"}, {"wert": "H820", "text": "Staffordshire Bull Terrier"}, {"wert": "H827", "text": "Brasilianischer Terrier (Terrier Brasileiro)"}, {"wert": "H829", "text": "English Bull Terrier"}, {"wert": "H831", "text": "Miniatur Bullterrier"}, {"wert": "H834", "text": "Zwerg Bullterrier"}, {"wert": "H853", "text": "Soft Coated Wheaten Terrier"}, {"wert": "H864", "text": "American Pit Bull Terrier"}, {"wert": "H900", "text": "Friesischer Wasserhund"}, {"wert": "H910", "text": "Magyar Agar (Ungarischer Windhund)"}, {"wert": "H911", "text": "Italienisches Windspiel"}, {"wert": "H915", "text": "Irish Wolfhound (Irischer Wolfshund)"}, {"wert": "H916", "text": "Patterdale Terrier"}, {"wert": "H917", "text": "Tschechoslowakischer Wolf(s)hund"}, {"wert": "H918", "text": "Polnische Bracke"}, {"wert": "H919", "text": "Slovensky Kopvo"}, {"wert": "H920", "text": "Continental Bulldog"}, {"wert": "H921", "text": "Alauntbull"}, {"wert": "H927", "text": "Mallorca Dogge (Ca de Bou)"}, {"wert": "H931", "text": "Ratonero Andaluz"}, {"wert": "H935", "text": "Scandinavian Hound"}, {"wert": "H938", "text": "American King Shepherd"}, {"wert": "H940", "text": "Goldendoodle"}, {"wert": "H941", "text": "Merlsheimer"}, {"wert": "D361", "text": "Airedoodle"}, {"wert": "D362", "text": "American Bully"}, {"wert": "D363", "text": "Aussiedoodle"}, {"wert": "D364", "text": "Bernedoodle"}, {"wert": "D365", "text": "Bordoodle"}, {"wert": "D366", "text": "Brasilianischer Laufhund"}, {"wert": "D367", "text": "Cavapoo"}, {"wert": "D368", "text": "Chiweenies"}, {"wert": "D369", "text": "Ciobănesc Românesc Corb"}, {"wert": "D370", "text": "Clumberdoodle"}, {"wert": "D371", "text": "Cockapoo"}, {"wert": "D372", "text": "Working Cocker Spaniel"}, {"wert": "D373", "text": "Corgipoo"}, {"wert": "D374", "text": "Dalmadoodle"}, {"wert": "D375", "text": "Double-Doodle"}, {"wert": "D377", "text": "Doxiepoo"}, {"wert": "D378", "text": "Estnische Bracke"}, {"wert": "D379", "text": "Exotic Bulldog"}, {"wert": "D380", "text": "Flatdoodle"}, {"wert": "D381", "text": "Goldador"}, {"wert": "D382", "text": "Irish Doole"}, {"wert": "D383", "text": "Jackadoodle"}, {"wert": "D385", "text": "Labrabull"}, {"wert": "D387", "text": "Labrottie"}, {"wert": "D388", "text": "Labsky"}, {"wert": "D389", "text": "Leopard-Labrador"}, {"wert": "D390", "text": "Maltipoo"}, {"wert": "D391", "text": "Miniature Australian Labradoodle"}, {"wert": "D392", "text": "Miniature American Shepherd"}, {"wert": "D393", "text": "Miniature Goldendoodle"}, {"wert": "D394", "text": "Minature Labradoodle"}, {"wert": "D396", "text": "Morkie"}, {"wert": "D397", "text": "Pastor Garafiano"}, {"wert": "D398", "text": "Patterpoo, Patterpoodle"}, {"wert": "D399", "text": "Retromops"}, {"wert": "D400", "text": "Schnoodle"}, {"wert": "D401", "text": "Shepadoodle"}, {"wert": "D403", "text": "Sheprador"}, {"wert": "D404", "text": "Shih-Poo"}, {"wert": "D405", "text": "Springerdoodle"}, {"wert": "D406", "text": "Steirische Rauhaarbracke"}, {"wert": "D407", "text": "Thai-Bangkaew-Hund"}, {"wert": "D408", "text": "Transmontano-Hirtenhund"}, {"wert": "D409", "text": "Westiepoo"}, {"wert": "D410", "text": "Yorkiepoo"}, {"wert": "D417", "text": "Havapoo"}], "katzen": [{"wert": "K001", "text": "Abessinier"}, {"wert": "K003", "text": "American Bobtail Longhair"}, {"wert": "K004", "text": "American Bobtail Shorthair"}, {"wert": "K005", "text": "American Curl Longhair"}, {"wert": "K006", "text": "American Curl Shorthair"}, {"wert": "K007", "text": "American Lynx"}, {"wert": "K008", "text": "American Shorthair / Vienna Woods"}, {"wert": "K009", "text": "American Wirehair"}, {"wert": "K010", "text": "Balinese"}, {"wert": "K011", "text": "Bengal"}, {"wert": "K012", "text": "Birma"}, {"wert": "K013", "text": "Bombay"}, {"wert": "K014", "text": "Britisch Kurzhaar"}, {"wert": "K015", "text": "Burma Longhair / Tiffany / Chantilly"}, {"wert": "K016", "text": "Burma Shorthair"}, {"wert": "K017", "text": "Burmilla"}, {"wert": "K018", "text": "California Spangled"}, {"wert": "K019", "text": "Ceylon"}, {"wert": "K020", "text": "Chartreux / Kartäuser"}, {"wert": "K021", "text": "Chausie"}, {"wert": "K022", "text": "Cymric"}, {"wert": "K023", "text": "Exotische Kurzhaarkatze"}, {"wert": "K024", "text": "Havanna"}, {"wert": "K025", "text": "Japanese Bobtail Longhair"}, {"wert": "K026", "text": "Japanese Bobtail Shorthair"}, {"wert": "K027", "text": "Kanaani"}, {"wert": "K028", "text": "Korat"}, {"wert": "K029", "text": "Kurilean Bobtail Longhair"}, {"wert": "K030", "text": "Kurilean Bobtail Shorthair"}, {"wert": "K031", "text": "La Perm Longhair"}, {"wert": "K032", "text": "La Perm Shorthair"}, {"wert": "K033", "text": "Maine Coon"}, {"wert": "K034", "text": "Manx"}, {"wert": "K035", "text": "Mischling / Hauskatze / Europäisch Kurzhaar"}, {"wert": "K036", "text": "Munchkin Longhair"}, {"wert": "K037", "text": "Munchkin Shorthair"}, {"wert": "K038", "text": "Nebelung"}, {"wert": "K039", "text": "Norwegische Waldkatze"}, {"wert": "K040", "text": "Ocicat"}, {"wert": "K041", "text": "Ojos Azules"}, {"wert": "K042", "text": "Oriental Longhair / Javanese / Mandarin"}, {"wert": "K043", "text": "Oriental Shorthair"}, {"wert": "K044", "text": "Perser / Colourpoint / Himalayan / Maskenperser"}, {"wert": "K045", "text": "Peterbald"}, {"wert": "K046", "text": "Pixiebob Longhair"}, {"wert": "K047", "text": "Pixiebob Shorthair"}, {"wert": "K048", "text": "Rex"}, {"wert": "K049", "text": "RagaMuffin"}, {"wert": "K050", "text": "Ragdoll"}, {"wert": "K051", "text": "Russisch Blau"}, {"wert": "K052", "text": "Safari"}, {"wert": "K053", "text": "Savannah"}, {"wert": "K054", "text": "Scottish Fold Longhair"}, {"wert": "K055", "text": "Scottish Fold Shorthair"}, {"wert": "K056", "text": "Siam"}, {"wert": "K057", "text": "Sibirische Katze / Neva Masquarade"}, {"wert": "K058", "text": "Singapura"}, {"wert": "K059", "text": "Snowshoe"}, {"wert": "K060", "text": "Sokoke"}, {"wert": "K061", "text": "Somali"}, {"wert": "K062", "text": "Sphynx"}, {"wert": "K063", "text": "Thai"}, {"wert": "K064", "text": "Tonkanese"}, {"wert": "K065", "text": "Toyger"}, {"wert": "K066", "text": "Türkisch Angora"}, {"wert": "K067", "text": "Türkisch Van"}, {"wert": "K068", "text": "York Chocolate"}, {"wert": "K069", "text": "Serengeti"}, {"wert": "K070", "text": "Bunny cat"}, {"wert": "K071", "text": "Hasenkatze"}, {"wert": "K072", "text": "Mau, Ägyptische"}, {"wert": "K074", "text": "Mau, Egyptian"}, {"wert": "K075", "text": "Stummelschwanzkatze Langhaar, Amerikanische"}, {"wert": "K076", "text": "Stummelschwanzkatze Kurzhaar, Amerikanische"}, {"wert": "K077", "text": "Luchskatze, Amerikanische "}, {"wert": "K078", "text": "American Shorthair in chocolate-silver"}, {"wert": "K079", "text": "Balinesenkatze"}, {"wert": "K080", "text": "Leopardette"}, {"wert": "K081", "text": "Heilige Birm"}, {"wert": "K082", "text": "Birman"}, {"wert": "K083", "text": "Sacred Birman"}, {"wert": "K084", "text": "British Shorthair"}, {"wert": "K085", "text": "Ceylonkatze"}, {"wert": "K086", "text": "Ceylon cat"}, {"wert": "K087", "text": "Chartreuse"}, {"wert": "K088", "text": "Karthäuser"}, {"wert": "K089", "text": "Manx, Longhaired"}, {"wert": "K090", "text": "Manxkatze, Langhaarige"}, {"wert": "K091", "text": "Kymrische Katze"}, {"wert": "K092", "text": "Exotic Shorthair"}, {"wert": "K093", "text": "Exotic"}, {"wert": "K094", "text": "Havanna Brown"}, {"wert": "K095", "text": "Boby"}, {"wert": "K096", "text": "Stummelschwanzkatze, Japanische"}, {"wert": "K097", "text": "Chrysanthemenkatze, Langhaar"}, {"wert": "K098", "text": "Chrysanthemenkatze, Kurzhaar"}, {"wert": "K099", "text": "Kanaan-Katze"}, {"wert": "K100", "text": "Si-Sawat"}, {"wert": "K101", "text": "Maeo Dok-Lao"}, {"wert": "K102", "text": "Kurilian Bobtail"}, {"wert": "K103", "text": "Stummelschwanzkatze, Karelische "}, {"wert": "K104", "text": "Karelisch Bobtail, Langhaar"}, {"wert": "K105", "text": "Nibelung"}, {"wert": "K106", "text": "Norweger"}, {"wert": "K107", "text": "Norwegian Forest Cat"}, {"wert": "K108", "text": "Skogkatt"}, {"wert": "K109", "text": "Nors Skaukatt"}, {"wert": "K110", "text": "Ocikatze"}, {"wert": "K111", "text": "Orientalisch Langhaar"}, {"wert": "K112", "text": "Javanese/Mandarin"}, {"wert": "K113", "text": "Orientalisch Kurzhaar"}, {"wert": "K114", "text": "OKH, Foreign Shorthair"}, {"wert": "K115", "text": "Rex, Bohemian"}, {"wert": "K116", "text": "Rex, California"}, {"wert": "K117", "text": "Rex, Cornish"}, {"wert": "K118", "text": "Rex, Devon"}, {"wert": "K119", "text": "Rex, German"}, {"wert": "K120", "text": "Rex, Oregon"}, {"wert": "K121", "text": "Rex, Selkirk"}, {"wert": "K122", "text": "Rex, Ural"}, {"wert": "K123", "text": "Russische Katze"}, {"wert": "K124", "text": "Russian Blue"}, {"wert": "K125", "text": "Bleu Russe"}, {"wert": "K126", "text": "Archangelsk-Katze"}, {"wert": "K127", "text": "Malterkatze"}, {"wert": "K128", "text": "Spanische Katze"}, {"wert": "K129", "text": "Highland Fold"}, {"wert": "K130", "text": "Coupari"}, {"wert": "K131", "text": "Hängeohrenkatze Langhaar, Schottische"}, {"wert": "K132", "text": "Faltohrkatze Langhaar, Schottische"}, {"wert": "K133", "text": "Hängeohrenkatze Kurzhaar, Schottische"}, {"wert": "K134", "text": "Faltohrkatze Kurzhaar, Schottische"}, {"wert": "K135", "text": "Siamese"}, {"wert": "K136", "text": "Waldkatze, Sibirische "}, {"wert": "K137", "text": "Sibirian Cat"}, {"wert": "K138", "text": "Sibirska Koschka"}, {"wert": "K139", "text": "Sibirski"}, {"wert": "K140", "text": "Neva Masquerade"}, {"wert": "K141", "text": "Drain Cat"}, {"wert": "K142", "text": "Schneeschuhkatze"}, {"wert": "K143", "text": "Canadian Hairless"}, {"wert": "K144", "text": "Mexican Hairless"}, {"wert": "K145", "text": "Moon Cat"}, {"wert": "K146", "text": "Nacktkatze"}, {"wert": "K147", "text": "Siam alter Typ"}, {"wert": "K148", "text": "Tonkinese"}, {"wert": "K149", "text": "Siamese, Goldener "}, {"wert": "K150", "text": "Angorakatze"}, {"wert": "K151", "text": "Ankarakatze"}, {"wert": "K152", "text": "Ankara kedisi"}, {"wert": "K153", "text": "Vankatze"}, {"wert": "K154", "text": "Schwimmkatze"}, {"wert": "K155", "text": "Türkische Katze"}, {"wert": "K156", "text": "Turkish"}, {"wert": "K157", "text": "Van Kedesi"}, {"wert": "K158", "text": "Türkisch Vankedisi"}, {"wert": "K159", "text": "Karelisch Bobtail, Kurzhaar"}, {"wert": "K160", "text": "Deutsch Langhaar"}], "pferde": [{"wert": "P003", "text": "Achal Tekkiner"}, {"wert": "P005", "text": "Aegidienberger"}, {"wert": "P014", "text": "Andalusier"}, {"wert": "P015", "text": "Anglo-Araber"}, {"wert": "P025", "text": "Appaloosa"}, {"wert": "P030", "text": "Shagya Araber"}, {"wert": "P032", "text": "Arabisches Vollblut"}, {"wert": "P038", "text": "Ardenner"}, {"wert": "P056", "text": "Camargue-Pferd"}, {"wert": "P063", "text": "Clydesdale"}, {"wert": "P064", "text": "Cob"}, {"wert": "P068", "text": "Criollo"}, {"wert": "P069", "text": "Curly Horse"}, {"wert": "P075", "text": "Dülmener Wildpferd"}, {"wert": "P077", "text": "Esel (unter 130 cm Stockmaß)"}, {"wert": "P079", "text": "Falabella"}, {"wert": "P081", "text": "Norwegisches Fjordpferd"}, {"wert": "P083", "text": "Missouri Foxtrotter"}, {"wert": "P086", "text": "Freiberger"}, {"wert": "P087", "text": "Friese"}, {"wert": "P099", "text": "Haflinger, Edelblut Haflinger"}, {"wert": "P103", "text": "Hannoveraner"}, {"wert": "P106", "text": "Holsteiner"}, {"wert": "P107", "text": "English Hunter"}, {"wert": "P108", "text": "Irish Hunter"}, {"wert": "P109", "text": "Huzule"}, {"wert": "P110", "text": "Irish Cob"}, {"wert": "P112", "text": "Irish Sport Horse"}, {"wert": "P113", "text": "Islandpferd"}, {"wert": "P117", "text": "Kaltblut"}, {"wert": "P130", "text": "Schwarzwälder Kaltblut"}, {"wert": "P132", "text": "Süddeutsches Kaltblut"}, {"wert": "P139", "text": "Kinsky-Pferd"}, {"wert": "P142", "text": "Kleinpferd"}, {"wert": "P143", "text": "Knabstrupper"}, {"wert": "P144", "text": "Konik Polski"}, {"wert": "P148", "text": "Lewitzer"}, {"wert": "P149", "text": "Lipizzaner"}, {"wert": "P151", "text": "Lusitano"}, {"wert": "P155", "text": "Maulesel"}, {"wert": "P156", "text": "Maultier, Muli "}, {"wert": "P158", "text": "American Miniature Horse"}, {"wert": "P159", "text": "Miniaturpferd"}, {"wert": "P166", "text": "Mustang"}, {"wert": "P172", "text": "Noriker"}, {"wert": "P174", "text": "Oldenburger"}, {"wert": "P179", "text": "Paint Horse"}, {"wert": "P180", "text": "Palomino"}, {"wert": "P182", "text": "Paso Fino"}, {"wert": "P184", "text": "Percheron"}, {"wert": "P190", "text": "Pinto"}, {"wert": "P192", "text": "Deutsches Polopferd"}, {"wert": "P193", "text": "Polopony"}, {"wert": "P194", "text": "Argentinisches Polopferd"}, {"wert": "P196", "text": "Pony"}, {"wert": "P201", "text": "Connemara Pony"}, {"wert": "P202", "text": "Dartmoor Pony"}, {"wert": "P206", "text": "Fellpony"}, {"wert": "P213", "text": "Minishetland Pony"}, {"wert": "P222", "text": "Shetland Pony"}, {"wert": "P224", "text": "Welsh Pony"}, {"wert": "P226", "text": "Pura Raza Espanola"}, {"wert": "P229", "text": "American Quarter Horse"}, {"wert": "P231", "text": "Deutsches Reitpferd"}, {"wert": "P236", "text": "Thüringer"}, {"wert": "P237", "text": "Deutsches Reitpony"}, {"wert": "P247", "text": "Schwarzwälder Fuchs"}, {"wert": "P252", "text": "Shire Horse"}, {"wert": "P257", "text": "Deutsches Sportpferd"}, {"wert": "P258", "text": "Irisches Sportpferd"}, {"wert": "P267", "text": "Tinker"}, {"wert": "P272", "text": "Traber"}, {"wert": "P281", "text": "Trakehner"}, {"wert": "P286", "text": "Vollblut"}, {"wert": "P289", "text": "Englisches Vollblut"}, {"wert": "P290", "text": "Warmblut"}, {"wert": "P291", "text": "Bayerisches Warmblut"}, {"wert": "P301", "text": "Mecklenburger Warmblut"}, {"wert": "P302", "text": "Niederländisches Warmblut"}, {"wert": "P305", "text": "Rheinländer (Rheinisches Warmblut)"}, {"wert": "P317", "text": "Zweibrücker"}, {"wert": "P319", "text": "Westfale"}, {"wert": "P321", "text": "Württemberger"}, {"wert": "P324", "text": "Leonharder"}, {"wert": "P325", "text": "Pony-/Kleinpferd Kreuzung"}, {"wert": "P326", "text": "Kaltblut Kreuzung"}, {"wert": "P327", "text": "Vollblut Kreuzung / Halbblut"}, {"wert": "P328", "text": "Warmblut Kreuzung"}, {"wert": "P329", "text": "Sonstige Pony-/Kleinpferdrasse"}, {"wert": "P330", "text": "Sonstige Kaltblutrasse"}, {"wert": "P331", "text": "Sonstige Warmblutrasse"}, {"wert": "P332", "text": "Sonstige Vollblutrasse"}, {"wert": "P333", "text": "Großesel (130 cm Stockmaß und größer)"}]};
+
+    // --- Searchable Rasse Dropdown ---
+    const rasseSearch = document.getElementById("rasseSearch");
+    const rasseWert = document.getElementById("rasseWert");
+    const rasseDropdown = document.getElementById("rasseDropdown");
+    let currentRassen = RASSEN.hunde;
+
+    function buildDropdown(list) {
+      rasseDropdown.innerHTML = "";
+      const misch = document.createElement("div");
+      misch.className = "dropdown-item";
+      misch.textContent = "Mischling / Rasse unbekannt";
+      misch.addEventListener("mousedown", () => selectRasse("MISCHLING", ""));
+      rasseDropdown.appendChild(misch);
+      list.forEach(r => {
+        const el = document.createElement("div");
+        el.className = "dropdown-item";
+        el.textContent = r.text;
+        el.addEventListener("mousedown", () => selectRasse(r.wert, r.text));
+        rasseDropdown.appendChild(el);
+      });
+    }
+
+    function selectRasse(wert, text) {
+      rasseWert.value = wert;
+      rasseSearch.value = text;
+      rasseDropdown.classList.remove("open");
+    }
+
+    rasseSearch.addEventListener("focus", () => {
+      buildDropdown(currentRassen.filter(r => r.text.toLowerCase().includes(rasseSearch.value.toLowerCase())).slice(0, 60));
+      rasseDropdown.classList.add("open");
+    });
+    rasseSearch.addEventListener("input", () => {
+      rasseWert.value = "MISCHLING";
+      buildDropdown(currentRassen.filter(r => r.text.toLowerCase().includes(rasseSearch.value.toLowerCase())).slice(0, 80));
+      rasseDropdown.classList.add("open");
+    });
+    rasseSearch.addEventListener("blur", () => setTimeout(() => rasseDropdown.classList.remove("open"), 150));
+
+    // --- Tierart Change ---
+    const tierartSel = document.getElementById("tierart");
+    const groesseField = document.getElementById("groesseField");
+
+    function onTierartChange() {
+      const t = tierartSel.value;
+      currentRassen = t === "Katze" ? RASSEN.katzen : t === "Pferd" ? RASSEN.pferde : RASSEN.hunde;
+      groesseField.style.display = t === "Hund" ? "block" : "none";
+      selectRasse("MISCHLING", "");
+    }
+    tierartSel.addEventListener("change", onTierartChange);
+    onTierartChange();
+
+    // PLZ nur Zahlen
+    document.getElementById("plz").addEventListener("input", e => { e.target.value = e.target.value.replace(/\D/g,"").slice(0,5); });
+
+    // --- Submit ---
+    const form = document.getElementById("form");
+    const loading = document.getElementById("loading");
+    const submitBtn = document.getElementById("submitBtn");
+    const errorBanner = document.getElementById("errorBanner");
+
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      errorBanner.classList.remove("active");
+
+      const plz = document.getElementById("plz").value.trim();
+      const gebHalter = document.getElementById("geb_halter").value.trim();
+      const tiername = document.getElementById("tiername").value.trim();
+      const gebTier = document.getElementById("geb_tier").value.trim();
+
+      if (!plz || plz.length !== 5) return showError("Bitte gültige 5-stellige PLZ eingeben.");
+      if (!/^\d{2}\.\d{2}\.\d{4}$/.test(gebHalter)) return showError("Geburtsdatum Halter: TT.MM.JJJJ");
+      if (!tiername) return showError("Bitte Tiernamen eingeben.");
+      if (!/^\d{2}\.\d{2}\.\d{4}$/.test(gebTier)) return showError("Tiergeburtsdatum: TT.MM.JJJJ");
+
+      // Vorerkrankungen
+      const illnesses = [...document.querySelectorAll("input[name=illness]:checked")].map(el => el.value);
+      const hasIllnesses = illnesses.length > 0;
+
+      submitBtn.disabled = true;
+      loading.classList.add("active");
+
+      const body = {
+        plz,
+        geburtsdatum_halter: gebHalter,
+        tierart: tierartSel.value,
+        geschlecht: document.getElementById("geschlecht").value,
+        tiername,
+        geburtsdatum_tier: gebTier,
+        rasse_wert: rasseWert.value,
+        rasse_text: rasseSearch.value.trim() || null,
+        groesse: tierartSel.value === "Hund" ? (document.querySelector("input[name=groesse]:checked")?.value || "0 - 44 cm") : "",
+        has_illnesses: hasIllnesses,
+        illnesses: illnesses,
+        coverage_type: document.querySelector("input[name=coverageType]:checked")?.value || "OP-Schutz",
+        tarif_priority: document.querySelector("input[name=tarifsAuswahlVorgang]:checked")?.value || "Bestes Preis-Leistungs-Verhältnis",
+        tarifPraferenz: document.querySelector("input[name=coverageType]:checked")?.value || "OP-Schutz"
+      };
+
+      try {
+        const res = await fetch("/api/tkv/calculate", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(body) });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.code) throw new Error(data?.message || "Berechnung fehlgeschlagen.");
+        window.location.href = "/tkv?code=" + encodeURIComponent(data.code);
+      } catch(err) {
+        loading.classList.remove("active");
+        submitBtn.disabled = false;
+        showError(err.message);
+      }
+    });
+
+    function showError(msg) { errorBanner.textContent = msg; errorBanner.classList.add("active"); }
+    </script>
+  </body>
+</html>

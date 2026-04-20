@@ -1,0 +1,4260 @@
+{
+  "pferderassen": [
+    {
+      "wert": "P003",
+      "text": "Achal Tekkiner"
+    },
+    {
+      "wert": "P005",
+      "text": "Aegidienberger"
+    },
+    {
+      "wert": "P014",
+      "text": "Andalusier"
+    },
+    {
+      "wert": "P015",
+      "text": "Anglo-Araber"
+    },
+    {
+      "wert": "P025",
+      "text": "Appaloosa"
+    },
+    {
+      "wert": "P030",
+      "text": "Shagya Araber"
+    },
+    {
+      "wert": "P032",
+      "text": "Arabisches Vollblut"
+    },
+    {
+      "wert": "P038",
+      "text": "Ardenner"
+    },
+    {
+      "wert": "P056",
+      "text": "Camargue-Pferd"
+    },
+    {
+      "wert": "P063",
+      "text": "Clydesdale"
+    },
+    {
+      "wert": "P064",
+      "text": "Cob"
+    },
+    {
+      "wert": "P068",
+      "text": "Criollo"
+    },
+    {
+      "wert": "P069",
+      "text": "Curly Horse"
+    },
+    {
+      "wert": "P075",
+      "text": "Dülmener Wildpferd"
+    },
+    {
+      "wert": "P077",
+      "text": "Esel (unter 130 cm Stockmaß)"
+    },
+    {
+      "wert": "P079",
+      "text": "Falabella"
+    },
+    {
+      "wert": "P081",
+      "text": "Norwegisches Fjordpferd"
+    },
+    {
+      "wert": "P083",
+      "text": "Missouri Foxtrotter"
+    },
+    {
+      "wert": "P086",
+      "text": "Freiberger"
+    },
+    {
+      "wert": "P087",
+      "text": "Friese"
+    },
+    {
+      "wert": "P099",
+      "text": "Haflinger, Edelblut Haflinger"
+    },
+    {
+      "wert": "P103",
+      "text": "Hannoveraner"
+    },
+    {
+      "wert": "P106",
+      "text": "Holsteiner"
+    },
+    {
+      "wert": "P107",
+      "text": "English Hunter"
+    },
+    {
+      "wert": "P108",
+      "text": "Irish Hunter"
+    },
+    {
+      "wert": "P109",
+      "text": "Huzule"
+    },
+    {
+      "wert": "P110",
+      "text": "Irish Cob"
+    },
+    {
+      "wert": "P112",
+      "text": "Irish Sport Horse"
+    },
+    {
+      "wert": "P113",
+      "text": "Islandpferd"
+    },
+    {
+      "wert": "P117",
+      "text": "Kaltblut"
+    },
+    {
+      "wert": "P130",
+      "text": "Schwarzwälder Kaltblut"
+    },
+    {
+      "wert": "P132",
+      "text": "Süddeutsches Kaltblut"
+    },
+    {
+      "wert": "P139",
+      "text": "Kinsky-Pferd"
+    },
+    {
+      "wert": "P142",
+      "text": "Kleinpferd"
+    },
+    {
+      "wert": "P143",
+      "text": "Knabstrupper"
+    },
+    {
+      "wert": "P144",
+      "text": "Konik Polski"
+    },
+    {
+      "wert": "P148",
+      "text": "Lewitzer"
+    },
+    {
+      "wert": "P149",
+      "text": "Lipizzaner"
+    },
+    {
+      "wert": "P151",
+      "text": "Lusitano"
+    },
+    {
+      "wert": "P155",
+      "text": "Maulesel"
+    },
+    {
+      "wert": "P156",
+      "text": "Maultier, Muli "
+    },
+    {
+      "wert": "P158",
+      "text": "American Miniature Horse"
+    },
+    {
+      "wert": "P159",
+      "text": "Miniaturpferd"
+    },
+    {
+      "wert": "P166",
+      "text": "Mustang"
+    },
+    {
+      "wert": "P172",
+      "text": "Noriker"
+    },
+    {
+      "wert": "P174",
+      "text": "Oldenburger"
+    },
+    {
+      "wert": "P179",
+      "text": "Paint Horse"
+    },
+    {
+      "wert": "P180",
+      "text": "Palomino"
+    },
+    {
+      "wert": "P182",
+      "text": "Paso Fino"
+    },
+    {
+      "wert": "P184",
+      "text": "Percheron"
+    },
+    {
+      "wert": "P190",
+      "text": "Pinto"
+    },
+    {
+      "wert": "P192",
+      "text": "Deutsches Polopferd"
+    },
+    {
+      "wert": "P193",
+      "text": "Polopony"
+    },
+    {
+      "wert": "P194",
+      "text": "Argentinisches Polopferd"
+    },
+    {
+      "wert": "P196",
+      "text": "Pony"
+    },
+    {
+      "wert": "P201",
+      "text": "Connemara Pony"
+    },
+    {
+      "wert": "P202",
+      "text": "Dartmoor Pony"
+    },
+    {
+      "wert": "P206",
+      "text": "Fellpony"
+    },
+    {
+      "wert": "P213",
+      "text": "Minishetland Pony"
+    },
+    {
+      "wert": "P222",
+      "text": "Shetland Pony"
+    },
+    {
+      "wert": "P224",
+      "text": "Welsh Pony"
+    },
+    {
+      "wert": "P226",
+      "text": "Pura Raza Espanola"
+    },
+    {
+      "wert": "P229",
+      "text": "American Quarter Horse"
+    },
+    {
+      "wert": "P231",
+      "text": "Deutsches Reitpferd"
+    },
+    {
+      "wert": "P236",
+      "text": "Thüringer"
+    },
+    {
+      "wert": "P237",
+      "text": "Deutsches Reitpony"
+    },
+    {
+      "wert": "P247",
+      "text": "Schwarzwälder Fuchs"
+    },
+    {
+      "wert": "P252",
+      "text": "Shire Horse"
+    },
+    {
+      "wert": "P257",
+      "text": "Deutsches Sportpferd"
+    },
+    {
+      "wert": "P258",
+      "text": "Irisches Sportpferd"
+    },
+    {
+      "wert": "P267",
+      "text": "Tinker"
+    },
+    {
+      "wert": "P272",
+      "text": "Traber"
+    },
+    {
+      "wert": "P281",
+      "text": "Trakehner"
+    },
+    {
+      "wert": "P286",
+      "text": "Vollblut"
+    },
+    {
+      "wert": "P289",
+      "text": "Englisches Vollblut"
+    },
+    {
+      "wert": "P290",
+      "text": "Warmblut"
+    },
+    {
+      "wert": "P291",
+      "text": "Bayerisches Warmblut"
+    },
+    {
+      "wert": "P301",
+      "text": "Mecklenburger Warmblut"
+    },
+    {
+      "wert": "P302",
+      "text": "Niederländisches Warmblut"
+    },
+    {
+      "wert": "P305",
+      "text": "Rheinländer (Rheinisches Warmblut)"
+    },
+    {
+      "wert": "P317",
+      "text": "Zweibrücker"
+    },
+    {
+      "wert": "P319",
+      "text": "Westfale"
+    },
+    {
+      "wert": "P321",
+      "text": "Württemberger"
+    },
+    {
+      "wert": "P324",
+      "text": "Leonharder"
+    },
+    {
+      "wert": "P325",
+      "text": "Pony-/Kleinpferd Kreuzung"
+    },
+    {
+      "wert": "P326",
+      "text": "Kaltblut Kreuzung"
+    },
+    {
+      "wert": "P327",
+      "text": "Vollblut Kreuzung / Halbblut"
+    },
+    {
+      "wert": "P328",
+      "text": "Warmblut Kreuzung"
+    },
+    {
+      "wert": "P329",
+      "text": "Sonstige Pony-/Kleinpferdrasse"
+    },
+    {
+      "wert": "P330",
+      "text": "Sonstige Kaltblutrasse"
+    },
+    {
+      "wert": "P331",
+      "text": "Sonstige Warmblutrasse"
+    },
+    {
+      "wert": "P332",
+      "text": "Sonstige Vollblutrasse"
+    },
+    {
+      "wert": "P333",
+      "text": "Großesel (130 cm Stockmaß und größer)"
+    }
+  ],
+  "hunderassen": [
+    {
+      "wert": "H001",
+      "text": "Aidi (Marokkanischer Schäferhund)",
+      "motherBreed": {
+        "wert": "D001",
+        "text": "Aidi (Marokkanischer Schäferhund) Mix"
+      }
+    },
+    {
+      "wert": "H004",
+      "text": "Anglo-français de petite vénerie",
+      "motherBreed": {
+        "wert": "D002",
+        "text": "Anglo-français de petite vénerie Mix"
+      }
+    },
+    {
+      "wert": "H005",
+      "text": "Ariégeois",
+      "motherBreed": {
+        "wert": "D003",
+        "text": "Ariégeois Mix"
+      }
+    },
+    {
+      "wert": "H006",
+      "text": "Azawakh (Tuaregwindhund)",
+      "motherBreed": {
+        "wert": "D004",
+        "text": "Azawakh (Tuaregwindhund) Mix"
+      }
+    },
+    {
+      "wert": "H007",
+      "text": "Barbet",
+      "motherBreed": {
+        "wert": "D005",
+        "text": "Barbet Mix"
+      }
+    },
+    {
+      "wert": "H009",
+      "text": "Bärenhund",
+      "motherBreed": {
+        "wert": "D006",
+        "text": "Bärenhund Mix"
+      }
+    },
+    {
+      "wert": "H010",
+      "text": "Barsoi (Russischer Windhund)",
+      "motherBreed": {
+        "wert": "D007",
+        "text": "Barsoi (Russischer Windhund) Mix"
+      }
+    },
+    {
+      "wert": "H011",
+      "text": "Basenji (Congo Dog)",
+      "motherBreed": {
+        "wert": "D008",
+        "text": "Basenji (Congo Dog) Mix"
+      }
+    },
+    {
+      "wert": "H013",
+      "text": "Basset Griffon",
+      "motherBreed": {
+        "wert": "D009",
+        "text": "Basset Griffon Mix"
+      }
+    },
+    {
+      "wert": "H014",
+      "text": "Beagle",
+      "motherBreed": {
+        "wert": "D010",
+        "text": "Beagle Mix"
+      }
+    },
+    {
+      "wert": "H015",
+      "text": "Beagle Harrier",
+      "motherBreed": {
+        "wert": "D011",
+        "text": "Beagle Harrier Mix"
+      }
+    },
+    {
+      "wert": "H016",
+      "text": "Bergamasker Hirtenhund",
+      "motherBreed": {
+        "wert": "D012",
+        "text": "Bergamasker Hirtenhund Mix"
+      }
+    },
+    {
+      "wert": "H018",
+      "text": "Berger de Brie (Briard)",
+      "motherBreed": {
+        "wert": "D013",
+        "text": "Berger de Brie (Briard) Mix"
+      }
+    },
+    {
+      "wert": "H019",
+      "text": "Berger de Picaderie",
+      "motherBreed": {
+        "wert": "D014",
+        "text": "Berger de Picaderie Mix"
+      }
+    },
+    {
+      "wert": "H021",
+      "text": "Bernhardiner",
+      "motherBreed": {
+        "wert": "D015",
+        "text": "Bernhardiner Mix"
+      }
+    },
+    {
+      "wert": "H023",
+      "text": "Billy",
+      "motherBreed": {
+        "wert": "D016",
+        "text": "Billy Mix"
+      }
+    },
+    {
+      "wert": "H025",
+      "text": "Bobtail (Old English Sheepdog)",
+      "motherBreed": {
+        "wert": "D017",
+        "text": "Bobtail (Old English Sheepdog) Mix"
+      }
+    },
+    {
+      "wert": "H026",
+      "text": "Bologneser (Bichon Bolognais)",
+      "motherBreed": {
+        "wert": "D018",
+        "text": "Bologneser (Bichon Bolognais) Mix"
+      }
+    },
+    {
+      "wert": "H027",
+      "text": "Bolonka Zwetna",
+      "motherBreed": {
+        "wert": "D019",
+        "text": "Bolonka Zwetna Mix"
+      }
+    },
+    {
+      "wert": "H029",
+      "text": "Bouvier des Flandres",
+      "motherBreed": {
+        "wert": "D020",
+        "text": "Bouvier des Flandres Mix"
+      }
+    },
+    {
+      "wert": "H030",
+      "text": "Deutscher Boxer",
+      "motherBreed": {
+        "wert": "D021",
+        "text": "Deutscher Boxer Mix"
+      }
+    },
+    {
+      "wert": "H031",
+      "text": "Bracke",
+      "motherBreed": {
+        "wert": "D022",
+        "text": "Bracke Mix"
+      }
+    },
+    {
+      "wert": "H033",
+      "text": "Broholmer",
+      "motherBreed": {
+        "wert": "D023",
+        "text": "Broholmer Mix"
+      }
+    },
+    {
+      "wert": "H034",
+      "text": "Buhund",
+      "motherBreed": {
+        "wert": "D024",
+        "text": "Buhund Mix"
+      }
+    },
+    {
+      "wert": "H035",
+      "text": "Bulldogge",
+      "motherBreed": {
+        "wert": "D025",
+        "text": "Bulldogge Mix"
+      }
+    },
+    {
+      "wert": "H036",
+      "text": "Cane Corso (Italienische Bulldogge)",
+      "motherBreed": {
+        "wert": "D026",
+        "text": "Cane Corso (Italienische Bulldogge) Mix"
+      }
+    },
+    {
+      "wert": "H043",
+      "text": "Australian Cattle Dog",
+      "motherBreed": {
+        "wert": "D027",
+        "text": "Australian Cattle Dog Mix"
+      }
+    },
+    {
+      "wert": "H044",
+      "text": "Chien d'Artois",
+      "motherBreed": {
+        "wert": "D028",
+        "text": "Chien d'Artois Mix"
+      }
+    },
+    {
+      "wert": "H045",
+      "text": "Chihuahua",
+      "motherBreed": {
+        "wert": "D029",
+        "text": "Chihuahua Mix"
+      }
+    },
+    {
+      "wert": "H047",
+      "text": "Chow-Chow",
+      "motherBreed": {
+        "wert": "D030",
+        "text": "Chow-Chow Mix"
+      }
+    },
+    {
+      "wert": "H049",
+      "text": "Cirneco dell'Etna (Sizilianische Bracke)",
+      "motherBreed": {
+        "wert": "D031",
+        "text": "Cirneco dell'Etna (Sizilianische Bracke) Mix"
+      }
+    },
+    {
+      "wert": "H051",
+      "text": "Bearded Collie",
+      "motherBreed": {
+        "wert": "D032",
+        "text": "Bearded Collie Mix"
+      }
+    },
+    {
+      "wert": "H052",
+      "text": "Border Collie",
+      "motherBreed": {
+        "wert": "D033",
+        "text": "Border Collie Mix"
+      }
+    },
+    {
+      "wert": "H053",
+      "text": "Black and Tan Coonhound",
+      "motherBreed": {
+        "wert": "D034",
+        "text": "Black and Tan Coonhound Mix"
+      }
+    },
+    {
+      "wert": "H055",
+      "text": "Coton de Tuléar",
+      "motherBreed": {
+        "wert": "D035",
+        "text": "Coton de Tuléar Mix"
+      }
+    },
+    {
+      "wert": "H056",
+      "text": "Dackel (Teckel)",
+      "motherBreed": {
+        "wert": "D036",
+        "text": "Dackel (Teckel) Mix"
+      }
+    },
+    {
+      "wert": "H057",
+      "text": "Dalmatiner",
+      "motherBreed": {
+        "wert": "D037",
+        "text": "Dalmatiner Mix"
+      }
+    },
+    {
+      "wert": "H058",
+      "text": "Deerhound",
+      "motherBreed": {
+        "wert": "D038",
+        "text": "Deerhound Mix"
+      }
+    },
+    {
+      "wert": "H059",
+      "text": "Deutsch Drahthaar",
+      "motherBreed": {
+        "wert": "D039",
+        "text": "Deutsch Drahthaar Mix"
+      }
+    },
+    {
+      "wert": "H060",
+      "text": "Deutsch Kurzhaar",
+      "motherBreed": {
+        "wert": "D040",
+        "text": "Deutsch Kurzhaar Mix"
+      }
+    },
+    {
+      "wert": "H061",
+      "text": "Deutsch Langhaar",
+      "motherBreed": {
+        "wert": "D041",
+        "text": "Deutsch Langhaar Mix"
+      }
+    },
+    {
+      "wert": "H062",
+      "text": "Deutsch Stichelhaar",
+      "motherBreed": {
+        "wert": "D042",
+        "text": "Deutsch Stichelhaar Mix"
+      }
+    },
+    {
+      "wert": "H063",
+      "text": "Dingo",
+      "motherBreed": {
+        "wert": "D043",
+        "text": "Dingo Mix"
+      }
+    },
+    {
+      "wert": "H064",
+      "text": "Dobermann",
+      "motherBreed": {
+        "wert": "D044",
+        "text": "Dobermann Mix"
+      }
+    },
+    {
+      "wert": "H065",
+      "text": "Dogge",
+      "motherBreed": {
+        "wert": "D045",
+        "text": "Dogge Mix"
+      }
+    },
+    {
+      "wert": "H066",
+      "text": "Dogo Argentino",
+      "motherBreed": {
+        "wert": "D046",
+        "text": "Dogo Argentino Mix"
+      }
+    },
+    {
+      "wert": "H068",
+      "text": "Schwedische Dachsbracke (Drever)",
+      "motherBreed": {
+        "wert": "D047",
+        "text": "Schwedische Dachsbracke (Drever) Mix"
+      }
+    },
+    {
+      "wert": "H069",
+      "text": "Dunker",
+      "motherBreed": {
+        "wert": "D048",
+        "text": "Dunker Mix"
+      }
+    },
+    {
+      "wert": "H076",
+      "text": "Eurasier (Wolf-Chow)",
+      "motherBreed": {
+        "wert": "D049",
+        "text": "Eurasier (Wolf-Chow) Mix"
+      }
+    },
+    {
+      "wert": "H077",
+      "text": "Fila Brasileiro (Brasilianischer Mastiff)",
+      "motherBreed": {
+        "wert": "D050",
+        "text": "Fila Brasileiro (Brasilianischer Mastiff) Mix"
+      }
+    },
+    {
+      "wert": "H078",
+      "text": "American Foxhound",
+      "motherBreed": {
+        "wert": "D051",
+        "text": "American Foxhound Mix"
+      }
+    },
+    {
+      "wert": "H079",
+      "text": "English Foxhound",
+      "motherBreed": {
+        "wert": "D052",
+        "text": "English Foxhound Mix"
+      }
+    },
+    {
+      "wert": "H080",
+      "text": "Galgo Español (Spanischer Windhund)",
+      "motherBreed": {
+        "wert": "D053",
+        "text": "Galgo Español (Spanischer Windhund) Mix"
+      }
+    },
+    {
+      "wert": "H081",
+      "text": "Grand anglo-français",
+      "motherBreed": {
+        "wert": "D054",
+        "text": "Grand anglo-français Mix"
+      }
+    },
+    {
+      "wert": "H082",
+      "text": "Grand bleu de Gascogne",
+      "motherBreed": {
+        "wert": "D055",
+        "text": "Grand bleu de Gascogne Mix"
+      }
+    },
+    {
+      "wert": "H083",
+      "text": "Grand Gascon Saintongeois",
+      "motherBreed": {
+        "wert": "D056",
+        "text": "Grand Gascon Saintongeois Mix"
+      }
+    },
+    {
+      "wert": "H084",
+      "text": "Greyhound (Polnischer Windhund)",
+      "motherBreed": {
+        "wert": "D057",
+        "text": "Greyhound (Polnischer Windhund) Mix"
+      }
+    },
+    {
+      "wert": "H085",
+      "text": "Griffon",
+      "motherBreed": {
+        "wert": "D058",
+        "text": "Griffon Mix"
+      }
+    },
+    {
+      "wert": "H086",
+      "text": "Belgischer Griffon",
+      "motherBreed": {
+        "wert": "D059",
+        "text": "Belgischer Griffon Mix"
+      }
+    },
+    {
+      "wert": "H089",
+      "text": "Grönlandhund",
+      "motherBreed": {
+        "wert": "D060",
+        "text": "Grönlandhund Mix"
+      }
+    },
+    {
+      "wert": "H090",
+      "text": "Haldenstövare",
+      "motherBreed": {
+        "wert": "D061",
+        "text": "Haldenstövare Mix"
+      }
+    },
+    {
+      "wert": "H091",
+      "text": "Hamiltonstövare (Hamilton Bracke)",
+      "motherBreed": {
+        "wert": "D062",
+        "text": "Hamiltonstövare (Hamilton Bracke) Mix"
+      }
+    },
+    {
+      "wert": "H092",
+      "text": "Harrier",
+      "motherBreed": {
+        "wert": "D063",
+        "text": "Harrier Mix"
+      }
+    },
+    {
+      "wert": "H093",
+      "text": "Harzer Fuchs",
+      "motherBreed": {
+        "wert": "D064",
+        "text": "Harzer Fuchs Mix"
+      }
+    },
+    {
+      "wert": "H094",
+      "text": "Havanerser",
+      "motherBreed": {
+        "wert": "D065",
+        "text": "Havanerser Mix"
+      }
+    },
+    {
+      "wert": "H097",
+      "text": "Hovawart",
+      "motherBreed": {
+        "wert": "D066",
+        "text": "Hovawart Mix"
+      }
+    },
+    {
+      "wert": "H098",
+      "text": "Altdänischer Vorstehhund (Gammel Dansk Honsehund)",
+      "motherBreed": {
+        "wert": "D067",
+        "text": "Altdänischer Vorstehhund (Gammel Dansk Honsehund) Mix"
+      }
+    },
+    {
+      "wert": "H099",
+      "text": "Husky",
+      "motherBreed": {
+        "wert": "D068",
+        "text": "Husky Mix"
+      }
+    },
+    {
+      "wert": "H100",
+      "text": "Hygenhund",
+      "motherBreed": {
+        "wert": "D069",
+        "text": "Hygenhund Mix"
+      }
+    },
+    {
+      "wert": "H101",
+      "text": "Islandhund (Isländischer Spitz, Isländischer Schäferhund)",
+      "motherBreed": {
+        "wert": "D070",
+        "text": "Islandhund (Isländischer Spitz, Isländischer Schäferhund) Mix"
+      }
+    },
+    {
+      "wert": "H102",
+      "text": "Japan Chin (Japan Spitz)",
+      "motherBreed": {
+        "wert": "D071",
+        "text": "Japan Chin (Japan Spitz) Mix"
+      }
+    },
+    {
+      "wert": "H104",
+      "text": "Kanaan Hund (Canaan Dog)",
+      "motherBreed": {
+        "wert": "D072",
+        "text": "Kanaan Hund (Canaan Dog) Mix"
+      }
+    },
+    {
+      "wert": "H107",
+      "text": "Komodor",
+      "motherBreed": {
+        "wert": "D073",
+        "text": "Komodor Mix"
+      }
+    },
+    {
+      "wert": "H108",
+      "text": "Kooikerhondje (Holländischer Entenlockhund)",
+      "motherBreed": {
+        "wert": "D074",
+        "text": "Kooikerhondje (Holländischer Entenlockhund) Mix"
+      }
+    },
+    {
+      "wert": "H109",
+      "text": "Korea Jindo Dog",
+      "motherBreed": {
+        "wert": "D075",
+        "text": "Korea Jindo Dog Mix"
+      }
+    },
+    {
+      "wert": "H111",
+      "text": "Kuvasz",
+      "motherBreed": {
+        "wert": "D076",
+        "text": "Kuvasz Mix"
+      }
+    },
+    {
+      "wert": "H112",
+      "text": "Lagotto Romagnolo",
+      "motherBreed": {
+        "wert": "D077",
+        "text": "Lagotto Romagnolo Mix"
+      }
+    },
+    {
+      "wert": "H113",
+      "text": "Laika",
+      "motherBreed": {
+        "wert": "D078",
+        "text": "Laika Mix"
+      }
+    },
+    {
+      "wert": "H114",
+      "text": "Landseer",
+      "motherBreed": {
+        "wert": "D079",
+        "text": "Landseer Mix"
+      }
+    },
+    {
+      "wert": "H118",
+      "text": "Schweizerischer Laufhund",
+      "motherBreed": {
+        "wert": "D080",
+        "text": "Schweizerischer Laufhund Mix"
+      }
+    },
+    {
+      "wert": "H119",
+      "text": "Leonberger",
+      "motherBreed": {
+        "wert": "D081",
+        "text": "Leonberger Mix"
+      }
+    },
+    {
+      "wert": "H120",
+      "text": "Lhasa Apso",
+      "motherBreed": {
+        "wert": "D082",
+        "text": "Lhasa Apso Mix"
+      }
+    },
+    {
+      "wert": "H121",
+      "text": "Löwchen (Petit Chien Lion)",
+      "motherBreed": {
+        "wert": "D083",
+        "text": "Löwchen (Petit Chien Lion) Mix"
+      }
+    },
+    {
+      "wert": "H123",
+      "text": "Lurcher",
+      "motherBreed": {
+        "wert": "D084",
+        "text": "Lurcher Mix"
+      }
+    },
+    {
+      "wert": "H124",
+      "text": "Magyar Vizsla",
+      "motherBreed": {
+        "wert": "D085",
+        "text": "Magyar Vizsla Mix"
+      }
+    },
+    {
+      "wert": "H125",
+      "text": "Malteser",
+      "motherBreed": {
+        "wert": "D086",
+        "text": "Malteser Mix"
+      }
+    },
+    {
+      "wert": "H127",
+      "text": "Bullmastiff",
+      "motherBreed": {
+        "wert": "D087",
+        "text": "Bullmastiff Mix"
+      }
+    },
+    {
+      "wert": "H128",
+      "text": "Mastin de los Pirineos",
+      "motherBreed": {
+        "wert": "D088",
+        "text": "Mastin de los Pirineos Mix"
+      }
+    },
+    {
+      "wert": "H130",
+      "text": "Mastino Napoletano (Italienische Dogge)",
+      "motherBreed": {
+        "wert": "D089",
+        "text": "Mastino Napoletano (Italienische Dogge) Mix"
+      }
+    },
+    {
+      "wert": "H134",
+      "text": "Mops (Pug)",
+      "motherBreed": {
+        "wert": "D090",
+        "text": "Mops (Pug) Mix"
+      }
+    },
+    {
+      "wert": "H135",
+      "text": "Mudi (Ungarischer Schäferhund)",
+      "motherBreed": {
+        "wert": "D091",
+        "text": "Mudi (Ungarischer Schäferhund) Mix"
+      }
+    },
+    {
+      "wert": "H136",
+      "text": "Großer Münsterländer",
+      "motherBreed": {
+        "wert": "D092",
+        "text": "Großer Münsterländer Mix"
+      }
+    },
+    {
+      "wert": "H137",
+      "text": "Kleiner Münsterländer",
+      "motherBreed": {
+        "wert": "D093",
+        "text": "Kleiner Münsterländer Mix"
+      }
+    },
+    {
+      "wert": "H138",
+      "text": "Nackt-/Schopfhund",
+      "motherBreed": {
+        "wert": "D094",
+        "text": "Nackt-/Schopfhund Mix"
+      }
+    },
+    {
+      "wert": "H139",
+      "text": "Neufundländer",
+      "motherBreed": {
+        "wert": "D095",
+        "text": "Neufundländer Mix"
+      }
+    },
+    {
+      "wert": "H141",
+      "text": "Otterhound",
+      "motherBreed": {
+        "wert": "D096",
+        "text": "Otterhound Mix"
+      }
+    },
+    {
+      "wert": "H143",
+      "text": "Perdiguero de Burgos",
+      "motherBreed": {
+        "wert": "D097",
+        "text": "Perdiguero de Burgos Mix"
+      }
+    },
+    {
+      "wert": "H144",
+      "text": "Perro de agua Español (Spanischer Wasserhund)",
+      "motherBreed": {
+        "wert": "D098",
+        "text": "Perro de agua Español (Spanischer Wasserhund) Mix"
+      }
+    },
+    {
+      "wert": "H145",
+      "text": "Petit bleu de Gascogne",
+      "motherBreed": {
+        "wert": "D099",
+        "text": "Petit bleu de Gascogne Mix"
+      }
+    },
+    {
+      "wert": "H146",
+      "text": "Petit Gascon Saintongeois",
+      "motherBreed": {
+        "wert": "D100",
+        "text": "Petit Gascon Saintongeois Mix"
+      }
+    },
+    {
+      "wert": "H147",
+      "text": "Pharaonenhund",
+      "motherBreed": {
+        "wert": "D101",
+        "text": "Pharaonenhund Mix"
+      }
+    },
+    {
+      "wert": "H148",
+      "text": "Pinscher",
+      "motherBreed": {
+        "wert": "D102",
+        "text": "Pinscher Mix"
+      }
+    },
+    {
+      "wert": "H149",
+      "text": "Affenpinscher",
+      "motherBreed": {
+        "wert": "D103",
+        "text": "Affenpinscher Mix"
+      }
+    },
+    {
+      "wert": "H150",
+      "text": "Zwergpinscher (Rehpinscher)",
+      "motherBreed": {
+        "wert": "D104",
+        "text": "Zwergpinscher (Rehpinscher) Mix"
+      }
+    },
+    {
+      "wert": "H151",
+      "text": "Podenco",
+      "motherBreed": {
+        "wert": "D105",
+        "text": "Podenco Mix"
+      }
+    },
+    {
+      "wert": "H152",
+      "text": "Podengo",
+      "motherBreed": {
+        "wert": "D106",
+        "text": "Podengo Mix"
+      }
+    },
+    {
+      "wert": "H153",
+      "text": "Podengo (klein)",
+      "motherBreed": {
+        "wert": "D107",
+        "text": "Podengo (klein) Mix"
+      }
+    },
+    {
+      "wert": "H154",
+      "text": "Pointer",
+      "motherBreed": {
+        "wert": "D108",
+        "text": "Pointer Mix"
+      }
+    },
+    {
+      "wert": "H157",
+      "text": "Porcelaine",
+      "motherBreed": {
+        "wert": "D109",
+        "text": "Porcelaine Mix"
+      }
+    },
+    {
+      "wert": "H158",
+      "text": "Großpudel",
+      "motherBreed": {
+        "wert": "D110",
+        "text": "Großpudel Mix"
+      }
+    },
+    {
+      "wert": "H159",
+      "text": "Kleinpudel",
+      "motherBreed": {
+        "wert": "D111",
+        "text": "Kleinpudel Mix"
+      }
+    },
+    {
+      "wert": "H160",
+      "text": "Toy Pudel",
+      "motherBreed": {
+        "wert": "D112",
+        "text": "Toy Pudel Mix"
+      }
+    },
+    {
+      "wert": "H161",
+      "text": "Zwergpudel",
+      "motherBreed": {
+        "wert": "D113",
+        "text": "Zwergpudel Mix"
+      }
+    },
+    {
+      "wert": "H162",
+      "text": "Pudelpointer",
+      "motherBreed": {
+        "wert": "D114",
+        "text": "Pudelpointer Mix"
+      }
+    },
+    {
+      "wert": "H163",
+      "text": "Puli (Ungarischer Hirtenhund)",
+      "motherBreed": {
+        "wert": "D115",
+        "text": "Puli (Ungarischer Hirtenhund) Mix"
+      }
+    },
+    {
+      "wert": "H164",
+      "text": "Pumi",
+      "motherBreed": {
+        "wert": "D116",
+        "text": "Pumi Mix"
+      }
+    },
+    {
+      "wert": "H166",
+      "text": "Rafeiro do Alentejo",
+      "motherBreed": {
+        "wert": "D117",
+        "text": "Rafeiro do Alentejo Mix"
+      }
+    },
+    {
+      "wert": "H167",
+      "text": "Rauhbart",
+      "motherBreed": {
+        "wert": "D118",
+        "text": "Rauhbart Mix"
+      }
+    },
+    {
+      "wert": "H168",
+      "text": "Chesapeake Bay Retriever",
+      "motherBreed": {
+        "wert": "D119",
+        "text": "Chesapeake Bay Retriever Mix"
+      }
+    },
+    {
+      "wert": "H169",
+      "text": "Curly Coated Retriever",
+      "motherBreed": {
+        "wert": "D120",
+        "text": "Curly Coated Retriever Mix"
+      }
+    },
+    {
+      "wert": "H170",
+      "text": "Flat Coated Retriever",
+      "motherBreed": {
+        "wert": "D121",
+        "text": "Flat Coated Retriever Mix"
+      }
+    },
+    {
+      "wert": "H171",
+      "text": "Golden Retriever",
+      "motherBreed": {
+        "wert": "D122",
+        "text": "Golden Retriever Mix"
+      }
+    },
+    {
+      "wert": "H172",
+      "text": "Labardor Retriever",
+      "motherBreed": {
+        "wert": "D123",
+        "text": "Labardor Retriever Mix"
+      }
+    },
+    {
+      "wert": "H173",
+      "text": "Novascotia Duck Tolling Retriever",
+      "motherBreed": {
+        "wert": "D124",
+        "text": "Novascotia Duck Tolling Retriever Mix"
+      }
+    },
+    {
+      "wert": "H174",
+      "text": "Rhodesian RIdgeback",
+      "motherBreed": {
+        "wert": "D125",
+        "text": "Rhodesian RIdgeback Mix"
+      }
+    },
+    {
+      "wert": "H176",
+      "text": "Rottweiler",
+      "motherBreed": {
+        "wert": "D126",
+        "text": "Rottweiler Mix"
+      }
+    },
+    {
+      "wert": "H177",
+      "text": "Russkiy Toy",
+      "motherBreed": {
+        "wert": "D127",
+        "text": "Russkiy Toy Mix"
+      }
+    },
+    {
+      "wert": "H179",
+      "text": "Saluki (Persischer Windhund)",
+      "motherBreed": {
+        "wert": "D128",
+        "text": "Saluki (Persischer Windhund) Mix"
+      }
+    },
+    {
+      "wert": "H180",
+      "text": "Samojede",
+      "motherBreed": {
+        "wert": "D129",
+        "text": "Samojede Mix"
+      }
+    },
+    {
+      "wert": "H181",
+      "text": "Sarplaninac (Judoslawischer Hirtenhund)",
+      "motherBreed": {
+        "wert": "D130",
+        "text": "Sarplaninac (Judoslawischer Hirtenhund) Mix"
+      }
+    },
+    {
+      "wert": "H182",
+      "text": "Altdeutscher Schäferhund",
+      "motherBreed": {
+        "wert": "D131",
+        "text": "Altdeutscher Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H183",
+      "text": "Belgischer Schäferhund",
+      "motherBreed": {
+        "wert": "D132",
+        "text": "Belgischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H184",
+      "text": "Deutscher Schäferhund",
+      "motherBreed": {
+        "wert": "D133",
+        "text": "Deutscher Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H185",
+      "text": "Holländischer Schäferhund",
+      "motherBreed": {
+        "wert": "D134",
+        "text": "Holländischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H186",
+      "text": "Karst Schäferhund (Kraski Ovcar)",
+      "motherBreed": {
+        "wert": "D135",
+        "text": "Karst Schäferhund (Kraski Ovcar) Mix"
+      }
+    },
+    {
+      "wert": "H187",
+      "text": "Katalanischer Schäferhund",
+      "motherBreed": {
+        "wert": "D136",
+        "text": "Katalanischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H188",
+      "text": "Kroatischer Schäferhund",
+      "motherBreed": {
+        "wert": "D137",
+        "text": "Kroatischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H190",
+      "text": "Maremmen-Abruzzen-Schäferhund",
+      "motherBreed": {
+        "wert": "D138",
+        "text": "Maremmen-Abruzzen-Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H191",
+      "text": "Tatra Schäferhund",
+      "motherBreed": {
+        "wert": "D139",
+        "text": "Tatra Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H193",
+      "text": "Kaukasischer Schäferhund",
+      "motherBreed": {
+        "wert": "D140",
+        "text": "Kaukasischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H195",
+      "text": "Südrussischer Schäferhund",
+      "motherBreed": {
+        "wert": "D141",
+        "text": "Südrussischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H196",
+      "text": "Zentralasiatischer Schäferhund",
+      "motherBreed": {
+        "wert": "D142",
+        "text": "Zentralasiatischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H197",
+      "text": "Schapendoes",
+      "motherBreed": {
+        "wert": "D143",
+        "text": "Schapendoes Mix"
+      }
+    },
+    {
+      "wert": "H198",
+      "text": "Schillerstövare (Schillerbracke)",
+      "motherBreed": {
+        "wert": "D144",
+        "text": "Schillerstövare (Schillerbracke) Mix"
+      }
+    },
+    {
+      "wert": "H199",
+      "text": "Schipperke",
+      "motherBreed": {
+        "wert": "D145",
+        "text": "Schipperke Mix"
+      }
+    },
+    {
+      "wert": "H200",
+      "text": "Schnauzer",
+      "motherBreed": {
+        "wert": "D146",
+        "text": "Schnauzer Mix"
+      }
+    },
+    {
+      "wert": "H201",
+      "text": "Zwergschnauzer",
+      "motherBreed": {
+        "wert": "D147",
+        "text": "Zwergschnauzer Mix"
+      }
+    },
+    {
+      "wert": "H202",
+      "text": "Bayerischer Gebirgsschweisshund",
+      "motherBreed": {
+        "wert": "D148",
+        "text": "Bayerischer Gebirgsschweisshund Mix"
+      }
+    },
+    {
+      "wert": "H203",
+      "text": "Hannoverscher Schweisshund",
+      "motherBreed": {
+        "wert": "D149",
+        "text": "Hannoverscher Schweisshund Mix"
+      }
+    },
+    {
+      "wert": "H204",
+      "text": "Segugio Maremmano",
+      "motherBreed": {
+        "wert": "D150",
+        "text": "Segugio Maremmano Mix"
+      }
+    },
+    {
+      "wert": "H206",
+      "text": "Setter",
+      "motherBreed": {
+        "wert": "D151",
+        "text": "Setter Mix"
+      }
+    },
+    {
+      "wert": "H207",
+      "text": "Shar Pei",
+      "motherBreed": {
+        "wert": "D152",
+        "text": "Shar Pei Mix"
+      }
+    },
+    {
+      "wert": "H211",
+      "text": "Australian Shepherd (Aussie)",
+      "motherBreed": {
+        "wert": "D153",
+        "text": "Australian Shepherd (Aussie) Mix"
+      }
+    },
+    {
+      "wert": "H213",
+      "text": "Shih Tzu",
+      "motherBreed": {
+        "wert": "D154",
+        "text": "Shih Tzu Mix"
+      }
+    },
+    {
+      "wert": "H214",
+      "text": "Shikoku",
+      "motherBreed": {
+        "wert": "D155",
+        "text": "Shikoku Mix"
+      }
+    },
+    {
+      "wert": "H215",
+      "text": "Sloughi (Arabischer Windhund)",
+      "motherBreed": {
+        "wert": "D156",
+        "text": "Sloughi (Arabischer Windhund) Mix"
+      }
+    },
+    {
+      "wert": "H216",
+      "text": "Slovensky Cuvac",
+      "motherBreed": {
+        "wert": "D157",
+        "text": "Slovensky Cuvac Mix"
+      }
+    },
+    {
+      "wert": "H217",
+      "text": "Smalandsstövare",
+      "motherBreed": {
+        "wert": "D158",
+        "text": "Smalandsstövare Mix"
+      }
+    },
+    {
+      "wert": "H218",
+      "text": "American Cocker Spaniel",
+      "motherBreed": {
+        "wert": "D159",
+        "text": "American Cocker Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H219",
+      "text": "American Water Spaniel",
+      "motherBreed": {
+        "wert": "D160",
+        "text": "American Water Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H220",
+      "text": "Cavalier King Charles Spaniel",
+      "motherBreed": {
+        "wert": "D161",
+        "text": "Cavalier King Charles Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H221",
+      "text": "Clumber Spaniel",
+      "motherBreed": {
+        "wert": "D162",
+        "text": "Clumber Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H223",
+      "text": "English Springer Spaniel",
+      "motherBreed": {
+        "wert": "D163",
+        "text": "English Springer Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H225",
+      "text": "Irish Water Spaniel",
+      "motherBreed": {
+        "wert": "D164",
+        "text": "Irish Water Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H226",
+      "text": "King Charles Spaniel",
+      "motherBreed": {
+        "wert": "D165",
+        "text": "King Charles Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H228",
+      "text": "Sussex Spaniel",
+      "motherBreed": {
+        "wert": "D166",
+        "text": "Sussex Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H229",
+      "text": "Tibet Spaniel",
+      "motherBreed": {
+        "wert": "D167",
+        "text": "Tibet Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H230",
+      "text": "Welsh Springer Spaniel",
+      "motherBreed": {
+        "wert": "D168",
+        "text": "Welsh Springer Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H232",
+      "text": "Spitz",
+      "motherBreed": {
+        "wert": "D169",
+        "text": "Spitz Mix"
+      }
+    },
+    {
+      "wert": "H234",
+      "text": "Taiwan Hund",
+      "motherBreed": {
+        "wert": "D170",
+        "text": "Taiwan Hund Mix"
+      }
+    },
+    {
+      "wert": "H236",
+      "text": "Airedale Terrier",
+      "motherBreed": {
+        "wert": "D171",
+        "text": "Airedale Terrier Mix"
+      }
+    },
+    {
+      "wert": "H237",
+      "text": "American Staffordshire Terrier",
+      "motherBreed": {
+        "wert": "D172",
+        "text": "American Staffordshire Terrier Mix"
+      }
+    },
+    {
+      "wert": "H239",
+      "text": "Australian Silky Terrier",
+      "motherBreed": {
+        "wert": "D173",
+        "text": "Australian Silky Terrier Mix"
+      }
+    },
+    {
+      "wert": "H240",
+      "text": "Bedlington Terrier",
+      "motherBreed": {
+        "wert": "D174",
+        "text": "Bedlington Terrier Mix"
+      }
+    },
+    {
+      "wert": "H241",
+      "text": "Border Terrier",
+      "motherBreed": {
+        "wert": "D175",
+        "text": "Border Terrier Mix"
+      }
+    },
+    {
+      "wert": "H242",
+      "text": "Boston Terrier",
+      "motherBreed": {
+        "wert": "D176",
+        "text": "Boston Terrier Mix"
+      }
+    },
+    {
+      "wert": "H244",
+      "text": "Bullterrier",
+      "motherBreed": {
+        "wert": "D177",
+        "text": "Bullterrier Mix"
+      }
+    },
+    {
+      "wert": "H246",
+      "text": "Cesky Terrier",
+      "motherBreed": {
+        "wert": "D178",
+        "text": "Cesky Terrier Mix"
+      }
+    },
+    {
+      "wert": "H247",
+      "text": "Dandie Dinmont Terrier",
+      "motherBreed": {
+        "wert": "D179",
+        "text": "Dandie Dinmont Terrier Mix"
+      }
+    },
+    {
+      "wert": "H248",
+      "text": "Deutscher Jagdterrier",
+      "motherBreed": {
+        "wert": "D180",
+        "text": "Deutscher Jagdhundterrier Mix"
+      }
+    },
+    {
+      "wert": "H249",
+      "text": "English Toy Terrier",
+      "motherBreed": {
+        "wert": "D181",
+        "text": "English Toy Terrier  Mix"
+      }
+    },
+    {
+      "wert": "H250",
+      "text": "Foxterrier (Drathaar, Rauhaar)",
+      "motherBreed": {
+        "wert": "D182",
+        "text": "Foxterrier (Drathaar, Rauhaar) Mix"
+      }
+    },
+    {
+      "wert": "H251",
+      "text": "Fox Terrier (Glatthaar)",
+      "motherBreed": {
+        "wert": "D183",
+        "text": "Fox Terrier (Glatthaar) Mix"
+      }
+    },
+    {
+      "wert": "H252",
+      "text": "Glen Of Imaal Terrier",
+      "motherBreed": {
+        "wert": "D184",
+        "text": "Glen Of Imaal Terrier Mix"
+      }
+    },
+    {
+      "wert": "H253",
+      "text": "Irish Terrier",
+      "motherBreed": {
+        "wert": "D185",
+        "text": "Irish Terrier Mix"
+      }
+    },
+    {
+      "wert": "H255",
+      "text": "Jack Russel Terrier",
+      "motherBreed": {
+        "wert": "D186",
+        "text": "Jack Russel Terrier Mix"
+      }
+    },
+    {
+      "wert": "H256",
+      "text": "Japanischer Terrier (Nippon-Terrier)",
+      "motherBreed": {
+        "wert": "D187",
+        "text": "Japanischer Terrier (Nippon-Terrier) Mix"
+      }
+    },
+    {
+      "wert": "H257",
+      "text": "Kerry Blue Terrier",
+      "motherBreed": {
+        "wert": "D188",
+        "text": "Kerry Blue Terrier Mix"
+      }
+    },
+    {
+      "wert": "H258",
+      "text": "Lakeland Terrier",
+      "motherBreed": {
+        "wert": "D189",
+        "text": "Lakeland Terrier Mix"
+      }
+    },
+    {
+      "wert": "H259",
+      "text": "Lucas Terrier",
+      "motherBreed": {
+        "wert": "D190",
+        "text": "Lucas Terrier Mix"
+      }
+    },
+    {
+      "wert": "H260",
+      "text": "Manchester Terrier",
+      "motherBreed": {
+        "wert": "D191",
+        "text": "Manchester Terrier Mix"
+      }
+    },
+    {
+      "wert": "H261",
+      "text": "Norfolk Terrier",
+      "motherBreed": {
+        "wert": "D192",
+        "text": "Norfolk Terrier Mix"
+      }
+    },
+    {
+      "wert": "H262",
+      "text": "Norwich Terrier",
+      "motherBreed": {
+        "wert": "D193",
+        "text": "Norwich Terrier Mix"
+      }
+    },
+    {
+      "wert": "H263",
+      "text": "Parson Russel Terrier",
+      "motherBreed": {
+        "wert": "D194",
+        "text": "Parson Russel Terrier Mix"
+      }
+    },
+    {
+      "wert": "H265",
+      "text": "Schwarzer Terrier",
+      "motherBreed": {
+        "wert": "D195",
+        "text": "Schwarzer Terrier Mix"
+      }
+    },
+    {
+      "wert": "H266",
+      "text": "Scottish Terrier",
+      "motherBreed": {
+        "wert": "D196",
+        "text": "Scottish Terrier Mix"
+      }
+    },
+    {
+      "wert": "H268",
+      "text": "Skye Terrier",
+      "motherBreed": {
+        "wert": "D197",
+        "text": "Skye Terrier Mix"
+      }
+    },
+    {
+      "wert": "H271",
+      "text": "Welsh Terrier",
+      "motherBreed": {
+        "wert": "D198",
+        "text": "Welsh Terrier Mix"
+      }
+    },
+    {
+      "wert": "H272",
+      "text": "West Highland White Terrier",
+      "motherBreed": {
+        "wert": "D199",
+        "text": "West Highland White Terrier Mix"
+      }
+    },
+    {
+      "wert": "H273",
+      "text": "Westfalen-Terrier",
+      "motherBreed": {
+        "wert": "D200",
+        "text": "Westfalen-Terrier Mix"
+      }
+    },
+    {
+      "wert": "H274",
+      "text": "Yorkshire Terrier",
+      "motherBreed": {
+        "wert": "D201",
+        "text": "Yorkshire Terrier Mix"
+      }
+    },
+    {
+      "wert": "H275",
+      "text": "Tornjak",
+      "motherBreed": {
+        "wert": "D202",
+        "text": "Tornjak Mix"
+      }
+    },
+    {
+      "wert": "H276",
+      "text": "Tosa Inu",
+      "motherBreed": {
+        "wert": "D203",
+        "text": "Tosa Inu Mix"
+      }
+    },
+    {
+      "wert": "H277",
+      "text": "Moskauer Wachhund",
+      "motherBreed": {
+        "wert": "D204",
+        "text": "Moskauer Wachhund Mix"
+      }
+    },
+    {
+      "wert": "H278",
+      "text": "Deutscher Wachtelhund",
+      "motherBreed": {
+        "wert": "D205",
+        "text": "Deutscher Wachtelhund Mix"
+      }
+    },
+    {
+      "wert": "H279",
+      "text": "Wäller",
+      "motherBreed": {
+        "wert": "D206",
+        "text": "Wäller Mix"
+      }
+    },
+    {
+      "wert": "H280",
+      "text": "Weimaraner",
+      "motherBreed": {
+        "wert": "D207",
+        "text": "Weimaraner Mix"
+      }
+    },
+    {
+      "wert": "H282",
+      "text": "Whippet",
+      "motherBreed": {
+        "wert": "D208",
+        "text": "Whippet Mix"
+      }
+    },
+    {
+      "wert": "H283",
+      "text": "Afghanischer Windhund",
+      "motherBreed": {
+        "wert": "D209",
+        "text": "Afghanischer Windhund Mix"
+      }
+    },
+    {
+      "wert": "H287",
+      "text": "Wolfshund",
+      "motherBreed": {
+        "wert": "D210",
+        "text": "Wolfshund Mix"
+      }
+    },
+    {
+      "wert": "H290",
+      "text": "Alano Español",
+      "motherBreed": {
+        "wert": "D211",
+        "text": "Alano Español Mix"
+      }
+    },
+    {
+      "wert": "H291",
+      "text": "Labradoodle",
+      "motherBreed": {
+        "wert": "D212",
+        "text": "Labradoodle Mix"
+      }
+    },
+    {
+      "wert": "H292",
+      "text": "Prager Rattler",
+      "motherBreed": {
+        "wert": "D213",
+        "text": "Prager Rattler Mix"
+      }
+    },
+    {
+      "wert": "H293",
+      "text": "Puggle",
+      "motherBreed": {
+        "wert": "D214",
+        "text": "Puggle Mix"
+      }
+    },
+    {
+      "wert": "H294",
+      "text": "Ratero",
+      "motherBreed": {
+        "wert": "D215",
+        "text": "Ratero Mix"
+      }
+    },
+    {
+      "wert": "H295",
+      "text": "Boerboel",
+      "motherBreed": {
+        "wert": "D216",
+        "text": "Boerboel Mix"
+      }
+    },
+    {
+      "wert": "H303",
+      "text": "Akita-Inu",
+      "motherBreed": {
+        "wert": "D217",
+        "text": "Akita-Inu  Mix"
+      }
+    },
+    {
+      "wert": "H318",
+      "text": "Karelischer Bärenhund",
+      "motherBreed": {
+        "wert": "D218",
+        "text": "Karelischer Bärenhund Mix"
+      }
+    },
+    {
+      "wert": "H319",
+      "text": "Germanischer Bärenhund",
+      "motherBreed": {
+        "wert": "D219",
+        "text": "Germanischer Bärenhund Mix"
+      }
+    },
+    {
+      "wert": "H330",
+      "text": "Basset Fauve de Bretagne",
+      "motherBreed": {
+        "wert": "D220",
+        "text": "Basset Fauve de Bretagne Mix"
+      }
+    },
+    {
+      "wert": "H331",
+      "text": "Basset Hound",
+      "motherBreed": {
+        "wert": "D221",
+        "text": "Basset Hound Mix"
+      }
+    },
+    {
+      "wert": "H332",
+      "text": "Basset Griffon Vendéen, Petit (B.G.V., Kleiner)",
+      "motherBreed": {
+        "wert": "D222",
+        "text": "Basset Griffon Vendéen, Petit (B.G.V., Kleiner) Mix"
+      }
+    },
+    {
+      "wert": "H338",
+      "text": "Beauceron (Bas Rouge)",
+      "motherBreed": {
+        "wert": "D223",
+        "text": "Beauceron (Bas Rouge) Mix"
+      }
+    },
+    {
+      "wert": "H345",
+      "text": "Pyrenäenschäferhund",
+      "motherBreed": {
+        "wert": "D224",
+        "text": "Pyrenäenschäferhund Mix"
+      }
+    },
+    {
+      "wert": "H346",
+      "text": "Pyrenäen-Schäferhund",
+      "motherBreed": {
+        "wert": "D225",
+        "text": "Pyrenäen-Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H352",
+      "text": "Bichon Frise",
+      "motherBreed": {
+        "wert": "D226",
+        "text": "Bichon Frise Mix"
+      }
+    },
+    {
+      "wert": "H355",
+      "text": "Bloodhound",
+      "motherBreed": {
+        "wert": "D227",
+        "text": "Bloodhound Mix"
+      }
+    },
+    {
+      "wert": "H362",
+      "text": "Bolonka Tsvetnaya",
+      "motherBreed": {
+        "wert": "D228",
+        "text": "Bolonka Tsvetnaya Mix"
+      }
+    },
+    {
+      "wert": "H366",
+      "text": "Balkanbracke",
+      "motherBreed": {
+        "wert": "D229",
+        "text": "Balkanbracke Mix"
+      }
+    },
+    {
+      "wert": "H367",
+      "text": "Brandlbracke",
+      "motherBreed": {
+        "wert": "D230",
+        "text": "Brandlbracke Mix"
+      }
+    },
+    {
+      "wert": "H370",
+      "text": "Braque de Bourbonnais",
+      "motherBreed": {
+        "wert": "D231",
+        "text": "Braque de Bourbonnais  Mix"
+      }
+    },
+    {
+      "wert": "H371",
+      "text": "Braque d'Auvergne",
+      "motherBreed": {
+        "wert": "D232",
+        "text": "Braque d'Auvergne Mix"
+      }
+    },
+    {
+      "wert": "H372",
+      "text": "Französischer Vorstehhund - Typus Gascogne",
+      "motherBreed": {
+        "wert": "D233",
+        "text": "Französischer Vorstehhund - Typus Gascogne Mix"
+      }
+    },
+    {
+      "wert": "H375",
+      "text": "Alpenländische Bracke",
+      "motherBreed": {
+        "wert": "D234",
+        "text": "Alpenländische Bracke Mix"
+      }
+    },
+    {
+      "wert": "H379",
+      "text": "Old English Bulldog",
+      "motherBreed": {
+        "wert": "D235",
+        "text": "Old English Bulldog Mix"
+      }
+    },
+    {
+      "wert": "H380",
+      "text": "Französische Bulldogge",
+      "motherBreed": {
+        "wert": "D236",
+        "text": "Französische Bulldogge Mix"
+      }
+    },
+    {
+      "wert": "H381",
+      "text": "American Bulldog",
+      "motherBreed": {
+        "wert": "D237",
+        "text": "American Bulldog Mix"
+      }
+    },
+    {
+      "wert": "H387",
+      "text": "Portugiesischer Schäferhund",
+      "motherBreed": {
+        "wert": "D238",
+        "text": "Portugiesischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H388",
+      "text": "Griffon Nivernais (Grand Griffon Nivernais, Chien de Pays)",
+      "motherBreed": {
+        "wert": "D239",
+        "text": "Griffon Nivernais (Grand Griffon Nivernais, Chien de Pays) Mix"
+      }
+    },
+    {
+      "wert": "H389",
+      "text": "Portugiesischer Treibhund",
+      "motherBreed": {
+        "wert": "D240",
+        "text": "Portugiesischer Treibhund Mix"
+      }
+    },
+    {
+      "wert": "H390",
+      "text": "Portugiesischer Wasserhund",
+      "motherBreed": {
+        "wert": "D241",
+        "text": "Portugiesischer Wasserhund Mix"
+      }
+    },
+    {
+      "wert": "H392",
+      "text": "Zavod",
+      "motherBreed": {
+        "wert": "D242",
+        "text": "Zavod Mix"
+      }
+    },
+    {
+      "wert": "H393",
+      "text": "Carpathian Sheepdog",
+      "motherBreed": {
+        "wert": "D243",
+        "text": "Carpathian Sheepdog Mix"
+      }
+    },
+    {
+      "wert": "H394",
+      "text": "Rumänischer Schäferhund",
+      "motherBreed": {
+        "wert": "D244",
+        "text": "Rumänischer Schäferhund Mix"
+      }
+    },
+    {
+      "wert": "H408",
+      "text": "Uruguayischer Cimarron",
+      "motherBreed": {
+        "wert": "D245",
+        "text": "Uruguayischer Cimarron Mix"
+      }
+    },
+    {
+      "wert": "H414",
+      "text": "Langhaar Collie",
+      "motherBreed": {
+        "wert": "D246",
+        "text": "Langhaar Collie Mix"
+      }
+    },
+    {
+      "wert": "H415",
+      "text": "Kurzhaar Collie",
+      "motherBreed": {
+        "wert": "D247",
+        "text": "Kurzhaar Collie Mix"
+      }
+    },
+    {
+      "wert": "H423",
+      "text": "Welsh Corgi (Cardigan)",
+      "motherBreed": {
+        "wert": "D248",
+        "text": "Welsh Corgi (Cardigan) Mix"
+      }
+    },
+    {
+      "wert": "H424",
+      "text": "Welsh Corgi (Pembroke)",
+      "motherBreed": {
+        "wert": "D249",
+        "text": "Welsh Corgi (Pembroke) Mix"
+      }
+    },
+    {
+      "wert": "H427",
+      "text": "Kurzhaardackel",
+      "motherBreed": {
+        "wert": "D250",
+        "text": "Kurzhaardackel Mix"
+      }
+    },
+    {
+      "wert": "H428",
+      "text": "Rauhhaardackel",
+      "motherBreed": {
+        "wert": "D251",
+        "text": "Rauhhaardackel Mix"
+      }
+    },
+    {
+      "wert": "H429",
+      "text": "Langhaardackel",
+      "motherBreed": {
+        "wert": "D252",
+        "text": "Langhaardackel Mix"
+      }
+    },
+    {
+      "wert": "H430",
+      "text": "Zwergdackel",
+      "motherBreed": {
+        "wert": "D253",
+        "text": "Zwergdackel Mix"
+      }
+    },
+    {
+      "wert": "H439",
+      "text": "Maliki (Anatolischer Hirtenhund)",
+      "motherBreed": {
+        "wert": "D254",
+        "text": "Maliki (Anatolischer Hirtenhund) Mix"
+      }
+    },
+    {
+      "wert": "H445",
+      "text": "Dogge (Deutsche, Dänische, Ulmer,  Englische, Hatzrüde, Saupacker, Große)",
+      "motherBreed": {
+        "wert": "D255",
+        "text": "Dogge (Deutsche, Dänische, Ulmer,  Englische, Hatzrüde, Saupacker, Große) Mix"
+      }
+    },
+    {
+      "wert": "H446",
+      "text": "Bordeauxdogge (Dogge, Bordeaux-, Dogge de Bordeaux)",
+      "motherBreed": {
+        "wert": "D256",
+        "text": "Bordeauxdogge (Dogge, Bordeaux-, Dogge de Bordeaux) Mix"
+      }
+    },
+    {
+      "wert": "H447",
+      "text": "Argentinische Dogge",
+      "motherBreed": {
+        "wert": "D257",
+        "text": "Argentinische Dogge Mix"
+      }
+    },
+    {
+      "wert": "H449",
+      "text": "Kanarische Dogge (Perro de Presa Canario)",
+      "motherBreed": {
+        "wert": "D258",
+        "text": "Kanarische Dogge (Perro de Presa Canario) Mix"
+      }
+    },
+    {
+      "wert": "H451",
+      "text": "Tibet Dogge",
+      "motherBreed": {
+        "wert": "D259",
+        "text": "Tibet Dogge Mix"
+      }
+    },
+    {
+      "wert": "H454",
+      "text": "Drent'Scher Hühnerhund",
+      "motherBreed": {
+        "wert": "D260",
+        "text": "Drent'Scher Hühnerhund Mix"
+      }
+    },
+    {
+      "wert": "H459",
+      "text": "Norwegischer Elchhund (Norsk Elghund)",
+      "motherBreed": {
+        "wert": "D261",
+        "text": "Norwegischer Elchhund (Norsk Elghund) Mix"
+      }
+    },
+    {
+      "wert": "H460",
+      "text": "Schwedischer Elchhund",
+      "motherBreed": {
+        "wert": "D262",
+        "text": "Schwedischer Elchhund Mix"
+      }
+    },
+    {
+      "wert": "H461",
+      "text": "Groß-Elo",
+      "motherBreed": {
+        "wert": "D263",
+        "text": "Groß-Elo Mix"
+      }
+    },
+    {
+      "wert": "H462",
+      "text": "Klein-Elo",
+      "motherBreed": {
+        "wert": "D264",
+        "text": "Klein-Elo Mix"
+      }
+    },
+    {
+      "wert": "H465",
+      "text": "Brittany Spaniel",
+      "motherBreed": {
+        "wert": "D265",
+        "text": "Brittany Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H467",
+      "text": "Französischer Spaniel",
+      "motherBreed": {
+        "wert": "D266",
+        "text": "Französischer Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H468",
+      "text": "Picardie Spaniel",
+      "motherBreed": {
+        "wert": "D267",
+        "text": "Picardie Spaniel Mix"
+      }
+    },
+    {
+      "wert": "H484",
+      "text": "Griffon Korthals (Vorstehhund, Französischer Rauhhaariger, Griffon d'arrét á poil dur, Korthals, Griffon á poil dur)",
+      "motherBreed": {
+        "wert": "D268",
+        "text": "Griffon Korthals (Vorstehhund, Französischer Rauhhaariger, Griffon d'arrét á poil dur, Korthals, Griffon á poil dur) Mix"
+      }
+    },
+    {
+      "wert": "H485",
+      "text": "Griffon Nivernais (Grand Griffon Nivernais, Chien de Pays)",
+      "motherBreed": {
+        "wert": "D269",
+        "text": "Griffon Nivernais (Grand Griffon Nivernais, Chien de Pays) Mix"
+      }
+    },
+    {
+      "wert": "H486",
+      "text": "Griffon á poil Laineux (Griffon Boulet, Griffon, Französischer Wollhaariger, Griffon, French Wolly-haired Pointing, Grifón de muestra de pelo lanoso Francés)",
+      "motherBreed": {
+        "wert": "D270",
+        "text": "Griffon á poil Laineux (Griffon Boulet, Griffon, Französischer Wollhaariger, Griffon, French Wolly-haired Pointing, Grifón de muestra de pelo lanoso Francés) Mix"
+      }
+    },
+    {
+      "wert": "H487",
+      "text": "Griffon Vendéen (Griffon Vendéen, Grand, Griffon Vendéen, Großer, Griffon Vendéen, Briquet)",
+      "motherBreed": {
+        "wert": "D271",
+        "text": "Griffon Vendéen (Griffon Vendéen, Grand, Griffon Vendéen, Großer, Griffon Vendéen, Briquet) Mix"
+      }
+    },
+    {
+      "wert": "H490",
+      "text": "Barbancon",
+      "motherBreed": {
+        "wert": "D272",
+        "text": "Barbancon Mix"
+      }
+    },
+    {
+      "wert": "H491",
+      "text": "Petit Barbacon",
+      "motherBreed": {
+        "wert": "D273",
+        "text": "Petit Barbacon Mix"
+      }
+    },
+    {
+      "wert": "H504",
+      "text": "Kangal",
+      "motherBreed": {
+        "wert": "D274",
+        "text": "Kangal Mix"
+      }
+    },
+    {
+      "wert": "H510",
+      "text": "Akbas",
+      "motherBreed": {
+        "wert": "D275",
+        "text": "Akbas Mix"
+      }
+    },
+    {
+      "wert": "H515",
+      "text": "Hokkaido-Ken",
+      "motherBreed": {
+        "wert": "D276",
+        "text": "Hokkaido-Ken Mix"
+      }
+    },
+    {
+      "wert": "H519",
+      "text": "Alaskan Husky",
+      "motherBreed": {
+        "wert": "D277",
+        "text": "Alaskan Husky Mix"
+      }
+    },
+    {
+      "wert": "H540",
+      "text": "Kelpie",
+      "motherBreed": {
+        "wert": "D278",
+        "text": "Kelpie Mix"
+      }
+    },
+    {
+      "wert": "H542",
+      "text": "Kishu-Inu",
+      "motherBreed": {
+        "wert": "D279",
+        "text": "Kishu-Inu Mix"
+      }
+    },
+    {
+      "wert": "H549",
+      "text": "Jindo-kyon",
+      "motherBreed": {
+        "wert": "D280",
+        "text": "Jindo-kyon Mix"
+      }
+    },
+    {
+      "wert": "H555",
+      "text": "Schwedischer Lapphund",
+      "motherBreed": {
+        "wert": "D281",
+        "text": "Schwedischer Lapphund  Mix"
+      }
+    },
+    {
+      "wert": "H556",
+      "text": "Finnischer Lapplandhirtenhund (Rentierhund, Lappländischer, Lapinporoika)",
+      "motherBreed": {
+        "wert": "D282",
+        "text": "Finnischer Lapplandhirtenhund (Rentierhund, Lappländischer, Lapinporoika) Mix"
+      }
+    },
+    {
+      "wert": "H560",
+      "text": "Griechische Bracke",
+      "motherBreed": {
+        "wert": "D283",
+        "text": "Griechische Bracke Mix"
+      }
+    },
+    {
+      "wert": "H575",
+      "text": "Norsk Lundehund",
+      "motherBreed": {
+        "wert": "D284",
+        "text": "Norsk Lundehund Mix"
+      }
+    },
+    {
+      "wert": "H577",
+      "text": "Hungarian Wirehaired Vizsla",
+      "motherBreed": {
+        "wert": "D285",
+        "text": "Hungarian Wirehaired Vizsla Mix"
+      }
+    },
+    {
+      "wert": "H581",
+      "text": "(Old) English Mastiff",
+      "motherBreed": {
+        "wert": "D286",
+        "text": "(Old) English Mastiff Mix"
+      }
+    },
+    {
+      "wert": "H585",
+      "text": "Pyrenäenhund",
+      "motherBreed": {
+        "wert": "D287",
+        "text": "Pyrenäenhund Mix"
+      }
+    },
+    {
+      "wert": "H586",
+      "text": "Spanischer Mastiff (Spanische Dogge)",
+      "motherBreed": {
+        "wert": "D288",
+        "text": "Spanischer Mastiff (Spanische Dogge) Mix"
+      }
+    },
+    {
+      "wert": "H607",
+      "text": "Afrikanischer Nackthund",
+      "motherBreed": {
+        "wert": "D289",
+        "text": "Afrikanischer Nackthund Mix"
+      }
+    },
+    {
+      "wert": "H608",
+      "text": "Chinesischer Nackthund (Schopfhund)",
+      "motherBreed": {
+        "wert": "D290",
+        "text": "Chinesischer Nackthund (Schopfhund) Mix"
+      }
+    },
+    {
+      "wert": "H609",
+      "text": "Mexikanischer Nackthund",
+      "motherBreed": {
+        "wert": "D291",
+        "text": "Mexikanischer Nackthund Mix"
+      }
+    },
+    {
+      "wert": "H610",
+      "text": "Peruanischer Nackthund",
+      "motherBreed": {
+        "wert": "D292",
+        "text": "Peruanischer Nackthund Mix"
+      }
+    },
+    {
+      "wert": "H612",
+      "text": "Petit chien courant suisse",
+      "motherBreed": {
+        "wert": "D293",
+        "text": "Petit chien courant suisse Mix"
+      }
+    },
+    {
+      "wert": "H618",
+      "text": "Fellterrier",
+      "motherBreed": {
+        "wert": "D294",
+        "text": "Fellterrier Mix"
+      }
+    },
+    {
+      "wert": "H621",
+      "text": "Pekinese",
+      "motherBreed": {
+        "wert": "D295",
+        "text": "Pekinese Mix"
+      }
+    },
+    {
+      "wert": "H635",
+      "text": "Pharaoh Hound",
+      "motherBreed": {
+        "wert": "D296",
+        "text": "Pharaoh Hound Mix"
+      }
+    },
+    {
+      "wert": "H638",
+      "text": "Deutscher Pinscher",
+      "motherBreed": {
+        "wert": "D297",
+        "text": "Deutscher Pinscher Mix"
+      }
+    },
+    {
+      "wert": "H639",
+      "text": "Mittelschlag Pinscher",
+      "motherBreed": {
+        "wert": "D298",
+        "text": "Mittelschlag Pinscher Mix"
+      }
+    },
+    {
+      "wert": "H641",
+      "text": "Miniatur Pinscher (Minipin)",
+      "motherBreed": {
+        "wert": "D299",
+        "text": "Miniatur Pinscher (Minipin) Mix"
+      }
+    },
+    {
+      "wert": "H643",
+      "text": "Mini- Dobermann",
+      "motherBreed": {
+        "wert": "D300",
+        "text": "Mini- Dobermann Mix"
+      }
+    },
+    {
+      "wert": "H646",
+      "text": "Podenco Ibicenco",
+      "motherBreed": {
+        "wert": "D301",
+        "text": "Podenco Ibicenco Mix"
+      }
+    },
+    {
+      "wert": "H648",
+      "text": "Podengo (groß, mittelgroß)",
+      "motherBreed": {
+        "wert": "D302",
+        "text": "Podengo (groß, mittelgroß) Mix"
+      }
+    },
+    {
+      "wert": "H654",
+      "text": "English Pointer",
+      "motherBreed": {
+        "wert": "D303",
+        "text": "English Pointer Mix"
+      }
+    },
+    {
+      "wert": "H656",
+      "text": "Polnischer Niederungshütehund",
+      "motherBreed": {
+        "wert": "D304",
+        "text": "Polnischer Niederungshütehund  Mix"
+      }
+    },
+    {
+      "wert": "H659",
+      "text": "Königspudel",
+      "motherBreed": {
+        "wert": "D305",
+        "text": "Königspudel Mix"
+      }
+    },
+    {
+      "wert": "H668",
+      "text": "Labrador",
+      "motherBreed": {
+        "wert": "D306",
+        "text": "Labrador Mix"
+      }
+    },
+    {
+      "wert": "H674",
+      "text": "Mah Tai (Thai Ridgeback)",
+      "motherBreed": {
+        "wert": "D307",
+        "text": "Mah Tai (Thai Ridgeback) Mix"
+      }
+    },
+    {
+      "wert": "H675",
+      "text": "Puh Quoc Hund",
+      "motherBreed": {
+        "wert": "D308",
+        "text": "Puh Quoc Hund Mix"
+      }
+    },
+    {
+      "wert": "H697",
+      "text": "Groenendael",
+      "motherBreed": {
+        "wert": "D309",
+        "text": "Groenendael Mix"
+      }
+    },
+    {
+      "wert": "H698",
+      "text": "Tervueren",
+      "motherBreed": {
+        "wert": "D310",
+        "text": "Tervueren Mix"
+      }
+    },
+    {
+      "wert": "H699",
+      "text": "Malinois",
+      "motherBreed": {
+        "wert": "D311",
+        "text": "Malinois Mix"
+      }
+    },
+    {
+      "wert": "H700",
+      "text": "Laekenois",
+      "motherBreed": {
+        "wert": "D312",
+        "text": "Laekenois Mix"
+      }
+    },
+    {
+      "wert": "H711",
+      "text": "Perro de pastor Mallorquin",
+      "motherBreed": {
+        "wert": "D313",
+        "text": "Perro de pastor Mallorquin Mix"
+      }
+    },
+    {
+      "wert": "H727",
+      "text": "Berger Blanc Suisse (Weißer Schäferhund)",
+      "motherBreed": {
+        "wert": "D314",
+        "text": "Berger Blanc Suisse (Weißer Schäferhund) Mix"
+      }
+    },
+    {
+      "wert": "H743",
+      "text": "Belgischer Schiffer Spitz",
+      "motherBreed": {
+        "wert": "D315",
+        "text": "Belgischer Schiffer Spitz Mix"
+      }
+    },
+    {
+      "wert": "H744",
+      "text": "Mittelschnauzer",
+      "motherBreed": {
+        "wert": "D316",
+        "text": "Mittelschnauzer Mix"
+      }
+    },
+    {
+      "wert": "H745",
+      "text": "Riesenschnauzer",
+      "motherBreed": {
+        "wert": "D317",
+        "text": "Riesenschnauzer Mix"
+      }
+    },
+    {
+      "wert": "H753",
+      "text": "Appenzeller Sennenhund (Appenzellerhund, Appezöller Bläss)",
+      "motherBreed": {
+        "wert": "D318",
+        "text": "Appenzeller Sennenhund (Appenzellerhund, Appezöller Bläss) Mix"
+      }
+    },
+    {
+      "wert": "H754",
+      "text": "Berner Sennenhund",
+      "motherBreed": {
+        "wert": "D319",
+        "text": "Berner Sennenhund Mix"
+      }
+    },
+    {
+      "wert": "H755",
+      "text": "Entlebucher Sennenhund",
+      "motherBreed": {
+        "wert": "D320",
+        "text": "Entlebucher Sennenhund Mix"
+      }
+    },
+    {
+      "wert": "H756",
+      "text": "Großer Schweizer Sennenhund (Great Swiss Mountain Dog, Grand bouvier suisse)",
+      "motherBreed": {
+        "wert": "D321",
+        "text": "Großer Schweizer Sennenhund (Great Swiss Mountain Dog, Grand bouvier suisse) Mix"
+      }
+    },
+    {
+      "wert": "H757",
+      "text": "English Setter",
+      "motherBreed": {
+        "wert": "D322",
+        "text": "English Setter Mix"
+      }
+    },
+    {
+      "wert": "H758",
+      "text": "Gordon Setter",
+      "motherBreed": {
+        "wert": "D323",
+        "text": "Gordon Setter Mix"
+      }
+    },
+    {
+      "wert": "H760",
+      "text": "Irish Setter",
+      "motherBreed": {
+        "wert": "D324",
+        "text": "Irish Setter Mix"
+      }
+    },
+    {
+      "wert": "H763",
+      "text": "Sheltie",
+      "motherBreed": {
+        "wert": "D325",
+        "text": "Sheltie Mix"
+      }
+    },
+    {
+      "wert": "H767",
+      "text": "Shiba Inu",
+      "motherBreed": {
+        "wert": "D326",
+        "text": "Shiba Inu Mix"
+      }
+    },
+    {
+      "wert": "H785",
+      "text": "Cockerspaniel",
+      "motherBreed": {
+        "wert": "D327",
+        "text": "Cockerspaniel Mix"
+      }
+    },
+    {
+      "wert": "H794",
+      "text": "Papillon (Schmetterlingshündchen)",
+      "motherBreed": {
+        "wert": "D328",
+        "text": "Papillon (Schmetterlingshündchen) Mix"
+      }
+    },
+    {
+      "wert": "H795",
+      "text": "Phalene",
+      "motherBreed": {
+        "wert": "D329",
+        "text": "Phalene Mix"
+      }
+    },
+    {
+      "wert": "H801",
+      "text": "Spinone",
+      "motherBreed": {
+        "wert": "D330",
+        "text": "Spinone Mix"
+      }
+    },
+    {
+      "wert": "H803",
+      "text": "Deutscher Spitz (Deutsche Spitze)",
+      "motherBreed": {
+        "wert": "D331",
+        "text": "Deutscher Spitz (Deutsche Spitze) Mix"
+      }
+    },
+    {
+      "wert": "H804",
+      "text": "Großspitz",
+      "motherBreed": {
+        "wert": "D332",
+        "text": "Großspitz Mix"
+      }
+    },
+    {
+      "wert": "H805",
+      "text": "Mittelspitz",
+      "motherBreed": {
+        "wert": "D333",
+        "text": "Mittelspitz Mix"
+      }
+    },
+    {
+      "wert": "H806",
+      "text": "Kleinspitz",
+      "motherBreed": {
+        "wert": "D334",
+        "text": "Kleinspitz Mix"
+      }
+    },
+    {
+      "wert": "H807",
+      "text": "Pomeranian",
+      "motherBreed": {
+        "wert": "D335",
+        "text": "Pomeranian Mix"
+      }
+    },
+    {
+      "wert": "H809",
+      "text": "Finnenspitz",
+      "motherBreed": {
+        "wert": "D336",
+        "text": "Finnenspitz Mix"
+      }
+    },
+    {
+      "wert": "H811",
+      "text": "Friesischer Vorstehhund",
+      "motherBreed": {
+        "wert": "D337",
+        "text": "Friesischer Vorstehhund Mix"
+      }
+    },
+    {
+      "wert": "H820",
+      "text": "Staffordshire Bull Terrier",
+      "motherBreed": {
+        "wert": "D338",
+        "text": "Staffordshire Bull Terrier Mix"
+      }
+    },
+    {
+      "wert": "H827",
+      "text": "Brasilianischer Terrier (Terrier Brasileiro)",
+      "motherBreed": {
+        "wert": "D339",
+        "text": "Brasilianischer Terrier (Terrier Brasileiro) Mix"
+      }
+    },
+    {
+      "wert": "H829",
+      "text": "English Bull Terrier",
+      "motherBreed": {
+        "wert": "D340",
+        "text": "English Bull Terrier Mix"
+      }
+    },
+    {
+      "wert": "H831",
+      "text": "Miniatur Bullterrier",
+      "motherBreed": {
+        "wert": "D341",
+        "text": "Miniatur Bullterrier Mix"
+      }
+    },
+    {
+      "wert": "H834",
+      "text": "Zwerg Bullterrier",
+      "motherBreed": {
+        "wert": "D342",
+        "text": "Zwerg Bullterrier Mix"
+      }
+    },
+    {
+      "wert": "H853",
+      "text": "Soft Coated Wheaten Terrier",
+      "motherBreed": {
+        "wert": "D343",
+        "text": "Soft Coated Wheaten Terrier Mix"
+      }
+    },
+    {
+      "wert": "H864",
+      "text": "American Pit Bull Terrier",
+      "motherBreed": {
+        "wert": "D344",
+        "text": "American Pit Bull Terrier Mix"
+      }
+    },
+    {
+      "wert": "H900",
+      "text": "Friesischer Wasserhund",
+      "motherBreed": {
+        "wert": "D345",
+        "text": "Friesischer Wasserhund Mix"
+      }
+    },
+    {
+      "wert": "H910",
+      "text": "Magyar Agar (Ungarischer Windhund)",
+      "motherBreed": {
+        "wert": "D346",
+        "text": "Magyar Agar (Ungarischer Windhund) Mix"
+      }
+    },
+    {
+      "wert": "H911",
+      "text": "Italienisches Windspiel",
+      "motherBreed": {
+        "wert": "D347",
+        "text": "Italienisches Windspiel Mix"
+      }
+    },
+    {
+      "wert": "H915",
+      "text": "Irish Wolfhound (Irischer Wolfshund)",
+      "motherBreed": {
+        "wert": "D348",
+        "text": "Irish Wolfhound (Irischer Wolfshund) Mix"
+      }
+    },
+    {
+      "wert": "H916",
+      "text": "Patterdale Terrier",
+      "motherBreed": {
+        "wert": "D349",
+        "text": "Patterdale Terrier Mix"
+      }
+    },
+    {
+      "wert": "H917",
+      "text": "Tschechoslowakischer Wolf(s)hund",
+      "motherBreed": {
+        "wert": "D350",
+        "text": "Tschechoslowakischer Wolf(s)hund Mix"
+      }
+    },
+    {
+      "wert": "H918",
+      "text": "Polnische Bracke",
+      "motherBreed": {
+        "wert": "D351",
+        "text": "Polnische Bracke Mix"
+      }
+    },
+    {
+      "wert": "H919",
+      "text": "Slovensky Kopvo",
+      "motherBreed": {
+        "wert": "D352",
+        "text": "Slovensky Kopvo Mix"
+      }
+    },
+    {
+      "wert": "H920",
+      "text": "Continental Bulldog",
+      "motherBreed": {
+        "wert": "D353",
+        "text": "Continental Bulldog Mix"
+      }
+    },
+    {
+      "wert": "H921",
+      "text": "Alauntbull",
+      "motherBreed": {
+        "wert": "D354",
+        "text": "Alauntbull Mix"
+      }
+    },
+    {
+      "wert": "H927",
+      "text": "Mallorca Dogge (Ca de Bou)",
+      "motherBreed": {
+        "wert": "D355",
+        "text": "Mallorca Dogge (Ca de Bou) Mix"
+      }
+    },
+    {
+      "wert": "H931",
+      "text": "Ratonero Andaluz",
+      "motherBreed": {
+        "wert": "D356",
+        "text": "Ratonero Andaluz Mix"
+      }
+    },
+    {
+      "wert": "H935",
+      "text": "Scandinavian Hound",
+      "motherBreed": {
+        "wert": "D357",
+        "text": "Scandinavian Hound Mix"
+      }
+    },
+    {
+      "wert": "H938",
+      "text": "American King Shepherd",
+      "motherBreed": {
+        "wert": "D358",
+        "text": "American King Shepherd Mix"
+      }
+    },
+    {
+      "wert": "H940",
+      "text": "Goldendoodle",
+      "motherBreed": {
+        "wert": "D359",
+        "text": "Goldendoodle Mix"
+      }
+    },
+    {
+      "wert": "H941",
+      "text": "Merlsheimer",
+      "motherBreed": {
+        "wert": "D360",
+        "text": "Merlsheimer Mix"
+      }
+    },
+    {
+      "wert": "D361",
+      "text": "Airedoodle",
+      "motherBreed": {
+        "wert": "D431",
+        "text": "Airedoodle Mix"
+      }
+    },
+    {
+      "wert": "D362",
+      "text": "American Bully",
+      "motherBreed": {
+        "wert": "D432",
+        "text": "American Bully Mix"
+      }
+    },
+    {
+      "wert": "D363",
+      "text": "Aussiedoodle",
+      "motherBreed": {
+        "wert": "D433",
+        "text": "Aussiedoodle Mix"
+      }
+    },
+    {
+      "wert": "D364",
+      "text": "Bernedoodle",
+      "motherBreed": {
+        "wert": "D434",
+        "text": "Bernedoodle Mix"
+      }
+    },
+    {
+      "wert": "D365",
+      "text": "Bordoodle",
+      "motherBreed": {
+        "wert": "D418",
+        "text": "Bordoodle Mix"
+      }
+    },
+    {
+      "wert": "D366",
+      "text": "Brasilianischer Laufhund",
+      "motherBreed": {
+        "wert": "D419",
+        "text": "Brasilianischer Laufhund Mix"
+      }
+    },
+    {
+      "wert": "D367",
+      "text": "Cavapoo",
+      "motherBreed": {
+        "wert": "D420",
+        "text": "Cavapoo Mix"
+      }
+    },
+    {
+      "wert": "D368",
+      "text": "Chiweenies",
+      "motherBreed": {
+        "wert": "D435",
+        "text": "Chiweenies Mix"
+      }
+    },
+    {
+      "wert": "D369",
+      "text": "Ciobănesc Românesc Corb",
+      "motherBreed": {
+        "wert": "D421",
+        "text": "Ciobănesc Românesc Corb Mix"
+      }
+    },
+    {
+      "wert": "D370",
+      "text": "Clumberdoodle",
+      "motherBreed": {
+        "wert": "D422",
+        "text": "Clumberdoodle Mix"
+      }
+    },
+    {
+      "wert": "D371",
+      "text": "Cockapoo",
+      "motherBreed": {
+        "wert": "D436",
+        "text": "Cockapoo Mix"
+      }
+    },
+    {
+      "wert": "D372",
+      "text": "Working Cocker Spaniel",
+      "motherBreed": {
+        "wert": "D437",
+        "text": "Working Cocker Spaniel Mix"
+      }
+    },
+    {
+      "wert": "D373",
+      "text": "Corgipoo",
+      "motherBreed": {
+        "wert": "D412",
+        "text": "Corgipoo Mix"
+      }
+    },
+    {
+      "wert": "D374",
+      "text": "Dalmadoodle",
+      "motherBreed": {
+        "wert": "D438",
+        "text": "Dalmadoodle Mix"
+      }
+    },
+    {
+      "wert": "D375",
+      "text": "Double-Doodle",
+      "motherBreed": {
+        "wert": "D376",
+        "text": "Double-Doodle Mix"
+      }
+    },
+    {
+      "wert": "D377",
+      "text": "Doxiepoo",
+      "motherBreed": {
+        "wert": "D439",
+        "text": "Doxiepoo Mix"
+      }
+    },
+    {
+      "wert": "D378",
+      "text": "Estnische Bracke",
+      "motherBreed": {
+        "wert": "D423",
+        "text": "Estnische Bracke Mix"
+      }
+    },
+    {
+      "wert": "D379",
+      "text": "Exotic Bulldog",
+      "motherBreed": {
+        "wert": "D440",
+        "text": "Exotic Bulldog Mix"
+      }
+    },
+    {
+      "wert": "D380",
+      "text": "Flatdoodle",
+      "motherBreed": {
+        "wert": "D424",
+        "text": "Flatdoodle Mix"
+      }
+    },
+    {
+      "wert": "D381",
+      "text": "Goldador",
+      "motherBreed": {
+        "wert": "D441",
+        "text": "Goldador Mix"
+      }
+    },
+    {
+      "wert": "D382",
+      "text": "Irish Doole",
+      "motherBreed": {
+        "wert": "D413",
+        "text": "Irish Doole Mix"
+      }
+    },
+    {
+      "wert": "D383",
+      "text": "Jackadoodle",
+      "motherBreed": {
+        "wert": "D384",
+        "text": "Jackadoodle Mix"
+      }
+    },
+    {
+      "wert": "D385",
+      "text": "Labrabull",
+      "motherBreed": {
+        "wert": "D414",
+        "text": "Labrabull Mix"
+      }
+    },
+    {
+      "wert": "D387",
+      "text": "Labrottie",
+      "motherBreed": {
+        "wert": "D442",
+        "text": "Labrottie Mix"
+      }
+    },
+    {
+      "wert": "D388",
+      "text": "Labsky",
+      "motherBreed": {
+        "wert": "D443",
+        "text": "Labsky Mix"
+      }
+    },
+    {
+      "wert": "D389",
+      "text": "Leopard-Labrador",
+      "motherBreed": {
+        "wert": "D444",
+        "text": "Leopard-Labrador Mix"
+      }
+    },
+    {
+      "wert": "D390",
+      "text": "Maltipoo",
+      "motherBreed": {
+        "wert": "D425",
+        "text": "Maltipoo Mix"
+      }
+    },
+    {
+      "wert": "D391",
+      "text": "Miniature Australian Labradoodle",
+      "motherBreed": {
+        "wert": "D426",
+        "text": "Miniature Australian Labradoodle Mix"
+      }
+    },
+    {
+      "wert": "D392",
+      "text": "Miniature American Shepherd",
+      "motherBreed": {
+        "wert": "D427",
+        "text": "Miniature American Shepherd Mix"
+      }
+    },
+    {
+      "wert": "D393",
+      "text": "Miniature Goldendoodle",
+      "motherBreed": {
+        "wert": "D445",
+        "text": "Miniature Goldendoodle Mix"
+      }
+    },
+    {
+      "wert": "D394",
+      "text": "Minature Labradoodle",
+      "motherBreed": {
+        "wert": "D395",
+        "text": "Minature Labradoodle Mix"
+      }
+    },
+    {
+      "wert": "D396",
+      "text": "Morkie",
+      "motherBreed": {
+        "wert": "D428",
+        "text": "Morkie Mix"
+      }
+    },
+    {
+      "wert": "D397",
+      "text": "Pastor Garafiano",
+      "motherBreed": {
+        "wert": "D446",
+        "text": "Pastor Garafiano Mix"
+      }
+    },
+    {
+      "wert": "D398",
+      "text": "Patterpoo, Patterpoodle",
+      "motherBreed": {
+        "wert": "D429",
+        "text": "Patterpoo, Patterpoodle Mix"
+      }
+    },
+    {
+      "wert": "D399",
+      "text": "Retromops",
+      "motherBreed": {
+        "wert": "D447",
+        "text": "Retromops Mix"
+      }
+    },
+    {
+      "wert": "D400",
+      "text": "Schnoodle",
+      "motherBreed": {
+        "wert": "D448",
+        "text": "Schnoodle Mix"
+      }
+    },
+    {
+      "wert": "D401",
+      "text": "Shepadoodle",
+      "motherBreed": {
+        "wert": "D402",
+        "text": "Shepadoodle Mix"
+      }
+    },
+    {
+      "wert": "D403",
+      "text": "Sheprador",
+      "motherBreed": {
+        "wert": "D449",
+        "text": "Sheprador Mix"
+      }
+    },
+    {
+      "wert": "D404",
+      "text": "Shih-Poo",
+      "motherBreed": {
+        "wert": "D415",
+        "text": "Shih-Poo Mix"
+      }
+    },
+    {
+      "wert": "D405",
+      "text": "Springerdoodle",
+      "motherBreed": {
+        "wert": "D430",
+        "text": "Springerdoodle Mix"
+      }
+    },
+    {
+      "wert": "D406",
+      "text": "Steirische Rauhaarbracke",
+      "motherBreed": {
+        "wert": "D416",
+        "text": "Steirische Rauhaarbracke Mix"
+      }
+    },
+    {
+      "wert": "D407",
+      "text": "Thai-Bangkaew-Hund",
+      "motherBreed": {
+        "wert": "D450",
+        "text": "Thai-Bangkaew-Hund Mix"
+      }
+    },
+    {
+      "wert": "D408",
+      "text": "Transmontano-Hirtenhund",
+      "motherBreed": {
+        "wert": "D451",
+        "text": "Transmontano-Hirtenhund Mix"
+      }
+    },
+    {
+      "wert": "D409",
+      "text": "Westiepoo",
+      "motherBreed": {
+        "wert": "D452",
+        "text": "Westiepoo Mix"
+      }
+    },
+    {
+      "wert": "D410",
+      "text": "Yorkiepoo",
+      "motherBreed": {
+        "wert": "D453",
+        "text": "Yorkiepoo Mix"
+      }
+    },
+    {
+      "wert": "D417",
+      "text": "Havapoo",
+      "motherBreed": {
+        "wert": "D411",
+        "text": "Havapoo Mix"
+      }
+    }
+  ],
+  "katzenrassen": [
+    {
+      "wert": "K001",
+      "text": "Abessinier"
+    },
+    {
+      "wert": "K003",
+      "text": "American Bobtail Longhair"
+    },
+    {
+      "wert": "K004",
+      "text": "American Bobtail Shorthair"
+    },
+    {
+      "wert": "K005",
+      "text": "American Curl Longhair"
+    },
+    {
+      "wert": "K006",
+      "text": "American Curl Shorthair"
+    },
+    {
+      "wert": "K007",
+      "text": "American Lynx"
+    },
+    {
+      "wert": "K008",
+      "text": "American Shorthair / Vienna Woods"
+    },
+    {
+      "wert": "K009",
+      "text": "American Wirehair"
+    },
+    {
+      "wert": "K010",
+      "text": "Balinese"
+    },
+    {
+      "wert": "K011",
+      "text": "Bengal"
+    },
+    {
+      "wert": "K012",
+      "text": "Birma"
+    },
+    {
+      "wert": "K013",
+      "text": "Bombay"
+    },
+    {
+      "wert": "K014",
+      "text": "Britisch Kurzhaar"
+    },
+    {
+      "wert": "K015",
+      "text": "Burma Longhair / Tiffany / Chantilly"
+    },
+    {
+      "wert": "K016",
+      "text": "Burma Shorthair"
+    },
+    {
+      "wert": "K017",
+      "text": "Burmilla"
+    },
+    {
+      "wert": "K018",
+      "text": "California Spangled"
+    },
+    {
+      "wert": "K019",
+      "text": "Ceylon"
+    },
+    {
+      "wert": "K020",
+      "text": "Chartreux / Kartäuser"
+    },
+    {
+      "wert": "K021",
+      "text": "Chausie"
+    },
+    {
+      "wert": "K022",
+      "text": "Cymric"
+    },
+    {
+      "wert": "K023",
+      "text": "Exotische Kurzhaarkatze"
+    },
+    {
+      "wert": "K024",
+      "text": "Havanna"
+    },
+    {
+      "wert": "K025",
+      "text": "Japanese Bobtail Longhair"
+    },
+    {
+      "wert": "K026",
+      "text": "Japanese Bobtail Shorthair"
+    },
+    {
+      "wert": "K027",
+      "text": "Kanaani"
+    },
+    {
+      "wert": "K028",
+      "text": "Korat"
+    },
+    {
+      "wert": "K029",
+      "text": "Kurilean Bobtail Longhair"
+    },
+    {
+      "wert": "K030",
+      "text": "Kurilean Bobtail Shorthair"
+    },
+    {
+      "wert": "K031",
+      "text": "La Perm Longhair"
+    },
+    {
+      "wert": "K032",
+      "text": "La Perm Shorthair"
+    },
+    {
+      "wert": "K033",
+      "text": "Maine Coon"
+    },
+    {
+      "wert": "K034",
+      "text": "Manx"
+    },
+    {
+      "wert": "K035",
+      "text": "Mischling / Hauskatze / Europäisch Kurzhaar"
+    },
+    {
+      "wert": "K036",
+      "text": "Munchkin Longhair"
+    },
+    {
+      "wert": "K037",
+      "text": "Munchkin Shorthair"
+    },
+    {
+      "wert": "K038",
+      "text": "Nebelung"
+    },
+    {
+      "wert": "K039",
+      "text": "Norwegische Waldkatze"
+    },
+    {
+      "wert": "K040",
+      "text": "Ocicat"
+    },
+    {
+      "wert": "K041",
+      "text": "Ojos Azules"
+    },
+    {
+      "wert": "K042",
+      "text": "Oriental Longhair / Javanese / Mandarin"
+    },
+    {
+      "wert": "K043",
+      "text": "Oriental Shorthair"
+    },
+    {
+      "wert": "K044",
+      "text": "Perser / Colourpoint / Himalayan / Maskenperser"
+    },
+    {
+      "wert": "K045",
+      "text": "Peterbald"
+    },
+    {
+      "wert": "K046",
+      "text": "Pixiebob Longhair"
+    },
+    {
+      "wert": "K047",
+      "text": "Pixiebob Shorthair"
+    },
+    {
+      "wert": "K048",
+      "text": "Rex"
+    },
+    {
+      "wert": "K049",
+      "text": "RagaMuffin"
+    },
+    {
+      "wert": "K050",
+      "text": "Ragdoll"
+    },
+    {
+      "wert": "K051",
+      "text": "Russisch Blau"
+    },
+    {
+      "wert": "K052",
+      "text": "Safari"
+    },
+    {
+      "wert": "K053",
+      "text": "Savannah"
+    },
+    {
+      "wert": "K054",
+      "text": "Scottish Fold Longhair"
+    },
+    {
+      "wert": "K055",
+      "text": "Scottish Fold Shorthair"
+    },
+    {
+      "wert": "K056",
+      "text": "Siam"
+    },
+    {
+      "wert": "K057",
+      "text": "Sibirische Katze / Neva Masquarade"
+    },
+    {
+      "wert": "K058",
+      "text": "Singapura"
+    },
+    {
+      "wert": "K059",
+      "text": "Snowshoe"
+    },
+    {
+      "wert": "K060",
+      "text": "Sokoke"
+    },
+    {
+      "wert": "K061",
+      "text": "Somali"
+    },
+    {
+      "wert": "K062",
+      "text": "Sphynx"
+    },
+    {
+      "wert": "K063",
+      "text": "Thai"
+    },
+    {
+      "wert": "K064",
+      "text": "Tonkanese"
+    },
+    {
+      "wert": "K065",
+      "text": "Toyger"
+    },
+    {
+      "wert": "K066",
+      "text": "Türkisch Angora"
+    },
+    {
+      "wert": "K067",
+      "text": "Türkisch Van"
+    },
+    {
+      "wert": "K068",
+      "text": "York Chocolate"
+    },
+    {
+      "wert": "K069",
+      "text": "Serengeti"
+    },
+    {
+      "wert": "K070",
+      "text": "Bunny cat"
+    },
+    {
+      "wert": "K071",
+      "text": "Hasenkatze"
+    },
+    {
+      "wert": "K072",
+      "text": "Mau, Ägyptische"
+    },
+    {
+      "wert": "K074",
+      "text": "Mau, Egyptian"
+    },
+    {
+      "wert": "K075",
+      "text": "Stummelschwanzkatze Langhaar, Amerikanische"
+    },
+    {
+      "wert": "K076",
+      "text": "Stummelschwanzkatze Kurzhaar, Amerikanische"
+    },
+    {
+      "wert": "K077",
+      "text": "Luchskatze, Amerikanische "
+    },
+    {
+      "wert": "K078",
+      "text": "American Shorthair in chocolate-silver"
+    },
+    {
+      "wert": "K079",
+      "text": "Balinesenkatze"
+    },
+    {
+      "wert": "K080",
+      "text": "Leopardette"
+    },
+    {
+      "wert": "K081",
+      "text": "Heilige Birm"
+    },
+    {
+      "wert": "K082",
+      "text": "Birman"
+    },
+    {
+      "wert": "K083",
+      "text": "Sacred Birman"
+    },
+    {
+      "wert": "K084",
+      "text": "British Shorthair"
+    },
+    {
+      "wert": "K085",
+      "text": "Ceylonkatze"
+    },
+    {
+      "wert": "K086",
+      "text": "Ceylon cat"
+    },
+    {
+      "wert": "K087",
+      "text": "Chartreuse"
+    },
+    {
+      "wert": "K088",
+      "text": "Karthäuser"
+    },
+    {
+      "wert": "K089",
+      "text": "Manx, Longhaired"
+    },
+    {
+      "wert": "K090",
+      "text": "Manxkatze, Langhaarige"
+    },
+    {
+      "wert": "K091",
+      "text": "Kymrische Katze"
+    },
+    {
+      "wert": "K092",
+      "text": "Exotic Shorthair"
+    },
+    {
+      "wert": "K093",
+      "text": "Exotic"
+    },
+    {
+      "wert": "K094",
+      "text": "Havanna Brown"
+    },
+    {
+      "wert": "K095",
+      "text": "Boby"
+    },
+    {
+      "wert": "K096",
+      "text": "Stummelschwanzkatze, Japanische"
+    },
+    {
+      "wert": "K097",
+      "text": "Chrysanthemenkatze, Langhaar"
+    },
+    {
+      "wert": "K098",
+      "text": "Chrysanthemenkatze, Kurzhaar"
+    },
+    {
+      "wert": "K099",
+      "text": "Kanaan-Katze"
+    },
+    {
+      "wert": "K100",
+      "text": "Si-Sawat"
+    },
+    {
+      "wert": "K101",
+      "text": "Maeo Dok-Lao"
+    },
+    {
+      "wert": "K102",
+      "text": "Kurilian Bobtail"
+    },
+    {
+      "wert": "K103",
+      "text": "Stummelschwanzkatze, Karelische "
+    },
+    {
+      "wert": "K104",
+      "text": "Karelisch Bobtail, Langhaar"
+    },
+    {
+      "wert": "K105",
+      "text": "Nibelung"
+    },
+    {
+      "wert": "K106",
+      "text": "Norweger"
+    },
+    {
+      "wert": "K107",
+      "text": "Norwegian Forest Cat"
+    },
+    {
+      "wert": "K108",
+      "text": "Skogkatt"
+    },
+    {
+      "wert": "K109",
+      "text": "Nors Skaukatt"
+    },
+    {
+      "wert": "K110",
+      "text": "Ocikatze"
+    },
+    {
+      "wert": "K111",
+      "text": "Orientalisch Langhaar"
+    },
+    {
+      "wert": "K112",
+      "text": "Javanese/Mandarin"
+    },
+    {
+      "wert": "K113",
+      "text": "Orientalisch Kurzhaar"
+    },
+    {
+      "wert": "K114",
+      "text": "OKH, Foreign Shorthair"
+    },
+    {
+      "wert": "K115",
+      "text": "Rex, Bohemian"
+    },
+    {
+      "wert": "K116",
+      "text": "Rex, California"
+    },
+    {
+      "wert": "K117",
+      "text": "Rex, Cornish"
+    },
+    {
+      "wert": "K118",
+      "text": "Rex, Devon"
+    },
+    {
+      "wert": "K119",
+      "text": "Rex, German"
+    },
+    {
+      "wert": "K120",
+      "text": "Rex, Oregon"
+    },
+    {
+      "wert": "K121",
+      "text": "Rex, Selkirk"
+    },
+    {
+      "wert": "K122",
+      "text": "Rex, Ural"
+    },
+    {
+      "wert": "K123",
+      "text": "Russische Katze"
+    },
+    {
+      "wert": "K124",
+      "text": "Russian Blue"
+    },
+    {
+      "wert": "K125",
+      "text": "Bleu Russe"
+    },
+    {
+      "wert": "K126",
+      "text": "Archangelsk-Katze"
+    },
+    {
+      "wert": "K127",
+      "text": "Malterkatze"
+    },
+    {
+      "wert": "K128",
+      "text": "Spanische Katze"
+    },
+    {
+      "wert": "K129",
+      "text": "Highland Fold"
+    },
+    {
+      "wert": "K130",
+      "text": "Coupari"
+    },
+    {
+      "wert": "K131",
+      "text": "Hängeohrenkatze Langhaar, Schottische"
+    },
+    {
+      "wert": "K132",
+      "text": "Faltohrkatze Langhaar, Schottische"
+    },
+    {
+      "wert": "K133",
+      "text": "Hängeohrenkatze Kurzhaar, Schottische"
+    },
+    {
+      "wert": "K134",
+      "text": "Faltohrkatze Kurzhaar, Schottische"
+    },
+    {
+      "wert": "K135",
+      "text": "Siamese"
+    },
+    {
+      "wert": "K136",
+      "text": "Waldkatze, Sibirische "
+    },
+    {
+      "wert": "K137",
+      "text": "Sibirian Cat"
+    },
+    {
+      "wert": "K138",
+      "text": "Sibirska Koschka"
+    },
+    {
+      "wert": "K139",
+      "text": "Sibirski"
+    },
+    {
+      "wert": "K140",
+      "text": "Neva Masquerade"
+    },
+    {
+      "wert": "K141",
+      "text": "Drain Cat"
+    },
+    {
+      "wert": "K142",
+      "text": "Schneeschuhkatze"
+    },
+    {
+      "wert": "K143",
+      "text": "Canadian Hairless"
+    },
+    {
+      "wert": "K144",
+      "text": "Mexican Hairless"
+    },
+    {
+      "wert": "K145",
+      "text": "Moon Cat"
+    },
+    {
+      "wert": "K146",
+      "text": "Nacktkatze"
+    },
+    {
+      "wert": "K147",
+      "text": "Siam alter Typ"
+    },
+    {
+      "wert": "K148",
+      "text": "Tonkinese"
+    },
+    {
+      "wert": "K149",
+      "text": "Siamese, Goldener "
+    },
+    {
+      "wert": "K150",
+      "text": "Angorakatze"
+    },
+    {
+      "wert": "K151",
+      "text": "Ankarakatze"
+    },
+    {
+      "wert": "K152",
+      "text": "Ankara kedisi"
+    },
+    {
+      "wert": "K153",
+      "text": "Vankatze"
+    },
+    {
+      "wert": "K154",
+      "text": "Schwimmkatze"
+    },
+    {
+      "wert": "K155",
+      "text": "Türkische Katze"
+    },
+    {
+      "wert": "K156",
+      "text": "Turkish"
+    },
+    {
+      "wert": "K157",
+      "text": "Van Kedesi"
+    },
+    {
+      "wert": "K158",
+      "text": "Türkisch Vankedisi"
+    },
+    {
+      "wert": "K159",
+      "text": "Karelisch Bobtail, Kurzhaar"
+    },
+    {
+      "wert": "K160",
+      "text": "Deutsch Langhaar"
+    }
+  ]
+}

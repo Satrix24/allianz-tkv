@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privatschutz Rechner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --allianz-blue: #003781;
+        --allianz-blue-dark: #002a63;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --border: #dbe3ef;
+        --bg: #f3f6fb;
+        --card: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: radial-gradient(circle at top, #eef4ff 0%, var(--bg) 45%, #eef2f9 100%);
+        color: var(--text-primary);
+      }
+
+      .page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 620px;
+        background: var(--card);
+        border-radius: 18px;
+        box-shadow: 0 14px 40px rgba(0, 31, 84, 0.12);
+        border: 1px solid #e7edf7;
+        overflow: hidden;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 22px 26px;
+        border-bottom: 1px solid #e8eef7;
+        background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+      }
+
+      .logo-badge {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--allianz-blue);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        display: grid;
+        place-items: center;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--allianz-blue);
+      }
+
+      form {
+        padding: 24px 26px 28px;
+      }
+
+      .field {
+        margin-bottom: 18px;
+      }
+
+      .field label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #1e293b;
+      }
+
+      .field input,
+      .field select {
+        width: 100%;
+        height: 48px;
+        padding: 0 14px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text-primary);
+        font-size: 15px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.18s ease, box-shadow 0.18s ease;
+      }
+
+      .field input:focus,
+      .field select:focus {
+        border-color: var(--allianz-blue);
+        box-shadow: 0 0 0 3px rgba(0, 55, 129, 0.12);
+      }
+
+      .field small {
+        display: block;
+        margin-top: 8px;
+        color: var(--text-secondary);
+        font-size: 13px;
+        line-height: 1.3;
+      }
+
+      .error {
+        display: none;
+        margin-top: 8px;
+        color: #b42318;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .field.invalid input {
+        border-color: #d92d20;
+      }
+
+      .field.invalid .error {
+        display: block;
+      }
+
+      .submit {
+        width: 100%;
+        border: 0;
+        border-radius: 12px;
+        background: var(--allianz-blue);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 14px 16px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.08s ease;
+      }
+
+      .submit:hover {
+        background: var(--allianz-blue-dark);
+      }
+
+      .submit:active {
+        transform: translateY(1px);
+      }
+
+      .submit:disabled {
+        opacity: 0.75;
+        cursor: not-allowed;
+      }
+
+      .loading {
+        display: none;
+        margin-top: 16px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: #eef4ff;
+        color: var(--allianz-blue);
+        font-weight: 600;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .loading.active {
+        display: inline-flex;
+      }
+
+      .spinner {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 55, 129, 0.25);
+        border-top-color: var(--allianz-blue);
+        animation: spin 0.75s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .header,
+        form {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+
+        .header h1 {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <div class="logo-badge">Allianz</div>
+          <h1>Privatschutz Rechner</h1>
+        </header>
+
+        <form id="calculatorForm" novalidate>
+          <div class="field" id="plzField">
+            <label for="plz">PLZ</label>
+            <input
+              id="plz"
+              name="plz"
+              type="text"
+              inputmode="numeric"
+              pattern="\d{5}"
+              minlength="5"
+              maxlength="5"
+              required
+              placeholder="z.B. 87435"
+            />
+            <small>Für die Berechnung Ihres regionalen Tarifs</small>
+            <div class="error">Bitte geben Sie eine gültige 5-stellige PLZ ein.</div>
+          </div>
+
+          <div class="field">
+            <label for="wohnflaeche">Wohnfläche (m²)</label>
+            <input id="wohnflaeche" name="wohnflaeche" type="number" min="1" step="1" placeholder="z.B. 75" required />
+            <small>Die Größe Ihrer Wohnung oder Ihres Hauses</small>
+          </div>
+
+          <div class="field">
+            <label for="gebaeudeart">Gebäudeart</label>
+            <select id="gebaeudeart" name="gebaeudeart" required>
+              <option value="APARTMENT" selected>Mehrfamilienhaus / Wohnung</option>
+              <option value="HOUSE">Einfamilienhaus</option>
+            </select>
+            <small>Art Ihrer Unterkunft</small>
+          </div>
+
+          <div class="field">
+            <label for="etage">Etage</label>
+            <select id="etage" name="etage" required>
+              <option value="GROUND_FLOOR" selected>Erdgeschoss / Keller</option>
+              <option value="UPPER_FLOOR">1. Stock oder höher</option>
+            </select>
+            <small>Lage Ihrer Wohnung im Gebäude</small>
+          </div>
+
+          <div class="field">
+            <label for="familienstand">Familienstand</label>
+            <select id="familienstand" name="familienstand" required>
+              <option value="" disabled selected>Bitte auswählen</option>
+              <option value="Single">Single</option>
+              <option value="Paar">Paar</option>
+              <option value="Familie">Familie mit Kindern</option>
+            </select>
+            <small>Bestimmt den Versicherungsumfang</small>
+          </div>
+
+          <div class="field">
+            <label for="geburtsdatum">Geburtsdatum</label>
+            <input id="geburtsdatum" name="geburtsdatum" type="date" required />
+            <small>Für die Berechnung des Altersrabatts</small>
+          </div>
+
+          <button class="submit" id="submitButton" type="submit">Angebot berechnen</button>
+
+          <div class="loading" id="loadingState" aria-live="polite">
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Ihre Preise werden berechnet...</span>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById('calculatorForm');
+      const loadingState = document.getElementById('loadingState');
+      const submitButton = document.getElementById('submitButton');
+      const plzField = document.getElementById('plzField');
+      const plzInput = document.getElementById('plz');
+
+      plzInput.addEventListener('input', () => {
+        plzInput.value = plzInput.value.replace(/\D/g, '').slice(0, 5);
+        if (/^\d{5}$/.test(plzInput.value)) {
+          plzField.classList.remove('invalid');
+        }
+      });
+
+      function validatePlz() {
+        const isValid = /^\d{5}$/.test(plzInput.value);
+        plzField.classList.toggle('invalid', !isValid);
+        return isValid;
+      }
+
+      function wait(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function calculate(e) {
+        e.preventDefault();
+
+        if (!validatePlz()) return;
+        if (!form.reportValidity()) return;
+
+        submitButton.disabled = true;
+        loadingState.classList.add('active');
+
+        try {
+          const dob = document.getElementById('geburtsdatum').value;
+          const [y, m, d] = dob.split('-');
+          const geburtsdatum = `${d}.${m}.${y}`;
+
+          const body = {
+            plz: document.getElementById('plz').value,
+            wohnflaeche: document.getElementById('wohnflaeche').value,
+            gebaeudeart: document.getElementById('gebaeudeart').value,
+            etage: document.getElementById('etage').value,
+            familienstand: document.getElementById('familienstand').value,
+            geburtsdatum
+          };
+
+          const [res] = await Promise.all([
+            fetch('/api/privatschutz/calculate', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(body)
+            }),
+            wait(2000)
+          ]);
+
+          const data = await res.json();
+
+          if (!res.ok || !data?.code) {
+            throw new Error(data?.message || 'Berechnung fehlgeschlagen. Bitte erneut versuchen.');
+          }
+
+          window.location.href = `/privatschutz?code=${data.code}`;
+        } catch (err) {
+          loadingState.classList.remove('active');
+          submitButton.disabled = false;
+          alert(err.message || 'Es ist ein Fehler aufgetreten.');
+        }
+      }
+
+      form.addEventListener('submit', calculate);
+    </script>
+  </body>
+</html>

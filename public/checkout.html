@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versicherung abschließen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --allianz-blue: #003781;
+      --allianz-light: #eef4ff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d1d5db;
+      --bg: #f5f7fb;
+      --card-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 14px 32px;
+    }
+
+    .header {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--allianz-blue);
+      color: var(--allianz-blue);
+      font-weight: 800;
+      border-radius: 8px;
+      min-width: 110px;
+      padding: 8px 14px;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--allianz-blue);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.12;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      color: var(--allianz-blue);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      padding: 11px 12px;
+      background: #fff;
+      transition: border-color .18s ease, box-shadow .18s ease;
+      font-family: inherit;
+    }
+
+    textarea { min-height: 88px; resize: vertical; }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--allianz-blue);
+      box-shadow: 0 0 0 3px rgba(0, 55, 129, 0.14);
+    }
+
+    .birth-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+
+    .toggle-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all .18s ease;
+      background: #fff;
+      user-select: none;
+    }
+
+    .toggle-card:hover {
+      border-color: var(--allianz-blue);
+      transform: translateY(-1px);
+    }
+
+    .toggle-card.active {
+      border-color: var(--allianz-blue);
+      background: var(--allianz-light);
+      box-shadow: inset 0 0 0 1px rgba(0, 55, 129, 0.14);
+    }
+
+    .toggle-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .toggle-title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 15px;
+      color: #111827;
+    }
+
+    .toggle-price {
+      color: var(--allianz-blue);
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .toggle-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .radio-row {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+
+    .radio-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all .18s ease;
+      background: #fff;
+    }
+
+    .radio-card.active {
+      border-color: var(--allianz-blue);
+      background: var(--allianz-light);
+    }
+
+    .radio-card input[type="radio"] { width: 18px; height: 18px; margin: 0; }
+
+    .button-wrap { margin-top: 12px; }
+
+    .submit-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 15px 16px;
+      background: var(--allianz-blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+
+    .submit-btn:hover { transform: translateY(-1px); }
+    .submit-btn:disabled { opacity: 0.65; cursor: progress; transform: none; }
+
+    .status {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status.success { color: #0f6d2f; }
+    .status.error { color: #9f1239; }
+
+    .footer {
+      margin-top: 8px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: var(--allianz-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    .help {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    @media (min-width: 720px) {
+      .wrap { padding: 24px 20px 40px; }
+      .grid.two { grid-template-columns: repeat(2, 1fr); }
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+      .card-grid { grid-template-columns: repeat(2, 1fr); }
+      .radio-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="logo-row">
+        <div class="logo-badge">Allianz</div>
+      </div>
+      <h1>Versicherung abschließen</h1>
+      <div id="offerSubtitle" class="subtitle">Ihr Persönliches Angebot</div>
+    </header>
+
+    <form id="checkoutForm">
+      <section class="card">
+        <h2 class="section-title">Ihre Daten</h2>
+
+        <div class="grid two">
+          <div class="field">
+            <label for="name">Vor- und Nachname *</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="email">E-Mail *</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="field">
+            <label for="strasse">Straße</label>
+            <input id="strasse" name="strasse" type="text" />
+          </div>
+          <div class="field">
+            <label for="hausnummer">Hausnummer</label>
+            <input id="hausnummer" name="hausnummer" type="text" />
+          </div>
+          <div class="field">
+            <label for="plz">PLZ</label>
+            <input id="plz" name="plz" type="text" pattern="\\d{5}" maxlength="5" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="field">
+            <label for="ort">Ort</label>
+            <input id="ort" name="ort" type="text" />
+          </div>
+          <div class="field">
+            <label for="wohnflaeche">Wohnfläche in m²</label>
+            <input id="wohnflaeche" name="wohnflaeche" type="number" min="10" max="500" />
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="field">
+            <label for="gebaeudeart">Gebäudeart</label>
+            <select id="gebaeudeart" name="gebaeudeart">
+              <option value="">Bitte wählen</option>
+              <option value="Einfamilienhaus">Einfamilienhaus</option>
+              <option value="Mehrfamilienhaus">Mehrfamilienhaus</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="etage">Etage</label>
+            <select id="etage" name="etage">
+              <option value="">Bitte wählen</option>
+              <option value="Erdgeschoss / Keller">Erdgeschoss / Keller</option>
+              <option value="1. Stock oder höher">1. Stock oder höher</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="absicherung">Absicherung</label>
+            <select id="absicherung" name="absicherung">
+              <option value="">Bitte wählen</option>
+              <option value="Ich selbst">Ich selbst</option>
+              <option value="Ich + Partner">Ich + Partner</option>
+              <option value="Ich + Partner + Kind(er)">Ich + Partner + Kind(er)</option>
+              <option value="Ich + Kind(er)">Ich + Kind(er)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Geburtsdatum</label>
+          <div class="birth-grid">
+            <input id="gebTag" name="gebTag" type="number" min="1" max="31" placeholder="Tag" />
+            <input id="gebMonat" name="gebMonat" type="number" min="1" max="12" placeholder="Monat" />
+            <input id="gebJahr" name="gebJahr" type="number" min="1900" max="2100" placeholder="Jahr" />
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="field">
+            <label for="telefon">Telefon</label>
+            <input id="telefon" name="telefon" type="tel" />
+          </div>
+          <div class="field">
+            <label for="iban">IBAN *</label>
+            <input id="iban" name="iban" type="text" required placeholder="DE89 3704 0044 0532 0130 00" />
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="field">
+            <label for="vorschadenHausrat">Vorschäden Hausrat</label>
+            <select id="vorschadenHausrat" name="vorschadenHausrat">
+              <option value="">Bitte wählen</option>
+              <option value="Nein">Nein</option>
+              <option value="Ja">Ja</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="vorschadenHaftpflicht">Vorschäden Haftpflicht</label>
+            <select id="vorschadenHaftpflicht" name="vorschadenHaftpflicht">
+              <option value="">Bitte wählen</option>
+              <option value="Nein">Nein</option>
+              <option value="Ja">Ja</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="vorschadenRechtsschutz">Vorschäden Rechtsschutz</label>
+            <select id="vorschadenRechtsschutz" name="vorschadenRechtsschutz">
+              <option value="">Bitte wählen</option>
+              <option value="Nein">Nein</option>
+              <option value="Ja">Ja</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="hinweise">Hinweise</label>
+          <textarea id="hinweise" name="hinweise" placeholder="Optional"></textarea>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Ihr Versicherungspaket</h2>
+        <div class="field">
+          <label for="plan">Tarif</label>
+          <select id="plan" name="plan">
+            <option value="Komfort">Komfort – Top-Schutz (— € / Monat)</option>
+            <option value="Smart">Smart – Erweiterter Schutz (— € / Monat)</option>
+            <option value="Basis">Basis – Grundschutz (— € / Monat)</option>
+          </select>
+          <div class="help">Preise werden automatisch aus dem gespeicherten Angebot geladen.</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Zusatzbausteine (optional)</h2>
+
+        <div class="card-grid">
+          <div class="toggle-card" data-addon="extremwetterschutz">
+            <div class="toggle-head">
+              <p class="toggle-title">Extremwetterschutz</p>
+              <span id="addonExtremwetter" class="toggle-price">+ — € / Monat</span>
+            </div>
+            <p class="toggle-desc">Weitere Naturgefahren: versichert u.a. Schäden durch Überschwemmung, Erdbeben, Vulkanausbruch</p>
+          </div>
+
+          <div class="toggle-card" data-addon="glasschutzHausrat">
+            <div class="toggle-head">
+              <p class="toggle-title">Glasschutz Hausrat</p>
+              <span id="addonGlassHausrat" class="toggle-price">+ — € / Monat</span>
+            </div>
+            <p class="toggle-desc">Sichert die Mobiliar-/Innenverglasung ab, z.B. Glastische, Glasvitrinen</p>
+          </div>
+
+          <div class="toggle-card" data-addon="glasschutzGebaeude">
+            <div class="toggle-head">
+              <p class="toggle-title">Glasschutz Gebäude</p>
+              <span id="addonGlassGebaeude" class="toggle-price">+ — € / Monat</span>
+            </div>
+            <p class="toggle-desc">Sichert die Gebäudeaußenverglasung wie z.B. Fensterscheiben, Wintergarten</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <label style="display:block; margin-bottom: 8px;">Fahrradschutz</label>
+          <div class="radio-row" id="bikeOptions">
+            <label class="radio-card active">
+              <input type="radio" name="fahrradschutz" value="none" checked />
+              <span>Kein Fahrradschutz — —</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="fahrradschutz" value="1500" />
+              <span>bis 1.500 € — + 1,13 € / Monat</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="fahrradschutz" value="3000" />
+              <span>bis 3.000 € — + 2,24 € / Monat</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="fahrradschutz" value="6000" />
+              <span>bis 6.000 € — + 4,48 € / Monat</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <div class="button-wrap">
+        <button id="submitBtn" class="submit-btn" type="submit">Jetzt abschließen →</button>
+        <div id="status" class="status" aria-live="polite"></div>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <a href="#">Impressum</a> |
+      <a href="#">Datenschutz</a>
+    </footer>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const code = params.get('code') || '';
+    const planParamRaw = params.get('plan') || '';
+    const planParam = planParamRaw ? planParamRaw.charAt(0).toUpperCase() + planParamRaw.slice(1).toLowerCase() : '';
+
+    const addonState = {
+      extremwetterschutz: false,
+      glasschutzHausrat: false,
+      glasschutzGebaeude: false
+    };
+
+    function euro(v) {
+      if (v === null || v === undefined || Number.isNaN(Number(v))) return '—';
+      return Number(v).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function prefill() {
+      const map = {
+        name: 'name',
+        email: 'email',
+        telefon: 'telefon',
+        plz: 'plz'
+      };
+
+      Object.entries(map).forEach(([paramKey, id]) => {
+        const value = params.get(paramKey);
+        if (value) {
+          const el = document.getElementById(id);
+          if (el) el.value = value;
+        }
+      });
+
+      const displayName = params.get('name');
+      const subtitle = document.getElementById('offerSubtitle');
+      subtitle.textContent = displayName
+        ? `${displayName} – Ihr Persönliches Angebot`
+        : 'Ihr Persönliches Angebot';
+
+      if (planParam && ['Komfort', 'Smart', 'Basis'].includes(planParam)) {
+        document.getElementById('plan').value = planParam;
+      }
+    }
+
+    function bindCards() {
+      document.querySelectorAll('.toggle-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          const key = card.dataset.addon;
+          addonState[key] = !addonState[key];
+          card.classList.toggle('active', addonState[key]);
+        });
+      });
+
+      const bikeCards = document.querySelectorAll('.radio-card');
+      bikeCards.forEach((card) => {
+        const input = card.querySelector('input[type="radio"]');
+        card.addEventListener('click', () => {
+          input.checked = true;
+          bikeCards.forEach((c) => c.classList.remove('active'));
+          card.classList.add('active');
+        });
+      });
+    }
+
+    function setTarifOptions(tarife = {}) {
+      const labels = {
+        Komfort: 'Komfort – Top-Schutz',
+        Smart: 'Smart – Erweiterter Schutz',
+        Basis: 'Basis – Grundschutz'
+      };
+      const planSelect = document.getElementById('plan');
+      ['Komfort', 'Smart', 'Basis'].forEach((key, i) => {
+        const opt = planSelect.options[i];
+        const preis = tarife[key] && tarife[key].gesamt !== undefined ? euro(tarife[key].gesamt) : '—';
+        opt.textContent = `${labels[key]} (${preis} € / Monat)`;
+      });
+
+      if (planParam && ['Komfort', 'Smart', 'Basis'].includes(planParam)) {
+        planSelect.value = planParam;
+      }
+    }
+
+    async function loadOffer() {
+      if (!code) return;
+      try {
+        const response = await fetch(`/api/privatschutz/offer/${encodeURIComponent(code)}`);
+        if (!response.ok) throw new Error('Angebot nicht gefunden');
+        const data = await response.json();
+
+        setTarifOptions(data.tarife || {});
+
+        const addons = data.addons || {};
+        document.getElementById('addonExtremwetter').textContent = `+ ${euro(addons.extremwetterschutz)} € / Monat`;
+        document.getElementById('addonGlassHausrat').textContent = `+ ${euro(addons?.glasschutz?.hausrat)} € / Monat`;
+        document.getElementById('addonGlassGebaeude').textContent = `+ ${euro(addons?.glasschutz?.gebaeude)} € / Monat`;
+
+        if (!document.getElementById('wohnflaeche').value && data.input?.wohnflaeche) {
+          document.getElementById('wohnflaeche').value = data.input.wohnflaeche;
+        }
+        if (!document.getElementById('plz').value && data.input?.plz) {
+          document.getElementById('plz').value = data.input.plz;
+        }
+      } catch (_err) {
+        setTarifOptions({});
+      }
+    }
+
+    function getBirthdate() {
+      const d = document.getElementById('gebTag').value;
+      const m = document.getElementById('gebMonat').value;
+      const y = document.getElementById('gebJahr').value;
+      if (!d || !m || !y) return '';
+      return `${String(d).padStart(2, '0')}.${String(m).padStart(2, '0')}.${String(y)}`;
+    }
+
+    async function submitCheckout(e) {
+      e.preventDefault();
+      const form = document.getElementById('checkoutForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const status = document.getElementById('status');
+
+      if (!form.reportValidity()) return;
+
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Wird übermittelt...';
+      status.className = 'status';
+      status.textContent = '';
+
+      const payload = {
+        code,
+        plan: document.getElementById('plan').value,
+        kunde: {
+          name: document.getElementById('name').value.trim(),
+          strasse: document.getElementById('strasse').value.trim(),
+          hausnummer: document.getElementById('hausnummer').value.trim(),
+          plz: document.getElementById('plz').value.trim(),
+          ort: document.getElementById('ort').value.trim(),
+          wohnflaeche: document.getElementById('wohnflaeche').value ? Number(document.getElementById('wohnflaeche').value) : null,
+          gebaeudeart: document.getElementById('gebaeudeart').value,
+          etage: document.getElementById('etage').value,
+          absicherung: document.getElementById('absicherung').value,
+          geburtsdatum: getBirthdate(),
+          email: document.getElementById('email').value.trim(),
+          telefon: document.getElementById('telefon').value.trim(),
+          iban: document.getElementById('iban').value.trim(),
+          vorschadenHausrat: document.getElementById('vorschadenHausrat').value,
+          vorschadenHaftpflicht: document.getElementById('vorschadenHaftpflicht').value,
+          vorschadenRechtsschutz: document.getElementById('vorschadenRechtsschutz').value,
+          hinweise: document.getElementById('hinweise').value.trim()
+        },
+        zusatzbausteine: {
+          extremwetterschutz: addonState.extremwetterschutz,
+          glasschutzHausrat: addonState.glasschutzHausrat,
+          glasschutzGebaeude: addonState.glasschutzGebaeude,
+          fahrradschutz: document.querySelector('input[name="fahrradschutz"]:checked')?.value || 'none'
+        }
+      };
+
+      try {
+        const response = await fetch('/api/checkout/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json();
+
+        if (!response.ok || !data.ok) {
+          throw new Error(data?.message || data?.error || 'Übermittlung fehlgeschlagen');
+        }
+
+        status.classList.add('success');
+        status.textContent = '✅ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.';
+        form.reset();
+        document.querySelectorAll('.toggle-card').forEach((c) => c.classList.remove('active'));
+        document.querySelectorAll('.radio-card').forEach((c) => c.classList.remove('active'));
+        const defaultBike = document.querySelector('.radio-card input[value="none"]');
+        if (defaultBike) {
+          defaultBike.checked = true;
+          defaultBike.closest('.radio-card').classList.add('active');
+        }
+        addonState.extremwetterschutz = false;
+        addonState.glasschutzHausrat = false;
+        addonState.glasschutzGebaeude = false;
+      } catch (err) {
+        status.classList.add('error');
+        status.textContent = err.message || 'Ein Fehler ist aufgetreten.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    }
+
+    prefill();
+    bindCards();
+    loadOffer();
+    document.getElementById('checkoutForm').addEventListener('submit', submitCheckout);
+  </script>
+</body>
+</html>

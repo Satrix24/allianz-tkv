@@ -1,0 +1,3484 @@
+{
+  "1323be20-fe98-4711-9d0c-0c49ac6cb150": {
+    "input": {
+      "plz": "87435",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 22.65,
+        "hausrat": 9.06,
+        "haftpflicht": 6.34,
+        "rechtsschutz": 7.25,
+        "summary": [
+          "Grundschutz Hausrat",
+          "Privat-Haftpflicht inkl. Forderungsausfall",
+          "Rechtsschutz Basispaket"
+        ]
+      },
+      "Smart": {
+        "gesamt": 26.65,
+        "hausrat": 10.93,
+        "haftpflicht": 7.46,
+        "rechtsschutz": 8.26,
+        "summary": [
+          "Starker Alltags-Schutz",
+          "Erweiterte Haftpflicht-Leistungen",
+          "Rechtsschutz mit besseren Deckungen"
+        ]
+      },
+      "Komfort": {
+        "gesamt": 26.65,
+        "hausrat": 11.19,
+        "haftpflicht": 7.2,
+        "rechtsschutz": 8.26,
+        "originalPrice": 31.45,
+        "specialPrice": true,
+        "summary": [
+          "Premium-Leistungen in allen Sparten",
+          "Top-Schutz bei Hausrat + Haftpflicht",
+          "Umfangreicher Rechtsschutz"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 4.65,
+        "premium": 8.75
+      },
+      "glasschutz": {
+        "hausrat": 2.85,
+        "gebaeude": 5.55
+      },
+      "extremwetterschutz": 6.4
+    },
+    "meta": {
+      "source": "fallback",
+      "note": "Live-Seite lieferte keine stabil auslesbaren Preisdaten"
+    },
+    "debug": {
+      "exploredScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/landing_1775979945343.png",
+      "exploredAnalysis": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/analysis.json",
+      "resultScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/result_1775979949274.png",
+      "finalUrl": "https://www.allianz.de/recht-und-eigentum/privatschutz/rechner/#/",
+      "clickable": false
+    },
+    "code": "1323be20-fe98-4711-9d0c-0c49ac6cb150",
+    "createdAt": "2026-04-12T07:45:49.404Z"
+  },
+  "PS-MNVGWZDP-214A4C": {
+    "input": {
+      "plz": "10115",
+      "wohnflaeche": 60,
+      "familienstand": "Paar",
+      "geburtsdatum": "15.03.1985"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 24.91,
+        "hausrat": 9.96,
+        "haftpflicht": 6.97,
+        "rechtsschutz": 7.97,
+        "summary": [
+          "Grundschutz Hausrat",
+          "Privat-Haftpflicht inkl. Forderungsausfall",
+          "Rechtsschutz Basispaket"
+        ]
+      },
+      "Smart": {
+        "gesamt": 29.3,
+        "hausrat": 12.01,
+        "haftpflicht": 8.2,
+        "rechtsschutz": 9.08,
+        "summary": [
+          "Starker Alltags-Schutz",
+          "Erweiterte Haftpflicht-Leistungen",
+          "Rechtsschutz mit besseren Deckungen"
+        ]
+      },
+      "Komfort": {
+        "gesamt": 29.3,
+        "hausrat": 12.31,
+        "haftpflicht": 7.91,
+        "rechtsschutz": 9.08,
+        "originalPrice": 34.57,
+        "specialPrice": true,
+        "summary": [
+          "Premium-Leistungen in allen Sparten",
+          "Top-Schutz bei Hausrat + Haftpflicht",
+          "Umfangreicher Rechtsschutz"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 4.5,
+        "premium": 8.48
+      },
+      "glasschutz": {
+        "hausrat": 2.76,
+        "gebaeude": 5.4
+      },
+      "extremwetterschutz": 6.22
+    },
+    "meta": {
+      "source": "fallback",
+      "note": "Live-Seite lieferte keine stabil auslesbaren Preisdaten"
+    },
+    "debug": {
+      "exploredScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/landing_1775980464161.png",
+      "exploredAnalysis": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/analysis.json",
+      "resultScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/result_1775980467838.png",
+      "finalUrl": "https://www.allianz.de/recht-und-eigentum/privatschutz/rechner/#/",
+      "clickable": false
+    },
+    "code": "PS-MNVGWZDP-214A4C",
+    "createdAt": "2026-04-12T07:54:27.997Z"
+  },
+  "PS-MNVIQXLZ-5F2153": {
+    "input": {
+      "plz": "10115",
+      "wohnflaeche": 60,
+      "familienstand": "Paar",
+      "geburtsdatum": "15.03.1985"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 24.91,
+        "hausrat": 9.96,
+        "haftpflicht": 6.97,
+        "rechtsschutz": 7.97,
+        "summary": [
+          "Grundschutz Hausrat",
+          "Privat-Haftpflicht inkl. Forderungsausfall",
+          "Rechtsschutz Basispaket"
+        ]
+      },
+      "Smart": {
+        "gesamt": 29.3,
+        "hausrat": 12.01,
+        "haftpflicht": 8.2,
+        "rechtsschutz": 9.08,
+        "summary": [
+          "Starker Alltags-Schutz",
+          "Erweiterte Haftpflicht-Leistungen",
+          "Rechtsschutz mit besseren Deckungen"
+        ]
+      },
+      "Komfort": {
+        "gesamt": 29.3,
+        "hausrat": 12.31,
+        "haftpflicht": 7.91,
+        "rechtsschutz": 9.08,
+        "originalPrice": 34.57,
+        "specialPrice": true,
+        "summary": [
+          "Premium-Leistungen in allen Sparten",
+          "Top-Schutz bei Hausrat + Haftpflicht",
+          "Umfangreicher Rechtsschutz"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 4.5,
+        "premium": 8.48
+      },
+      "glasschutz": {
+        "hausrat": 2.76,
+        "gebaeude": 5.4
+      },
+      "extremwetterschutz": 6.22
+    },
+    "meta": {
+      "source": "fallback",
+      "note": "Live-Seite lieferte keine stabil auslesbaren Preisdaten"
+    },
+    "debug": {
+      "exploredScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/landing_1775983541268.png",
+      "exploredAnalysis": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/analysis.json",
+      "resultScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/result_1775983544887.png",
+      "finalUrl": "https://www.allianz.de/recht-und-eigentum/privatschutz/rechner/#/",
+      "clickable": false
+    },
+    "code": "PS-MNVIQXLZ-5F2153",
+    "createdAt": "2026-04-12T08:45:45.000Z"
+  },
+  "PS-MNVN93OB-020C19": {
+    "input": {
+      "plz": "80331",
+      "wohnflaeche": 75,
+      "familienstand": "Paar",
+      "geburtsdatum": "15.03.1985"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 26.31,
+        "hausrat": 10.52,
+        "haftpflicht": 7.37,
+        "rechtsschutz": 8.42,
+        "summary": [
+          "Grundschutz Hausrat",
+          "Privat-Haftpflicht inkl. Forderungsausfall",
+          "Rechtsschutz Basispaket"
+        ]
+      },
+      "Smart": {
+        "gesamt": 30.95,
+        "hausrat": 12.69,
+        "haftpflicht": 8.67,
+        "rechtsschutz": 9.59,
+        "summary": [
+          "Starker Alltags-Schutz",
+          "Erweiterte Haftpflicht-Leistungen",
+          "Rechtsschutz mit besseren Deckungen"
+        ]
+      },
+      "Komfort": {
+        "gesamt": 30.95,
+        "hausrat": 13,
+        "haftpflicht": 8.36,
+        "rechtsschutz": 9.59,
+        "originalPrice": 36.52,
+        "specialPrice": true,
+        "summary": [
+          "Premium-Leistungen in allen Sparten",
+          "Top-Schutz bei Hausrat + Haftpflicht",
+          "Umfangreicher Rechtsschutz"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 4.65,
+        "premium": 8.75
+      },
+      "glasschutz": {
+        "hausrat": 2.85,
+        "gebaeude": 5.55
+      },
+      "extremwetterschutz": 6.4
+    },
+    "meta": {
+      "source": "fallback",
+      "note": "Live-Seite lieferte keine stabil auslesbaren Preisdaten"
+    },
+    "debug": {
+      "exploredScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/landing_1775991106562.png",
+      "exploredAnalysis": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/analysis.json",
+      "resultScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/result_1775991110902.png",
+      "finalUrl": "https://www.allianz.de/recht-und-eigentum/privatschutz/rechner/#/",
+      "clickable": false
+    },
+    "code": "PS-MNVN93OB-020C19",
+    "createdAt": "2026-04-12T10:51:51.131Z"
+  },
+  "PS-MNVNLKO5-3AA6A4": {
+    "input": {
+      "plz": "87435",
+      "wohnflaeche": 80,
+      "familienstand": "Paar",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 26.78,
+        "hausrat": 10.71,
+        "haftpflicht": 7.5,
+        "rechtsschutz": 8.57,
+        "summary": [
+          "Grundschutz Hausrat",
+          "Privat-Haftpflicht inkl. Forderungsausfall",
+          "Rechtsschutz Basispaket"
+        ]
+      },
+      "Smart": {
+        "gesamt": 31.5,
+        "hausrat": 12.92,
+        "haftpflicht": 8.82,
+        "rechtsschutz": 9.77,
+        "summary": [
+          "Starker Alltags-Schutz",
+          "Erweiterte Haftpflicht-Leistungen",
+          "Rechtsschutz mit besseren Deckungen"
+        ]
+      },
+      "Komfort": {
+        "gesamt": 31.5,
+        "hausrat": 13.23,
+        "haftpflicht": 8.51,
+        "rechtsschutz": 9.77,
+        "originalPrice": 37.17,
+        "specialPrice": true,
+        "summary": [
+          "Premium-Leistungen in allen Sparten",
+          "Top-Schutz bei Hausrat + Haftpflicht",
+          "Umfangreicher Rechtsschutz"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 4.7,
+        "premium": 8.84
+      },
+      "glasschutz": {
+        "hausrat": 2.88,
+        "gebaeude": 5.6
+      },
+      "extremwetterschutz": 6.46
+    },
+    "meta": {
+      "source": "fallback",
+      "note": "Live-Seite lieferte keine stabil auslesbaren Preisdaten"
+    },
+    "debug": {
+      "exploredScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/landing_1775991688874.png",
+      "exploredAnalysis": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/privatschutz-explore/analysis.json",
+      "resultScreenshot": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/result_1775991692834.png",
+      "finalUrl": "https://www.allianz.de/recht-und-eigentum/privatschutz/rechner/#/",
+      "clickable": false
+    },
+    "code": "PS-MNVNLKO5-3AA6A4",
+    "createdAt": "2026-04-12T11:01:33.029Z"
+  },
+  "PS-MNVO6K4T-6EA6D0": {
+    "input": {
+      "plz": "80331",
+      "wohnflaeche": 75,
+      "familienstand": "Paar",
+      "geburtsdatum": "15.03.1985"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 18.7,
+        "hausrat": 9.81,
+        "haftpflicht": 8.88,
+        "rechtsschutz": 0,
+        "originalPrice": 19.68,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 10.33,
+            "reducedPrice": 9.81,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 2.6
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.28
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.35
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 1.83
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 9.35,
+            "reducedPrice": 8.88,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.59
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 3.65
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.61
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 55.98,
+        "hausrat": 7.58,
+        "haftpflicht": 8.41,
+        "rechtsschutz": 39.99,
+        "originalPrice": 62.2,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 9.35,
+            "reducedPrice": 8.41,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.42,
+            "reducedPrice": 7.58,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 44.43,
+            "reducedPrice": 39.99,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 136.34,
+        "hausrat": 6.74,
+        "haftpflicht": 7.48,
+        "rechtsschutz": 35.54,
+        "originalPrice": 170.43,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 9.35,
+            "reducedPrice": 7.48,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.42,
+            "reducedPrice": 6.74,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 44.43,
+            "reducedPrice": 35.54,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 108.23,
+            "reducedPrice": 86.58,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 2.6,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.28,
+          "gebaeude": 1.35
+        },
+        "extremwetterschutz": 1.83,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 2.6
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.28
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.35
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 1.83
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.59
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 3.65
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.61
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "9690e1b0f4939e3474498ce4e7a7ea05",
+        "city": "München",
+        "street": "Altenhofstraße",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 2.6,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.28,
+        "gebaeude": 1.35
+      },
+      "extremwetterschutz": 1.83,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 2.6
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.28
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.35
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 1.83
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.59
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 3.65
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.61
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "9690e1b0f4939e3474498ce4e7a7ea05",
+      "city": "München",
+      "street": "Altenhofstraße",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVO6K4T-6EA6D0",
+    "createdAt": "2026-04-12T11:17:52.110Z"
+  },
+  "PS-MNVONKNO-834785": {
+    "input": {
+      "plz": "87439",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "12.12.2002"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 12.73,
+        "hausrat": 6.84,
+        "haftpflicht": 5.89,
+        "rechtsschutz": 0,
+        "originalPrice": 13.4,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.2,
+            "reducedPrice": 6.84,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 1.15
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 1.92
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.12
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 2.57
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 6.2,
+            "reducedPrice": 5.89,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.1
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.46
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.3
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 37.87,
+        "hausrat": 5.36,
+        "haftpflicht": 5.58,
+        "rechtsschutz": 26.94,
+        "originalPrice": 42.08,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 6.2,
+            "reducedPrice": 5.58,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 5.95,
+            "reducedPrice": 5.36,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 29.93,
+            "reducedPrice": 26.94,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 117.57,
+        "hausrat": 4.76,
+        "haftpflicht": 4.96,
+        "rechtsschutz": 23.94,
+        "originalPrice": 146.97,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 6.2,
+            "reducedPrice": 4.96,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 5.95,
+            "reducedPrice": 4.76,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 29.93,
+            "reducedPrice": 23.94,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 104.89,
+            "reducedPrice": 83.91,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 1.15,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 1.92,
+          "gebaeude": 1.12
+        },
+        "extremwetterschutz": 2.57,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 1.15
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 1.92
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.12
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 2.57
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.1
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.46
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.3
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "cc2a74097cf7e2ff10f1163d01895a35",
+        "city": "Kempten (Allgäu)",
+        "street": "Adalbert-Stifter-Weg",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 1.15,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 1.92,
+        "gebaeude": 1.12
+      },
+      "extremwetterschutz": 2.57,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 1.15
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 1.92
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.12
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 2.57
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.1
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.46
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.3
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "cc2a74097cf7e2ff10f1163d01895a35",
+      "city": "Kempten (Allgäu)",
+      "street": "Adalbert-Stifter-Weg",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVONKNO-834785",
+    "createdAt": "2026-04-12T11:31:05.941Z"
+  },
+  "PS-MNVOP5GY-6D73FA": {
+    "input": {
+      "plz": "10115",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "12.12.2002"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 26.94,
+        "hausrat": 21.45,
+        "haftpflicht": 5.49,
+        "rechtsschutz": 0,
+        "originalPrice": 28.36,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 22.58,
+            "reducedPrice": 21.45,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 5.06
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 1.92
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.12
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 2.12
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 5.78,
+            "reducedPrice": 5.49,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.1
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.46
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.3
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 52.08,
+        "hausrat": 15.75,
+        "haftpflicht": 5.2,
+        "rechtsschutz": 31.13,
+        "originalPrice": 57.87,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 5.78,
+            "reducedPrice": 5.2,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 17.5,
+            "reducedPrice": 15.75,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 34.59,
+            "reducedPrice": 31.13,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 128.17,
+        "hausrat": 14,
+        "haftpflicht": 4.62,
+        "rechtsschutz": 27.67,
+        "originalPrice": 160.21,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 5.78,
+            "reducedPrice": 4.62,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 17.5,
+            "reducedPrice": 14,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 34.59,
+            "reducedPrice": 27.67,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 102.34,
+            "reducedPrice": 81.87,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 5.06,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 1.92,
+          "gebaeude": 1.12
+        },
+        "extremwetterschutz": 2.12,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 5.06
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 1.92
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.12
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 2.12
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.1
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.46
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.3
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "e287bd55b58208e994d331f3bb0ea7cf",
+        "city": "Berlin",
+        "street": "Ackerstraße",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 5.06,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 1.92,
+        "gebaeude": 1.12
+      },
+      "extremwetterschutz": 2.12,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 5.06
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 1.92
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.12
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 2.12
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.1
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.46
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.3
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "e287bd55b58208e994d331f3bb0ea7cf",
+      "city": "Berlin",
+      "street": "Ackerstraße",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVOP5GY-6D73FA",
+    "createdAt": "2026-04-12T11:32:19.571Z"
+  },
+  "PS-MNVOQ0WE-93C81A": {
+    "input": {
+      "plz": "87439",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "12.12.2002"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 12.73,
+        "hausrat": 6.84,
+        "haftpflicht": 5.89,
+        "rechtsschutz": 0,
+        "originalPrice": 13.4,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.2,
+            "reducedPrice": 6.84,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 1.15
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 1.92
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.12
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 2.57
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 6.2,
+            "reducedPrice": 5.89,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.1
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.46
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.3
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 37.87,
+        "hausrat": 5.36,
+        "haftpflicht": 5.58,
+        "rechtsschutz": 26.94,
+        "originalPrice": 42.08,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 6.2,
+            "reducedPrice": 5.58,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 5.95,
+            "reducedPrice": 5.36,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 29.93,
+            "reducedPrice": 26.94,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 117.57,
+        "hausrat": 4.76,
+        "haftpflicht": 4.96,
+        "rechtsschutz": 23.94,
+        "originalPrice": 146.97,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 6.2,
+            "reducedPrice": 4.96,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 5.95,
+            "reducedPrice": 4.76,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 29.93,
+            "reducedPrice": 23.94,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 104.89,
+            "reducedPrice": 83.91,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 1.15,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 1.92,
+          "gebaeude": 1.12
+        },
+        "extremwetterschutz": 2.57,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 1.15
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 1.92
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.12
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 2.57
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.1
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.46
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.3
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "f26fc6818d6c5c519efb6a4f5ee1eadc",
+        "city": "Kempten (Allgäu)",
+        "street": "Adalbert-Stifter-Weg",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 1.15,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 1.92,
+        "gebaeude": 1.12
+      },
+      "extremwetterschutz": 2.57,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 1.15
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 1.92
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.12
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 2.57
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.1
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.46
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.3
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "f26fc6818d6c5c519efb6a4f5ee1eadc",
+      "city": "Kempten (Allgäu)",
+      "street": "Adalbert-Stifter-Weg",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVOQ0WE-93C81A",
+    "createdAt": "2026-04-12T11:33:00.303Z"
+  },
+  "PS-MNVPQGZB-0997D0": {
+    "input": {
+      "plz": "80331",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 16.77,
+        "hausrat": 9.63,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 17.65,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 10.14,
+            "reducedPrice": 9.63,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.24
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.31
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 1.8
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 49.02,
+        "hausrat": 7.43,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 34.83,
+        "originalPrice": 54.47,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.26,
+            "reducedPrice": 7.43,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 38.7,
+            "reducedPrice": 34.83,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 130.16,
+        "hausrat": 6.61,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 30.96,
+        "originalPrice": 162.7,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.26,
+            "reducedPrice": 6.61,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 38.7,
+            "reducedPrice": 30.96,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 108.23,
+            "reducedPrice": 86.58,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 2.55,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.24,
+          "gebaeude": 1.31
+        },
+        "extremwetterschutz": 1.8,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.24
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.31
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 1.8
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "1472e58a6f06166780a3a7050a0080a6",
+        "city": "München",
+        "street": "Altenhofstraße",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 2.55,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.24,
+        "gebaeude": 1.31
+      },
+      "extremwetterschutz": 1.8,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.24
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.31
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 1.8
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "1472e58a6f06166780a3a7050a0080a6",
+      "city": "München",
+      "street": "Altenhofstraße",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVPQGZB-0997D0",
+    "createdAt": "2026-04-12T12:01:20.761Z"
+  },
+  "PS-MNVQ9Z7Z-4401B6": {
+    "input": {
+      "plz": "80331",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 16.77,
+        "hausrat": 9.63,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 17.65,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 10.14,
+            "reducedPrice": 9.63,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.24
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.31
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 1.8
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 49.02,
+        "hausrat": 7.43,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 34.83,
+        "originalPrice": 54.47,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.26,
+            "reducedPrice": 7.43,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 38.7,
+            "reducedPrice": 34.83,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 130.16,
+        "hausrat": 6.61,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 30.96,
+        "originalPrice": 162.7,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.26,
+            "reducedPrice": 6.61,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 38.7,
+            "reducedPrice": 30.96,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 108.23,
+            "reducedPrice": 86.58,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 2.55,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.24,
+          "gebaeude": 1.31
+        },
+        "extremwetterschutz": 1.8,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.24
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.31
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 1.8
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "51e75b3bdbb7886e5b1cf29bfcb91435",
+        "city": "München",
+        "street": "Altenhofstraße",
+        "requestedFloor": "FIRST",
+        "usedFloor": "FIRST",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 2.55,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.24,
+        "gebaeude": 1.31
+      },
+      "extremwetterschutz": 1.8,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.24
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.31
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 1.8
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "51e75b3bdbb7886e5b1cf29bfcb91435",
+      "city": "München",
+      "street": "Altenhofstraße",
+      "requestedFloor": "FIRST",
+      "usedFloor": "FIRST",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVQ9Z7Z-4401B6",
+    "createdAt": "2026-04-12T12:16:30.864Z"
+  },
+  "PS-MNVQDBWN-CCE85D": {
+    "input": {
+      "plz": "80331",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 16.77,
+        "hausrat": 9.63,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 17.65,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 10.14,
+            "reducedPrice": 9.63,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.24
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.31
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 1.8
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 49.02,
+        "hausrat": 7.43,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 34.83,
+        "originalPrice": 54.47,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.26,
+            "reducedPrice": 7.43,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 38.7,
+            "reducedPrice": 34.83,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 130.16,
+        "hausrat": 6.61,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 30.96,
+        "originalPrice": 162.7,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.26,
+            "reducedPrice": 6.61,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 38.7,
+            "reducedPrice": 30.96,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 108.23,
+            "reducedPrice": 86.58,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 2.55,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.24,
+          "gebaeude": 1.31
+        },
+        "extremwetterschutz": 1.8,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.24
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.31
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 1.8
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "47d5f17cd801400297c458150f92b422",
+        "city": "München",
+        "street": "Altenhofstraße",
+        "requestedFloor": "FIRST",
+        "usedFloor": "FIRST",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 2.55,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.24,
+        "gebaeude": 1.31
+      },
+      "extremwetterschutz": 1.8,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.24
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.31
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 1.8
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "47d5f17cd801400297c458150f92b422",
+      "city": "München",
+      "street": "Altenhofstraße",
+      "requestedFloor": "FIRST",
+      "usedFloor": "FIRST",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVQDBWN-CCE85D",
+    "createdAt": "2026-04-12T12:19:07.272Z"
+  },
+  "PS-MNVUT2VL-939411": {
+    "input": {
+      "plz": "87439",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 15.54,
+        "hausrat": 8.41,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 16.36,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.85,
+            "reducedPrice": 8.41,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 1.42
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.37
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.39
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 3.15
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 43.07,
+        "hausrat": 6.6,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 29.72,
+        "originalPrice": 47.86,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 6.6,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 29.72,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 122.2,
+        "hausrat": 5.86,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 26.42,
+        "originalPrice": 152.75,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 5.86,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 26.42,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 104.89,
+            "reducedPrice": 83.91,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 1.42,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.37,
+          "gebaeude": 1.39
+        },
+        "extremwetterschutz": 3.15,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 1.42
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.37
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.39
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 3.15
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "21f10f5b92c2509994d4e1b747ca9704",
+        "city": "Kempten (Allgäu)",
+        "street": "Adalbert-Stifter-Weg",
+        "requestedFloor": "FIRST",
+        "usedFloor": "FIRST",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 1.42,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.37,
+        "gebaeude": 1.39
+      },
+      "extremwetterschutz": 3.15,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 1.42
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.37
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.39
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 3.15
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "21f10f5b92c2509994d4e1b747ca9704",
+      "city": "Kempten (Allgäu)",
+      "street": "Adalbert-Stifter-Weg",
+      "requestedFloor": "FIRST",
+      "usedFloor": "FIRST",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNVUT2VL-939411",
+    "createdAt": "2026-04-12T14:23:20.529Z"
+  },
+  "PS-MNWTH1FH-559AAC": {
+    "input": {
+      "plz": "87439",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 15.54,
+        "hausrat": 8.41,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 16.36,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.85,
+            "reducedPrice": 8.41,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 1.42
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.37
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.39
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 3.15
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 43.07,
+        "hausrat": 6.6,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 29.72,
+        "originalPrice": 47.86,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 6.6,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 29.72,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 122.2,
+        "hausrat": 5.86,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 26.42,
+        "originalPrice": 152.75,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 5.86,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 26.42,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 104.89,
+            "reducedPrice": 83.91,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 1.42,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.37,
+          "gebaeude": 1.39
+        },
+        "extremwetterschutz": 3.15,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 1.42
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.37
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.39
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 3.15
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "ffef7237f079166fe61e98e8f083d8d2",
+        "city": "Kempten (Allgäu)",
+        "street": "Adalbert-Stifter-Weg",
+        "requestedFloor": "FIRST",
+        "usedFloor": "FIRST",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 1.42,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.37,
+        "gebaeude": 1.39
+      },
+      "extremwetterschutz": 3.15,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 1.42
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.37
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.39
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 3.15
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "ffef7237f079166fe61e98e8f083d8d2",
+      "city": "Kempten (Allgäu)",
+      "street": "Adalbert-Stifter-Weg",
+      "requestedFloor": "FIRST",
+      "usedFloor": "FIRST",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNWTH1FH-559AAC",
+    "createdAt": "2026-04-13T06:33:45.342Z"
+  },
+  "PS-MNXCSU6W-6BA5F1": {
+    "input": {
+      "plz": "87439",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 15.54,
+        "hausrat": 8.41,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 16.36,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.85,
+            "reducedPrice": 8.41,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 1.42
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.37
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.39
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 3.15
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 43.07,
+        "hausrat": 6.6,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 29.72,
+        "originalPrice": 47.86,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 6.6,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 29.72,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 122.2,
+        "hausrat": 5.86,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 26.42,
+        "originalPrice": 152.75,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 5.86,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 26.42,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 104.89,
+            "reducedPrice": 83.91,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 1.42,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.37,
+          "gebaeude": 1.39
+        },
+        "extremwetterschutz": 3.15,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 1.42
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.37
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.39
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 3.15
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "15135227b91ae0d58db828ad008e7186",
+        "city": "Kempten (Allgäu)",
+        "street": "Adalbert-Stifter-Weg",
+        "requestedFloor": "FIRST",
+        "usedFloor": "FIRST",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 1.42,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.37,
+        "gebaeude": 1.39
+      },
+      "extremwetterschutz": 3.15,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 1.42
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.37
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.39
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 3.15
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "15135227b91ae0d58db828ad008e7186",
+      "city": "Kempten (Allgäu)",
+      "street": "Adalbert-Stifter-Weg",
+      "requestedFloor": "FIRST",
+      "usedFloor": "FIRST",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MNXCSU6W-6BA5F1",
+    "createdAt": "2026-04-13T15:34:48.539Z"
+  },
+  "PS-MO1ES5LV-22E5C2": {
+    "input": {
+      "plz": "87439",
+      "wohnflaeche": 75,
+      "familienstand": "Single",
+      "geburtsdatum": "01.01.1990"
+    },
+    "tarife": {
+      "Basis": {
+        "gesamt": 15.54,
+        "hausrat": 8.41,
+        "haftpflicht": 7.13,
+        "rechtsschutz": 0,
+        "originalPrice": 16.36,
+        "discountPercent": 5,
+        "title": "Bronze",
+        "ident": "HP001",
+        "includedContracts": [
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 8.85,
+            "reducedPrice": 8.41,
+            "options": [
+              {
+                "ident": "RAD",
+                "title": "Fahrradschutz",
+                "price": 1.42
+              },
+              {
+                "ident": "GLI",
+                "title": "Glasschutz Hausrat",
+                "price": 2.37
+              },
+              {
+                "ident": "GLA",
+                "title": "Glasschutz Gebäude",
+                "price": 1.39
+              },
+              {
+                "ident": "ELE",
+                "title": "Extremwetterschutz",
+                "price": 3.15
+              },
+              {
+                "ident": "HWS",
+                "title": "Notfallservice Zuhause",
+                "price": 0
+              }
+            ]
+          },
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 7.13,
+            "options": [
+              {
+                "ident": "OEL",
+                "title": "Öltank-Haftpflichtschutz",
+                "price": 2.55
+              },
+              {
+                "ident": "OED",
+                "title": "Dienst-Haftpflichtschutz",
+                "price": 2.98
+              },
+              {
+                "ident": "VM",
+                "title": "Wohnungs-Haftpflichtschutz",
+                "price": 1.57
+              }
+            ]
+          }
+        ]
+      },
+      "Smart": {
+        "gesamt": 43.07,
+        "hausrat": 6.6,
+        "haftpflicht": 6.76,
+        "rechtsschutz": 29.72,
+        "originalPrice": 47.86,
+        "discountPercent": 10,
+        "title": "Silber",
+        "ident": "HP002",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.76,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 6.6,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 29.72,
+            "options": []
+          }
+        ]
+      },
+      "Komfort": {
+        "gesamt": 122.2,
+        "hausrat": 5.86,
+        "haftpflicht": 6.01,
+        "rechtsschutz": 26.42,
+        "originalPrice": 152.75,
+        "discountPercent": 20,
+        "title": "Gold",
+        "ident": "HP003",
+        "includedContracts": [
+          {
+            "contractIdent": "PHCOMFORT",
+            "originalPrice": 7.51,
+            "reducedPrice": 6.01,
+            "options": []
+          },
+          {
+            "contractIdent": "VHVCOMFORT",
+            "originalPrice": 7.33,
+            "reducedPrice": 5.86,
+            "options": []
+          },
+          {
+            "contractIdent": "RSCOMFORT",
+            "originalPrice": 33.02,
+            "reducedPrice": 26.42,
+            "options": []
+          },
+          {
+            "contractIdent": "TM003",
+            "originalPrice": 104.89,
+            "reducedPrice": 83.91,
+            "options": []
+          },
+          {
+            "contractIdent": "TH003",
+            "originalPrice": 0,
+            "reducedPrice": 0,
+            "options": []
+          }
+        ]
+      },
+      "addons": {
+        "fahrradschutz": {
+          "basic": 1.42,
+          "premium": null
+        },
+        "glasschutz": {
+          "hausrat": 2.37,
+          "gebaeude": 1.39
+        },
+        "extremwetterschutz": 3.15,
+        "rawOptions": [
+          {
+            "ident": "RAD",
+            "title": "Fahrradschutz",
+            "price": 1.42
+          },
+          {
+            "ident": "GLI",
+            "title": "Glasschutz Hausrat",
+            "price": 2.37
+          },
+          {
+            "ident": "GLA",
+            "title": "Glasschutz Gebäude",
+            "price": 1.39
+          },
+          {
+            "ident": "ELE",
+            "title": "Extremwetterschutz",
+            "price": 3.15
+          },
+          {
+            "ident": "HWS",
+            "title": "Notfallservice Zuhause",
+            "price": 0
+          },
+          {
+            "ident": "OEL",
+            "title": "Öltank-Haftpflichtschutz",
+            "price": 2.55
+          },
+          {
+            "ident": "OED",
+            "title": "Dienst-Haftpflichtschutz",
+            "price": 2.98
+          },
+          {
+            "ident": "VM",
+            "title": "Wohnungs-Haftpflichtschutz",
+            "price": 1.57
+          }
+        ]
+      },
+      "_meta": {
+        "source": "graphql-api",
+        "orderSessionId": "f62c463ead7eeddd433d5974468229dc",
+        "city": "Kempten (Allgäu)",
+        "street": "Adalbert-Stifter-Weg",
+        "requestedFloor": "FIRST",
+        "usedFloor": "FIRST",
+        "operations": [
+          "createOrderSession",
+          "match_country",
+          "listAddresses",
+          "canGetProducts",
+          "fetch_products"
+        ]
+      }
+    },
+    "addons": {
+      "fahrradschutz": {
+        "basic": 1.42,
+        "premium": null
+      },
+      "glasschutz": {
+        "hausrat": 2.37,
+        "gebaeude": 1.39
+      },
+      "extremwetterschutz": 3.15,
+      "rawOptions": [
+        {
+          "ident": "RAD",
+          "title": "Fahrradschutz",
+          "price": 1.42
+        },
+        {
+          "ident": "GLI",
+          "title": "Glasschutz Hausrat",
+          "price": 2.37
+        },
+        {
+          "ident": "GLA",
+          "title": "Glasschutz Gebäude",
+          "price": 1.39
+        },
+        {
+          "ident": "ELE",
+          "title": "Extremwetterschutz",
+          "price": 3.15
+        },
+        {
+          "ident": "HWS",
+          "title": "Notfallservice Zuhause",
+          "price": 0
+        },
+        {
+          "ident": "OEL",
+          "title": "Öltank-Haftpflichtschutz",
+          "price": 2.55
+        },
+        {
+          "ident": "OED",
+          "title": "Dienst-Haftpflichtschutz",
+          "price": 2.98
+        },
+        {
+          "ident": "VM",
+          "title": "Wohnungs-Haftpflichtschutz",
+          "price": 1.57
+        }
+      ]
+    },
+    "meta": {
+      "source": "graphql-api",
+      "orderSessionId": "f62c463ead7eeddd433d5974468229dc",
+      "city": "Kempten (Allgäu)",
+      "street": "Adalbert-Stifter-Weg",
+      "requestedFloor": "FIRST",
+      "usedFloor": "FIRST",
+      "operations": [
+        "createOrderSession",
+        "match_country",
+        "listAddresses",
+        "canGetProducts",
+        "fetch_products"
+      ]
+    },
+    "debug": null,
+    "code": "PS-MO1ES5LV-22E5C2",
+    "createdAt": "2026-04-16T11:41:20.614Z"
+  }
+}

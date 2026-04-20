@@ -1,0 +1,609 @@
+{
+  "PS-MNWYS9O6-BF3233": {
+    "input": {
+      "plz": "87439",
+      "geburtsdatumHalter": "01.01.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Bella",
+      "geburtsdatumTier": "01.01.2020",
+      "groesse": "",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "25,10 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "56,35 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "102,05 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "155,59 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "code": "PS-MNWYS9O6-BF3233",
+    "createdAt": "2026-04-13T09:02:27.318Z"
+  },
+  "PS-MNWYZUU6-987538": {
+    "input": {
+      "plz": "87439",
+      "geburtsdatumHalter": "01.01.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Bej",
+      "geburtsdatumTier": "01.01.2020",
+      "groesse": "0 - 44 cm",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "25,10 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "56,35 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "102,05 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "155,59 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "code": "PS-MNWYZUU6-987538",
+    "createdAt": "2026-04-13T09:08:21.343Z"
+  },
+  "PS-MNWZ3NTY-914705": {
+    "input": {
+      "plz": "87439",
+      "geburtsdatumHalter": "01.01.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "asd",
+      "geburtsdatumTier": "01.01.2020",
+      "groesse": "0 - 44 cm",
+      "rasseWert": "H068",
+      "rasseText": "Schwedische Dachsbracke (Drever)",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "18,43 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "40,52 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "72,99 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "110,94 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "code": "PS-MNWZ3NTY-914705",
+    "createdAt": "2026-04-13T09:11:18.886Z"
+  },
+  "PS-MO1EW1AW-8CD21E": {
+    "input": {
+      "plz": "87439",
+      "geburtsdatumHalter": "01.01.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "max",
+      "geburtsdatumTier": "01.01.2020",
+      "groesse": "0 - 44 cm",
+      "rasseWert": "H001",
+      "rasseText": "Aidi (Marokkanischer Schäferhund)",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "20,99 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "46,68 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "84,35 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "128,41 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "code": "PS-MO1EW1AW-8CD21E",
+    "createdAt": "2026-04-16T11:44:21.656Z"
+  },
+  "PS-MO1EZKXY-875B9C": {
+    "input": {
+      "plz": "87439",
+      "geburtsdatumHalter": "01.01.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "max",
+      "geburtsdatumTier": "01.01.2020",
+      "groesse": "0 - 44 cm",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "25,10 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "56,35 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "102,05 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "155,59 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "code": "PS-MO1EZKXY-875B9C",
+    "createdAt": "2026-04-16T11:47:07.078Z"
+  },
+  "PS-MO1H7VBI-C27D76": {
+    "input": {
+      "plz": "87435",
+      "geburtsdatumHalter": "12.12.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Max",
+      "geburtsdatumTier": "12.12.2022",
+      "groesse": "klein",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "11,88 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "25,06 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "44,68 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "67,48 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "pdfPath": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/allianz_tkv_1776343772979.pdf",
+    "pdfUrl": "/downloads/allianz_tkv_1776343772979.pdf",
+    "code": "PS-MO1H7VBI-C27D76",
+    "createdAt": "2026-04-16T12:49:33.007Z"
+  },
+  "PS-MO4V15NG-30E154": {
+    "input": {
+      "plz": "80331",
+      "geburtsdatumHalter": "15.03.1985",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Rex",
+      "geburtsdatumTier": "10.05.2020",
+      "groesse": "mittel",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "22,09 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "49,29 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "89,12 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "135,77 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "pdfPath": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/allianz_tkv_1776548372936.pdf",
+    "pdfUrl": "/downloads/allianz_tkv_1776548372936.pdf",
+    "code": "PS-MO4V15NG-30E154",
+    "createdAt": "2026-04-18T21:39:32.957Z"
+  },
+  "PS-MO4VR6E1-A8D2E7": {
+    "input": {
+      "plz": "80331",
+      "geburtsdatumHalter": "01.01.1985",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Rex",
+      "geburtsdatumTier": "01.01.2021",
+      "groesse": "",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "22,09 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "49,29 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "89,12 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "135,77 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "pdfPath": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/allianz_tkv_1776549586940.pdf",
+    "pdfUrl": "/downloads/allianz_tkv_1776549586940.pdf",
+    "code": "PS-MO4VR6E1-A8D2E7",
+    "createdAt": "2026-04-18T21:59:46.970Z"
+  },
+  "PS-MO5SQBPP-B6F4DB": {
+    "input": {
+      "plz": "80331",
+      "geburtsdatumHalter": "01.01.1985",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Rex",
+      "geburtsdatumTier": "01.01.2021",
+      "groesse": "",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "22,09 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "49,29 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "89,12 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "135,77 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "pdfPath": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/allianz_tkv_1776604974510.pdf",
+    "pdfUrl": "/downloads/allianz_tkv_1776604974510.pdf",
+    "code": "PS-MO5SQBPP-B6F4DB",
+    "createdAt": "2026-04-19T13:22:54.542Z"
+  },
+  "PS-MO5SU7PF-775ACA": {
+    "input": {
+      "plz": "80331",
+      "geburtsdatumHalter": "01.01.1985",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "Rex",
+      "geburtsdatumTier": "01.01.2021",
+      "groesse": "",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "22,09 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "49,29 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "89,12 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "135,77 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "pdfPath": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/allianz_tkv_1776605155941.pdf",
+    "pdfUrl": "/downloads/allianz_tkv_1776605155941.pdf",
+    "code": "PS-MO5SU7PF-775ACA",
+    "createdAt": "2026-04-19T13:25:55.971Z"
+  },
+  "PS-MO71OTGI-4E9F18": {
+    "input": {
+      "plz": "87439",
+      "geburtsdatumHalter": "01.01.1990",
+      "tierart": "Hund",
+      "geschlecht": "männlich",
+      "tiername": "max",
+      "geburtsdatumTier": "01.01.2020",
+      "groesse": "0 - 44 cm",
+      "rasseWert": "MISCHLING",
+      "rasseText": "",
+      "hasIllnesses": false,
+      "tarifPriority": "Bestes Preis-Leistungs-Verhältnis",
+      "tarifPraferenz": "OP-Schutz"
+    },
+    "tarife": [
+      {
+        "name": "Basis",
+        "preis": "25,10 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Smart",
+        "preis": "56,35 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen"
+        ]
+      },
+      {
+        "name": "Komfort",
+        "preis": "102,05 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Ausgewählt"
+        ]
+      },
+      {
+        "name": "Premium",
+        "preis": "155,59 €/Monat",
+        "leistungen": [
+          "monatlich",
+          "Auswählen",
+          "In allen Tarifen enthalten:",
+          "Freie Tierarztwahl",
+          "Lebenslange Absicherung"
+        ]
+      }
+    ],
+    "pdfPath": "/Users/openclaw/.openclaw/workspace/allianz-tkv/downloads/allianz_tkv_1776680486914.pdf",
+    "pdfUrl": "/downloads/allianz_tkv_1776680486914.pdf",
+    "code": "PS-MO71OTGI-4E9F18",
+    "createdAt": "2026-04-20T10:21:26.947Z"
+  }
+}
