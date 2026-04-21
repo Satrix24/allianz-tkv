@@ -354,6 +354,34 @@ app.post('/api/tkv/calculate', async (req, res) => {
   }
 });
 
+// DEBUG: Gibt den Seiteninhalt nach Berechnung zurück (für Parsing-Diagnose)
+app.post('/api/tkv/debug', async (req, res) => {
+  const { chromium } = require('playwright');
+  const Steel = require('steel-sdk').default;
+  const STEEL_API_KEY = process.env.STEEL_API_KEY || 'ste-pIxkqYixVZlLJ9sV5TdyhrgdDHzNyYd8xIVULwn0WHvRLalLWWoURQAquc9PZYC8DQh5YwD2hhDhQwTPKin1YRCcTs5znwC9lqN';
+  let browser, steelClient, steelSession;
+  try {
+    steelClient = new Steel({ steelAPIKey: STEEL_API_KEY });
+    steelSession = await steelClient.sessions.create({ useProxy: true, solveCaptchas: true });
+    const wsEndpoint = `wss://connect.steel.dev?apiKey=${STEEL_API_KEY}&sessionId=${steelSession.id}`;
+    browser = await chromium.connectOverCDP(wsEndpoint);
+    const contexts = browser.contexts();
+    const context = contexts[0] || await browser.newContext();
+    const page = await context.newPage();
+    await page.goto('https://www.allianz.de/tier/tierkrankenversicherung/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.waitForTimeout(5000);
+    const title = await page.title();
+    const bodyText = await page.evaluate(() => document.body.innerText.substring(0, 3000));
+    const html = await page.evaluate(() => document.body.innerHTML.substring(0, 5000));
+    await browser.close();
+    await steelClient.sessions.release(steelSession.id);
+    res.json({ title, bodyText, html });
+  } catch (e) {
+    try { if (steelClient && steelSession) await steelClient.sessions.release(steelSession.id); } catch {}
+    res.status(500).json({ error: e.message });
+  }
+});
+
 app.get('/api/tkv/offer/:code', (req, res) => {
   const offer = getTKVOffer(req.params.code);
   if (!offer) {
