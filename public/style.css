@@ -1,22 +1,40 @@
+/* ============================================================
+   Allianz Privatschutz — Dark Glass Morphism Design
+   Salesaipilot Style | Design by David (Coding Agent)
+   ============================================================ */
+
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --allianz-blue: #003781;
-  --allianz-blue-2: #0057b8;
-  --allianz-light: #f4f7fc;
-  --text: #13233f;
-  --muted: #5f6f8a;
-  --success: #1b9e4b;
-  --card-border: #dfe7f4;
+  --bg: #0a0a0f;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(124, 58, 237, 0.4);
+  --accent: #7c3aed;
+  --accent-2: #a855f7;
+  --accent-glow: rgba(124, 58, 237, 0.3);
+  --accent-glow-strong: rgba(124, 58, 237, 0.5);
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --success: #10b981;
+  --gold: #f59e0b;
+  --card-radius: 20px;
+  --transition: 0.2s ease;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top right, #ebf2ff, #f6f9ff 38%, #f4f7fc 100%);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 90% 0%, rgba(124, 58, 237, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 60%);
+  min-height: 100vh;
   padding: 12px 12px 98px;
 }
 
@@ -24,154 +42,220 @@ body {
   display: none !important;
 }
 
+/* ── Loading ─────────────────────────────────────────────── */
 .loading-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(10, 10, 15, 0.96);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   text-align: center;
-  color: var(--allianz-blue);
+  color: var(--text);
 }
 
 .loading-overlay p {
-  margin: 12px 0 0;
+  margin: 14px 0 0;
   font-weight: 600;
+  color: var(--text-muted);
 }
 
 .spinner {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 5px solid #d9e4f7;
-  border-top-color: var(--allianz-blue);
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
   animation: spin 0.85s linear infinite;
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
+/* ── Error ───────────────────────────────────────────────── */
 .error-container {
-  max-width: 620px;
+  max-width: 560px;
   margin: 14vh auto 0;
-  background: #fff;
-  border-radius: 20px;
-  border: 1px solid #ffd2d2;
-  box-shadow: 0 16px 40px rgba(19, 35, 63, 0.08);
-  padding: 28px 22px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  padding: 32px 24px;
   text-align: center;
 }
 
 .error-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .error-container h2 {
   margin: 0 0 8px;
+  color: var(--text);
 }
 
 .error-container p {
   margin: 0;
-  color: #6d4a4a;
+  color: var(--text-muted);
 }
 
+/* ── App Wrapper ─────────────────────────────────────────── */
 .app {
   width: min(1180px, 100%);
   margin: 0 auto;
 }
 
+/* ── Header ──────────────────────────────────────────────── */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  padding: 12px 0;
 }
 
 .logo-badge {
   display: inline-flex;
   align-items: center;
-  background: #fff;
-  border: 1px solid #dbe5f4;
-  box-shadow: 0 8px 20px rgba(0, 55, 129, 0.08);
+  gap: 8px;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 8px 16px;
+  transition: border-color var(--transition);
 }
 
-.allianz-logo {
-  width: 120px;
-  height: 30px;
+.logo-badge:hover {
+  border-color: var(--border-hover);
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .product-title {
   font-weight: 700;
-  color: var(--allianz-blue);
-  background: #e9f1ff;
-  border: 1px solid #cde0ff;
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 6px 14px;
+  letter-spacing: 0.02em;
 }
 
+/* ── Hero ────────────────────────────────────────────────── */
 .hero {
-  border-radius: 22px;
-  background: linear-gradient(125deg, var(--allianz-blue) 0%, #014ea9 44%, #0075ce 100%);
-  color: #fff;
-  padding: 24px 18px;
-  box-shadow: 0 16px 30px rgba(0, 55, 129, 0.2);
+  border-radius: var(--card-radius);
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  padding: 28px 22px;
+  margin-bottom: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.12) inset;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.9rem);
+  font-weight: 800;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-subtitle {
-  margin: 8px 0 14px;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 0.96rem;
+  margin: 8px 0 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .tag {
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  background: rgba(255, 255, 255, 0.15);
-  padding: 7px 12px;
-  font-size: 0.84rem;
-  font-weight: 500;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.15);
+  padding: 6px 14px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  letter-spacing: 0.01em;
 }
 
+/* ── Billing Toggle ──────────────────────────────────────── */
 .billing-toggle {
-  margin: 16px auto 14px;
+  margin: 18px auto 16px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #fff;
-  border: 1px solid var(--card-border);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 8px 12px;
-  box-shadow: 0 8px 24px rgba(19, 35, 63, 0.06);
+  padding: 8px 14px;
 }
 
 .toggle-label {
-  color: var(--muted);
+  color: var(--text-dim);
   font-size: 0.88rem;
   font-weight: 600;
+  transition: color var(--transition);
 }
 
 .toggle-label.active {
-  color: var(--allianz-blue);
+  color: var(--text);
 }
 
 .toggle-switch {
@@ -179,9 +263,15 @@ body {
   height: 26px;
   border-radius: 999px;
   border: none;
-  background: #d9e7ff;
+  background: rgba(124, 58, 237, 0.25);
   padding: 3px;
   cursor: default;
+  transition: background var(--transition);
+  outline: none;
+}
+
+.toggle-switch[aria-pressed="true"] {
+  background: var(--accent);
 }
 
 .toggle-switch span {
@@ -190,9 +280,11 @@ body {
   border-radius: 50%;
   display: block;
   background: #fff;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.18s ease;
 }
 
+/* ── Tarif Cards ─────────────────────────────────────────── */
 .cards-wrap {
   display: grid;
   gap: 14px;
@@ -201,61 +293,86 @@ body {
 
 .tarif-card {
   position: relative;
-  background: #fff;
-  border: 1px solid var(--card-border);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 12px 28px rgba(19, 35, 63, 0.08);
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 22px 20px 20px;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.tarif-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow: 0 0 30px var(--accent-glow);
 }
 
 .tarif-card h2 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
+/* Featured / Empfohlen Card */
 .tarif-card.featured {
-  border: 2px solid #c9ab4a;
-  box-shadow: 0 14px 28px rgba(0, 55, 129, 0.13);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.2), 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.tarif-card.featured:hover {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.35), 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .featured-badge {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  background: var(--allianz-blue);
-  color: #fff;
-  border-radius: 999px;
-  padding: 5px 10px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  top: -1px;
+  right: 18px;
+  background: linear-gradient(135deg, var(--gold) 0%, #fbbf24 100%);
+  color: #1a1a0a;
+  border-radius: 0 0 10px 10px;
+  padding: 5px 12px;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
+/* ── Prices ──────────────────────────────────────────────── */
 .price-block {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .price-original {
-  color: #74809a;
+  color: var(--text-dim);
   text-decoration: line-through;
   margin-bottom: 2px;
   font-size: 0.9rem;
 }
 
 .price-main {
-  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  font-family: 'Inter Tight', 'Inter', -apple-system, sans-serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--allianz-blue);
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1.1;
 }
 
 .price-main small {
-  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--text-muted);
+  letter-spacing: 0;
 }
 
 .special-price-note {
-  margin-top: 2px;
-  color: #005fc8;
+  margin-top: 4px;
+  color: var(--accent-2);
   font-size: 0.86rem;
   font-weight: 700;
 }
@@ -263,107 +380,141 @@ body {
 .saving-note {
   margin-top: 4px;
   color: var(--success);
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
+/* ── Summary List ────────────────────────────────────────── */
 .summary-list {
   list-style: none;
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   padding: 0;
 }
 
 .summary-list li {
   position: relative;
   padding-left: 24px;
-  margin-bottom: 9px;
-  color: #20304f;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .summary-list li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  top: -1px;
+  top: 0;
   color: var(--success);
   font-weight: 700;
 }
 
+/* ── Buttons ─────────────────────────────────────────────── */
 .btn {
   border: none;
   border-radius: 12px;
-  padding: 11px 14px;
+  padding: 12px 16px;
   font-weight: 700;
+  font-size: 0.9rem;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: transform .15s ease, box-shadow .2s ease;
+  width: 100%;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn-primary {
-  background: var(--allianz-blue);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
   color: #fff;
-  box-shadow: 0 8px 18px rgba(0, 55, 129, 0.25);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.55);
 }
 
 .btn-secondary {
-  background: #eff4fc;
-  color: var(--allianz-blue);
-  border: 1px solid #d7e3f7;
+  background: transparent;
+  color: var(--accent-2);
+  border: 1px solid rgba(124, 58, 237, 0.4);
 }
 
+.btn-secondary:hover {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: var(--accent-2);
+}
+
+/* ── Highlights Toggle / Komfort ─────────────────────────── */
 .highlights-toggle {
-  margin-top: 10px;
+  margin-top: 12px;
   border: none;
   background: transparent;
-  color: #0065cf;
+  color: var(--accent-2);
   padding: 0;
   font-weight: 700;
+  font-size: 0.85rem;
   cursor: pointer;
+  transition: color var(--transition);
+}
+
+.highlights-toggle:hover {
+  color: #fff;
 }
 
 .komfort-highlights {
-  margin-top: 10px;
-  border-top: 1px dashed #d7e3f7;
-  padding-top: 10px;
+  margin-top: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
 }
 
 .komfort-highlights h3 {
-  margin: 0 0 8px;
-  font-size: 1rem;
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: var(--text);
 }
 
 .komfort-highlights ul {
   margin: 0;
-  padding-left: 17px;
+  padding-left: 18px;
 }
 
 .komfort-highlights li {
   margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.komfort-highlights li strong {
+  color: var(--text);
 }
 
 .komfort-highlights.collapsed {
   display: none;
 }
 
+/* ── Add-ons ─────────────────────────────────────────────── */
 .addons {
   margin-top: 14px;
-  background: #fff;
-  border-radius: 18px;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 12px 28px rgba(19, 35, 63, 0.08);
-  padding: 18px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border);
+  padding: 22px 20px;
 }
 
 .addons h2 {
-  margin: 0 0 12px;
-  color: var(--allianz-blue);
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .addon-grid {
@@ -372,60 +523,86 @@ body {
 }
 
 .addon-card {
-  background: #f8fbff;
-  border: 1px solid #e1eaf8;
-  border-radius: 12px;
-  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.addon-card:hover {
+  border-color: rgba(124, 58, 237, 0.25);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .addon-card h3 {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .addon-card p {
-  margin: 6px 0;
+  margin: 5px 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
+.addon-card p strong {
+  color: var(--text);
+}
+
+/* ── Footer Note ─────────────────────────────────────────── */
 .footer-note {
-  margin: 14px 0 6px;
+  margin: 16px 0 8px;
   text-align: center;
-  color: #4e607f;
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
+/* ── Sticky CTA ──────────────────────────────────────────── */
 .sticky-cta {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid #dbe5f4;
-  box-shadow: 0 -8px 20px rgba(19, 35, 63, 0.08);
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
   z-index: 999;
 }
 
 .sticky-cta small {
   display: block;
-  color: #5d6f8f;
-  font-size: 0.76rem;
+  color: var(--text-dim);
+  font-size: 0.75rem;
 }
 
 #stickyLabel {
   display: block;
-  color: var(--allianz-blue);
+  color: var(--text);
   font-weight: 700;
+  font-size: 0.95rem;
 }
 
+.sticky-cta .btn {
+  width: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
 @media (min-width: 768px) {
   body {
-    padding: 20px 20px 104px;
+    padding: 24px 24px 110px;
   }
 
   .cards-wrap {
@@ -433,16 +610,28 @@ body {
   }
 
   .addon-grid {
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
   }
 
   .sticky-cta {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    width: min(760px, calc(100% - 24px));
-    border: 1px solid #dbe5f4;
+    width: min(760px, calc(100% - 32px));
+    border: 1px solid var(--border);
+    border-top: 1px solid var(--border);
     border-radius: 16px;
-    bottom: 14px;
+    bottom: 16px;
+    background: rgba(10, 10, 15, 0.9);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 36px 32px;
+  }
+
+  .tarif-card {
+    padding: 28px 24px 24px;
   }
 }
