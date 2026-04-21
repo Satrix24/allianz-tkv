@@ -2,6 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const { chromium } = require('playwright-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const Steel = require('steel-sdk').default;
+
+// Fallback API key in case Railway env var not yet set
+process.env.STEEL_API_KEY = process.env.STEEL_API_KEY || 'ste-pIxkqYixVZlLJ9sV5TdyhrgdDHzNyYd8xIVULwn0WHvRLalLWWoURQAquc9PZYC8DQh5YwD2hhDhQwTPKin1YRCcTs5znwC9lqN';
 
 const ALLIANZ_URL = 'https://www.allianz.de/gesundheit/tierkrankenversicherung/rechner/?page=angaben';
 const MAX_RETRIES = 3;
@@ -690,47 +694,111 @@ async function saveErrorArtifacts(page, downloadsDir, tag) {
   return { screenshot: png, html };
 }
 
+/**
+ * Creates a Steel.dev managed browser session.
+ * Returns { browser, steelClient, steelSession } on success,
+ * or { browser: null, steelClient: null, steelSession: null } if no API key.
+ */
+async function createSteelBrowser() {
+  const STEEL_API_KEY = process.env.STEEL_API_KEY;
+
+  if (!STEEL_API_KEY) {
+    console.log('[Steel] No API key, falling back to local browser');
+    return { browser: null, steelClient: null, steelSession: null };
+  }
+
+  const steelClient = new Steel({ steelAPIKey: STEEL_API_KEY });
+
+  // Create Steel session with residential proxy + CAPTCHA solving
+  const session = await steelClient.sessions.create({
+    useProxy: true,       // residential proxy — bypasses Cloudflare IP blocks
+    solveCaptchas: true,  // auto-solve any remaining CAPTCHA challenges
+    blockAds: true,
+  });
+
+  console.log('[Steel] Session created:', session.id);
+
+  // Connect Playwright to Steel via CDP WebSocket
+  const { chromium: chromiumPlain } = require('playwright');
+  const wsEndpoint = `wss://connect.steel.dev?apiKey=${STEEL_API_KEY}&sessionId=${session.id}`;
+  const browser = await chromiumPlain.connectOverCDP(wsEndpoint);
+
+  return { browser, steelClient, steelSession: session };
+}
+
 async function runSingleAttempt(input, config) {
   const userAgent = randomUserAgent();
   const launchHeadless = config.headless !== false;
 
-  // Full anti-detection hardening
-  const browser = await chromium.launch({
-    headless: launchHeadless,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-blink-features=AutomationControlled',
-      '--disable-features=IsolateOrigins,site-per-process',
-      '--disable-web-security',
-      '--disable-dev-shm-usage',
-      '--no-first-run',
-      '--no-zygote',
-      '--disable-gpu',
-      '--window-size=1920,1080',
-      '--start-maximized',
-      '--lang=de-DE',
-    ],
-    executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
-  });
+  // --- Browser Setup: try Steel first, fall back to local ---
+  let browser = null;
+  let steelClient = null;
+  let steelSession = null;
+  let usingSteel = false;
 
-  // Realistic browser context with German locale, timezone and geolocation
-  const context = await browser.newContext({
-    acceptDownloads: true,
-    userAgent,
-    viewport: { width: 1920, height: 1080 },
-    locale: 'de-DE',
-    timezoneId: 'Europe/Berlin',
-    geolocation: { latitude: 48.1351, longitude: 11.5820 }, // Munich
-    permissions: ['geolocation'],
-    extraHTTPHeaders: {
-      'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-      'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-      'sec-ch-ua-mobile': '?0',
-      'sec-ch-ua-platform': '"Windows"',
-    },
-  });
+  try {
+    if (process.env.STEEL_API_KEY) {
+      const result = await createSteelBrowser();
+      browser = result.browser;
+      steelClient = result.steelClient;
+      steelSession = result.steelSession;
+      usingSteel = !!browser;
+      if (usingSteel) console.log('[Scraper] Using Steel.dev managed browser');
+    }
+  } catch (err) {
+    console.warn('[Steel] Failed to create Steel session, falling back to local:', err.message);
+    usingSteel = false;
+    browser = null;
+  }
+
+  if (!browser) {
+    // Local browser fallback — full anti-detection hardening
+    console.log('[Scraper] Using local Playwright browser');
+    browser = await chromium.launch({
+      headless: launchHeadless,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-blink-features=AutomationControlled',
+        '--disable-features=IsolateOrigins,site-per-process',
+        '--disable-web-security',
+        '--disable-dev-shm-usage',
+        '--no-first-run',
+        '--no-zygote',
+        '--disable-gpu',
+        '--window-size=1920,1080',
+        '--start-maximized',
+        '--lang=de-DE',
+      ],
+      executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
+    });
+  }
+
+  // --- Context & Page Setup ---
+  let context;
+  if (usingSteel) {
+    // With Steel CDP connection the browser context already exists
+    const contexts = browser.contexts();
+    context = contexts[0] || await browser.newContext();
+  } else {
+    // Local browser — create a realistic German context
+    context = await browser.newContext({
+      acceptDownloads: true,
+      userAgent,
+      viewport: { width: 1920, height: 1080 },
+      locale: 'de-DE',
+      timezoneId: 'Europe/Berlin',
+      geolocation: { latitude: 48.1351, longitude: 11.5820 }, // Munich
+      permissions: ['geolocation'],
+      extraHTTPHeaders: {
+        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+      },
+    });
+  }
 
   const page = await context.newPage();
   page.setDefaultTimeout(DEFAULT_TIMEOUT);
@@ -814,6 +882,16 @@ async function runSingleAttempt(input, config) {
 
     await browser.close();
 
+    // Release Steel session after browser closes
+    try {
+      if (usingSteel && steelClient && steelSession) {
+        await steelClient.sessions.release(steelSession.id);
+        console.log('[Steel] Session released:', steelSession.id);
+      }
+    } catch (e) {
+      console.warn('[Steel] Failed to release session:', e.message);
+    }
+
     return {
       tarife,
       screenshot: screenshotPath ? `/downloads/${path.basename(screenshotPath)}` : null,
@@ -824,6 +902,17 @@ async function runSingleAttempt(input, config) {
     const tag = `error_attempt_${config.attempt}_${Date.now()}`;
     const artifacts = await saveErrorArtifacts(page, config.errorDir, tag);
     await browser.close().catch(() => {});
+
+    // Always try to release Steel session even on error
+    try {
+      if (usingSteel && steelClient && steelSession) {
+        await steelClient.sessions.release(steelSession.id);
+        console.log('[Steel] Session released after error:', steelSession.id);
+      }
+    } catch (e) {
+      console.warn('[Steel] Failed to release session after error:', e.message);
+    }
+
     const wrapped = new Error(error.message);
     wrapped.artifacts = artifacts;
     throw wrapped;
