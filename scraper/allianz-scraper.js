@@ -391,7 +391,7 @@ async function saveResultScreenshot(page, downloadsDir) {
 }
 
 async function parseTarife(page) {
-  // Strategie 0: Debug-Log — Page state + structure
+  // Debug-Log: Page state + structure
   try {
     const debugInfo = await page.evaluate(() => {
       return {
@@ -406,6 +406,65 @@ async function parseTarife(page) {
     console.log('[parseTarife] Debug page state:', JSON.stringify(debugInfo));
   } catch (e) {
     console.warn('[parseTarife] Debug-Info konnte nicht ausgelesen werden:', e.message);
+  }
+
+  // Strategie 0: nx-price component — integer + decimal as separate spans
+  const parsed0 = await page.evaluate(() => {
+    const results = [];
+    const tarifNamen = ['Basis', 'Smart', 'Komfort', 'Premium', 'OP-Schutz', 'Vollschutz', 'Optimal', 'Best'];
+
+    // Find all nx-price elements
+    const priceEls = document.querySelectorAll('nx-price, [class*="nx-price"], [class*="price-wrapper"]');
+
+    for (const el of priceEls) {
+      // Try to get integer + decimal parts
+      const intEl = el.querySelector('[class*="integer"], [class*="Integer"]');
+      const decEl = el.querySelector('[class*="decimal"], [class*="Decimal"], [class*="fraction"]');
+
+      let price = null;
+      if (intEl && decEl) {
+        // e.g. "25" + ",10" → "25.10"
+        const intPart = intEl.innerText.trim().replace(/[^0-9]/g, '');
+        const decPart = decEl.innerText.trim().replace(/[^0-9]/g, '');
+        if (intPart && decPart) {
+          price = parseFloat(`${intPart}.${decPart}`);
+        }
+      }
+
+      if (!price) {
+        // Fallback: get all text of the element and find a number
+        const text = el.innerText || '';
+        const m = text.match(/(\d+)[,.](\d{2})/);
+        if (m) price = parseFloat(`${m[1]}.${m[2]}`);
+      }
+
+      if (!price || price < 5 || price > 500) continue;
+
+      // Find associated tarif name — look at parent card
+      const card = el.closest('nx-card, nx-tile, [class*="card"], [class*="tarif"], [class*="produkt"]');
+      let name = '';
+      if (card) {
+        const nameEl = card.querySelector('h1,h2,h3,h4,[class*="title"],[class*="name"],[class*="heading"]');
+        if (nameEl) name = nameEl.innerText.trim();
+        if (!name) {
+          const found = tarifNamen.find(n => (card.innerText || '').includes(n));
+          name = found || '';
+        }
+      }
+
+      results.push({
+        name: name || `Tarif ${results.length + 1}`,
+        preis: price.toFixed(2).replace('.', ',') + ' €/Monat',
+        leistungen: [],
+      });
+    }
+
+    return results;
+  });
+
+  if (parsed0.length > 0) {
+    console.log('[parseTarife] Strategie 0 (nx-price spans) erfolgreich:', parsed0.length, 'Tarife');
+    return parsed0;
   }
 
   // Strategie 1: nx-card / nx-tile DOM-Struktur (Angular nx-Komponenten)
@@ -632,6 +691,28 @@ async function parseTarife(page) {
       name: namen2[idx] || `Tarif ${idx + 1}`,
       preis: preis.replace(',', '.') + ' €/Monat',
       leistungen: []
+    }));
+  }
+
+  // Strategie 5: brute-force — alle Zahlen im Bereich 10-400 aus dem Seitentext
+  await page.waitForTimeout(3000);
+  const bodyText3 = await page.evaluate(() => document.body.innerText || '');
+  console.log('[parseTarife] Strategie 5 bodyText sample:', bodyText3.substring(0, 1000));
+
+  // Extract all decimal numbers
+  const allDecimals = [...bodyText3.matchAll(/\b(\d{1,3})[,.](\d{2})\b/g)]
+    .map(m => ({ raw: m[0], val: parseFloat(`${m[1]}.${m[2]}`) }))
+    .filter(({ val }) => val >= 10 && val <= 400);
+
+  const uniqueVals = [...new Map(allDecimals.map(x => [x.val, x])).values()];
+
+  if (uniqueVals.length > 0) {
+    console.log('[parseTarife] Strategie 5 gefunden:', uniqueVals.map(x => x.raw).join(', '));
+    const namen = ['Basis', 'Smart', 'Komfort', 'Premium'];
+    return uniqueVals.slice(0, 4).map(({ val }, idx) => ({
+      name: namen[idx] || `Tarif ${idx + 1}`,
+      preis: val.toFixed(2).replace('.', ',') + ' €/Monat',
+      leistungen: [],
     }));
   }
 
