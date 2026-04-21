@@ -261,14 +261,37 @@ function mapGroessePattern(groesse) {
 }
 
 async function acceptCookies(page) {
+  // Strategie 1: Bekannter Allianz Cookie-Button
   try {
-    await page.getByRole('button', { name: /Nur erforderliche Cookies/i }).click({ timeout: 10000 });
+    await page.click('#onetrust-accept-btn-handler', { timeout: 8000 });
+    console.log('[cookies] onetrust accept clicked');
     await page.waitForTimeout(1500);
-  } catch (_) {
-    // Fallback: DOM-Remove
-    await page.evaluate(() => document.getElementById('onetrust-consent-sdk')?.remove());
-    await page.waitForTimeout(800);
-  }
+    return;
+  } catch (_) {}
+
+  // Strategie 2: Alle akzeptieren Varianten
+  try {
+    await page.locator('button:has-text("Alle Cookies akzeptieren"), button:has-text("Alle akzeptieren"), button:has-text("Akzeptieren"), button:has-text("Accept all")').first().click({ timeout: 5000 });
+    console.log('[cookies] generic accept clicked');
+    await page.waitForTimeout(1500);
+    return;
+  } catch (_) {}
+
+  // Strategie 3: Nur erforderliche
+  try {
+    await page.getByRole('button', { name: /Nur erforderliche Cookies/i }).click({ timeout: 5000 });
+    await page.waitForTimeout(1500);
+    return;
+  } catch (_) {}
+
+  // Strategie 4: DOM komplett entfernen
+  await page.evaluate(() => {
+    document.getElementById('onetrust-consent-sdk')?.remove();
+    document.querySelector('.onetrust-pc-dark-filter')?.remove();
+    document.querySelector('[class*="onetrust"]')?.remove();
+  });
+  await page.waitForTimeout(800);
+  console.log('[cookies] DOM removed fallback');
 }
 
 async function fillForm(page, data) {
