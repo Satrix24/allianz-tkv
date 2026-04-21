@@ -11,9 +11,11 @@ const DEFAULT_TIMEOUT = 45000;
 chromium.use(StealthPlugin());
 
 const USER_AGENTS = [
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15',
 ];
 
 function randomUserAgent() {
@@ -52,6 +54,17 @@ function validateInput(data) {
   const missing = required.filter((key) => !data[key]);
   if (missing.length) {
     throw new Error(`Fehlende Felder: ${missing.join(', ')}`);
+  }
+}
+
+// Human-like typing: click, clear, type char-by-char with random delays
+async function humanType(page, selector, text) {
+  await page.click(selector);
+  await page.waitForTimeout(200 + Math.random() * 300);
+  await page.fill(selector, '');
+  for (const char of text) {
+    await page.keyboard.type(char);
+    await page.waitForTimeout(50 + Math.random() * 150);
   }
 }
 
@@ -681,27 +694,80 @@ async function runSingleAttempt(input, config) {
   const userAgent = randomUserAgent();
   const launchHeadless = config.headless !== false;
 
+  // Full anti-detection hardening
   const browser = await chromium.launch({
     headless: launchHeadless,
     args: [
-      '--disable-blink-features=AutomationControlled',
       '--no-sandbox',
-      '--disable-dev-shm-usage'
-    ]
+      '--disable-setuid-sandbox',
+      '--disable-blink-features=AutomationControlled',
+      '--disable-features=IsolateOrigins,site-per-process',
+      '--disable-web-security',
+      '--disable-dev-shm-usage',
+      '--no-first-run',
+      '--no-zygote',
+      '--disable-gpu',
+      '--window-size=1920,1080',
+      '--start-maximized',
+      '--lang=de-DE',
+    ],
+    executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
   });
 
+  // Realistic browser context with German locale, timezone and geolocation
   const context = await browser.newContext({
     acceptDownloads: true,
-    viewport: { width: 1366, height: 900 },
     userAgent,
-    locale: 'de-DE'
+    viewport: { width: 1920, height: 1080 },
+    locale: 'de-DE',
+    timezoneId: 'Europe/Berlin',
+    geolocation: { latitude: 48.1351, longitude: 11.5820 }, // Munich
+    permissions: ['geolocation'],
+    extraHTTPHeaders: {
+      'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+      'sec-ch-ua-mobile': '?0',
+      'sec-ch-ua-platform': '"Windows"',
+    },
   });
 
   const page = await context.newPage();
   page.setDefaultTimeout(DEFAULT_TIMEOUT);
 
+  // JS evasion: remove automation fingerprints before any page script runs
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+    Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+    Object.defineProperty(navigator, 'languages', { get: () => ['de-DE', 'de', 'en-US', 'en'] });
+    window.chrome = {
+      runtime: {},
+      loadTimes: function() {},
+      csi: function() {},
+      app: {},
+    };
+    const originalQuery = window.navigator.permissions.query;
+    window.navigator.permissions.query = (parameters) =>
+      parameters.name === 'notifications'
+        ? Promise.resolve({ state: Notification.permission })
+        : originalQuery(parameters);
+  });
+
   try {
     await page.goto(ALLIANZ_URL, { waitUntil: 'domcontentloaded', timeout: DEFAULT_TIMEOUT });
+
+    // Wait for Cloudflare challenge to pass (if present)
+    await page.waitForTimeout(3000);
+    const cfTitle = await page.title();
+    if (cfTitle.includes('Moment') || cfTitle.includes('Just a moment') || cfTitle.includes('Checking')) {
+      console.log('[Cloudflare] Challenge detected, waiting 15s...');
+      await page.waitForTimeout(15000);
+      const cfTitle2 = await page.title();
+      console.log('[Cloudflare] After wait, title:', cfTitle2);
+      if (cfTitle2.includes('Moment') || cfTitle2.includes('Just a moment') || cfTitle2.includes('Checking')) {
+        throw new Error(`Cloudflare-Blockade nicht überwunden (Versuch ${config.attempt})`);
+      }
+    }
 
     // Warten bis Angular-App gebootstrappt ist (kann auf langsamen Servern 5-8 Sek. dauern)
     await page.waitForTimeout(2000);
@@ -711,7 +777,7 @@ async function runSingleAttempt(input, config) {
     ).catch(() => {});
     await page.waitForTimeout(2000);
 
-    // Cloudflare-Challenge prüfen
+    // Legacy Cloudflare-Challenge fallback check
     const title = (await page.title()).toLowerCase();
     if (title.includes('challenge') || title.includes('just a moment')) {
       await page.waitForTimeout(10000);
