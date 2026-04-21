@@ -351,14 +351,19 @@ async function fillForm(page, data) {
 
 async function goToResults(page) {
   await page.getByRole('button', { name: /Tarif berechnen/i }).first().click({ timeout: 10000 });
-  await page.waitForTimeout(8000);
+  await page.waitForTimeout(15000);
 }
 
 async function waitForResultArea(page) {
-  await page.waitForSelector(
-    '[class*="tarif"], [class*="produkt"], [class*="preis"], [class*="product"], [class*="price"]',
-    { timeout: 20000 }
-  );
+  try {
+    await page.waitForSelector(
+      '[class*="tarif"], [class*="produkt"], [class*="preis"], [class*="product"], [class*="price"], nx-card, nx-tile, [class*="result"]',
+      { timeout: 25000 }
+    );
+  } catch {
+    // Selector not found — just wait and let parseTarife handle it
+    await page.waitForTimeout(5000);
+  }
 }
 
 async function saveResultScreenshot(page, downloadsDir) {
@@ -369,6 +374,23 @@ async function saveResultScreenshot(page, downloadsDir) {
 }
 
 async function parseTarife(page) {
+  // Strategie 0: Debug-Log — Page state + structure
+  try {
+    const debugInfo = await page.evaluate(() => {
+      return {
+        title: document.title,
+        bodyText: document.body.innerText.substring(0, 500),
+        nxCards: document.querySelectorAll('nx-card').length,
+        nxTiles: document.querySelectorAll('nx-tile').length,
+        nxPrices: document.querySelectorAll('nx-price').length,
+        allText: document.body.innerText.substring(0, 2000),
+      };
+    });
+    console.log('[parseTarife] Debug page state:', JSON.stringify(debugInfo));
+  } catch (e) {
+    console.warn('[parseTarife] Debug-Info konnte nicht ausgelesen werden:', e.message);
+  }
+
   // Strategie 1: nx-card / nx-tile DOM-Struktur (Angular nx-Komponenten)
   const parsed1 = await page.evaluate(() => {
     const tarifNamen = ['Basis', 'Smart', 'Komfort', 'Premium', 'OP-Schutz', 'Vollschutz', 'Optimal', 'Best'];
@@ -382,6 +404,19 @@ async function parseTarife(page) {
       '.tarif', '.produkt', '.product', '.plan-card', '.rate-card'
     ];
 
+    // Price extraction helper: tries with € suffix first, then bare decimal in 5-500 range
+    function extractPrice(text) {
+      const withEuro = text.match(/(\d{1,3}[.,]\d{2})\s*[€]/);
+      if (withEuro) return withEuro[1];
+      const euroAfterSpace = text.match(/(\d{1,3}[.,]\d{2})\s*€/);
+      if (euroAfterSpace) return euroAfterSpace[1];
+      // Bare decimal fallback — only accept price-range values (5–500)
+      const bare = [...text.matchAll(/\b(\d{1,3}[.,]\d{2})\b/g)]
+        .map(m => m[1])
+        .find(p => { const v = parseFloat(p.replace(',', '.')); return v >= 5 && v <= 500; });
+      return bare || null;
+    }
+
     for (const sel of cardSelectors) {
       const cards = [...document.querySelectorAll(sel)];
       if (cards.length === 0) continue;
@@ -390,9 +425,11 @@ async function parseTarife(page) {
         const text = card.innerText || '';
         if (!text.trim()) continue;
 
-        // Preis aus dieser Card extrahieren
-        const preisMatch = text.match(/(\d{1,3}[.,]\d{2})\s*[€EUR]/);
-        if (!preisMatch) continue;
+        // Preis aus dieser Card extrahieren (robust: mit oder ohne direktes € nach Zahl)
+        const extractedPrice = extractPrice(text);
+        if (!extractedPrice) continue;
+        // Keep preisMatch-compatible variable for the push below
+        const preisMatch = [null, extractedPrice];
 
         // Tarif-Name aus dieser Card
         let tarifName = '';
@@ -423,6 +460,7 @@ async function parseTarife(page) {
           preis: preisMatch[1].replace(',', '.') + ' €/Monat',
           leistungen: leistungen.slice(0, 5)
         });
+        // (preisMatch[1] is set from extractedPrice above)
       }
 
       if (results.length > 0) break;
@@ -456,7 +494,23 @@ async function parseTarife(page) {
       if (isName) { currentTarif = isName; lastTarifIdx = i; continue; }
 
       // Preis-Zeile gefunden? (flexibler: erlaubt auch "ab X,XX €" oder mitten in Zeile)
-      const preisMatch = line.match(/(\d{1,3}[.,]\d{2})\s*[€EUR]/);
+      // Match price with € directly after, OR a bare decimal in 5–500 range
+      let preisMatch = line.match(/(\d{1,3}[.,]\d{2})\s*€/);
+      if (!preisMatch) {
+        // Check next line for € sign (price split across lines)
+        const nextLine = lines[i + 1] || '';
+        if (nextLine.trim() === '€' || nextLine.trim().startsWith('€')) {
+          preisMatch = line.match(/(\d{1,3}[.,]\d{2})/);
+        }
+      }
+      if (!preisMatch) {
+        // Bare decimal fallback — only in price range
+        const bareM = line.match(/^(\d{1,3}[.,]\d{2})$/);
+        if (bareM) {
+          const v = parseFloat(bareM[1].replace(',', '.'));
+          if (v >= 5 && v <= 500) preisMatch = bareM;
+        }
+      }
       if (preisMatch && currentTarif) {
         const leistungen = [];
         for (let j = i + 1; j < Math.min(i + 15, lines.length); j++) {
@@ -497,21 +551,35 @@ async function parseTarife(page) {
 
     const seenPrices = new Set();
     for (const el of priceEls) {
-      const t = el.innerText.trim();
+      // Include parent text too (price may be split across child elements)
+      const t = (el.innerText || '').trim();
       const m = t.match(/(\d{1,3}[.,]\d{2})/);
-      if (m && !seenPrices.has(m[1])) {
-        seenPrices.add(m[1]);
-        results.push(m[1]);
+      if (m) {
+        const v = parseFloat(m[1].replace(',', '.'));
+        if (v >= 5 && v <= 500 && !seenPrices.has(m[1])) {
+          seenPrices.add(m[1]);
+          results.push(m[1]);
+        }
       }
       if (results.length >= 4) break;
     }
 
-    // Fallback: body-Text regex
+    // Fallback: body-Text regex — try with € first, then bare decimals in range
     if (results.length === 0) {
       const bodyText = document.body.innerText || '';
-      const matches = [...bodyText.matchAll(/(\d{1,3}[.,]\d{2})\s*[€EUR]\s*(?:monat(?:lich)?|\/\s*Monat)?/gi)];
-      const unique = [...new Set(matches.map(m => m[1]))];
-      results.push(...unique.slice(0, 4));
+      // Try with € suffix
+      const matchesWithEuro = [...bodyText.matchAll(/(\d{1,3}[.,]\d{2})\s*€/g)];
+      const uniqueWithEuro = [...new Set(matchesWithEuro.map(m => m[1]))];
+      if (uniqueWithEuro.length > 0) {
+        results.push(...uniqueWithEuro.slice(0, 4));
+      } else {
+        // Bare decimals in price range as last resort
+        const allDecimals = [...bodyText.matchAll(/\b(\d{1,3}[.,]\d{2})\b/g)]
+          .map(m => m[1])
+          .filter(p => { const v = parseFloat(p.replace(',', '.')); return v >= 5 && v <= 500; });
+        const uniqueDecimals = [...new Set(allDecimals)];
+        results.push(...uniqueDecimals.slice(0, 4));
+      }
     }
 
     return results.map((preis, idx) => ({
@@ -529,8 +597,16 @@ async function parseTarife(page) {
   // Strategie 4: Warte noch 5s, dann nochmal Strategie 2 probieren (langsame Seite)
   await page.waitForTimeout(5000);
   const bodyText2 = await page.evaluate(() => document.body.innerText || '');
-  const allMatches = [...bodyText2.matchAll(/(\d{1,3}[.,]\d{2})\s*[€EUR]\s*(?:monat(?:lich)?|\/\s*Monat)?/gi)];
-  const uniquePreise2 = [...new Set(allMatches.map(m => m[1]))];
+  // Try with € suffix first
+  let allMatches = [...bodyText2.matchAll(/(\d{1,3}[.,]\d{2})\s*€/g)];
+  let uniquePreise2 = [...new Set(allMatches.map(m => m[1]))];
+  // Fallback: bare decimals in price range (5–500)
+  if (uniquePreise2.length === 0) {
+    const priceRangeMatches = [...bodyText2.matchAll(/\b(\d{1,3}[.,]\d{2})\b/g)]
+      .map(m => m[1])
+      .filter(p => { const val = parseFloat(p.replace(',', '.')); return val >= 5 && val <= 500; });
+    uniquePreise2 = [...new Set(priceRangeMatches)];
+  }
 
   if (uniquePreise2.length > 0) {
     console.log('[parseTarife] Strategie 4 (delayed bodyText) erfolgreich:', uniquePreise2.length, 'Preise');
@@ -643,6 +719,17 @@ async function runSingleAttempt(input, config) {
       if (finalTitle.includes('challenge')) {
         throw new Error(`Cloudflare-Blockade (Versuch ${config.attempt})`);
       }
+    }
+
+    // Cookie-Consent akzeptieren — mehrere mögliche Banner-Selektoren
+    try {
+      await page.locator(
+        '[data-testid="uc-accept-all-button"], #onetrust-accept-btn-handler, button:has-text("Alle akzeptieren"), button:has-text("Akzeptieren")'
+      ).first().click({ timeout: 5000 });
+      await page.waitForTimeout(1000);
+      console.log('[cookies] Additional consent banner accepted');
+    } catch (_) {
+      // No extra banner — continue
     }
 
     await acceptCookies(page);

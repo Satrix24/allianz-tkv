@@ -233,16 +233,22 @@ app.post('/api/scrape', async (req, res) => {
     return res.status(400).json({ ok: false, error: 'url required' });
   }
   try {
-    const response = await fetch(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Cache-Control': 'no-cache',
-      },
-      signal: AbortSignal.timeout(20000),
-    });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 20000);
+    let response;
+    try {
+      response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
+          'Cache-Control': 'no-cache',
+        },
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(timer);
+    }
     if (!response.ok) {
       return res.json({ ok: false, error: `HTTP ${response.status}` });
     }
@@ -260,7 +266,7 @@ app.post('/api/scrape', async (req, res) => {
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
       .trim()
-      .slice(0, 4000);
+      .slice(0, 15000);
     res.json({ ok: true, content });
   } catch (err) {
     res.json({ ok: false, error: String(err) });
