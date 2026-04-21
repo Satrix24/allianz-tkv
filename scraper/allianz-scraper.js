@@ -813,18 +813,19 @@ async function createSteelBrowser() {
 
   const steelClient = new Steel({ steelAPIKey: STEEL_API_KEY });
 
-  // Create Steel session with residential proxy + CAPTCHA solving
+  // Create Steel session — useProxy requires paid plan, omit for hobby plan
+  // solveCaptchas handles Cloudflare / bot-checks
   const session = await steelClient.sessions.create({
-    useProxy: true,       // residential proxy — bypasses Cloudflare IP blocks
     solveCaptchas: true,  // auto-solve any remaining CAPTCHA challenges
     blockAds: true,
   });
 
-  console.log('[Steel] Session created:', session.id);
+  console.log('[Steel] Session created:', session.id, '| wsUrl:', session.websocketUrl);
 
   // Connect Playwright to Steel via CDP WebSocket
+  // Use session.websocketUrl directly (includes correct auth params)
   const { chromium: chromiumPlain } = require('playwright');
-  const wsEndpoint = `wss://connect.steel.dev?apiKey=${STEEL_API_KEY}&sessionId=${session.id}`;
+  const wsEndpoint = session.websocketUrl;
   const browser = await chromiumPlain.connectOverCDP(wsEndpoint);
 
   return { browser, steelClient, steelSession: session };
@@ -851,8 +852,11 @@ async function runSingleAttempt(input, config) {
     }
   } catch (err) {
     console.warn('[Steel] Failed to create Steel session, falling back to local:', err.message);
+    console.error('[Steel] Error details:', JSON.stringify(err, Object.getOwnPropertyNames(err)));
     usingSteel = false;
     browser = null;
+    steelClient = null;
+    steelSession = null;
   }
 
   if (!browser) {
@@ -925,6 +929,18 @@ async function runSingleAttempt(input, config) {
         : originalQuery(parameters);
   });
 
+  // Helper to release Steel session safely
+  async function releaseSteelSession(label) {
+    if (usingSteel && steelClient && steelSession) {
+      try {
+        await steelClient.sessions.release(steelSession.id);
+        console.log(`[Steel] Session released (${label}):`, steelSession.id);
+      } catch (e) {
+        console.warn(`[Steel] Release failed (${label}):`, e.message);
+      }
+    }
+  }
+
   try {
     await page.goto(ALLIANZ_URL, { waitUntil: 'domcontentloaded', timeout: DEFAULT_TIMEOUT });
 
@@ -984,17 +1000,8 @@ async function runSingleAttempt(input, config) {
     const tarife = await parseTarife(page);
     const pdfPath = await downloadPDF(page, config.downloadsDir);
 
-    await browser.close();
-
-    // Release Steel session after browser closes
-    try {
-      if (usingSteel && steelClient && steelSession) {
-        await steelClient.sessions.release(steelSession.id);
-        console.log('[Steel] Session released:', steelSession.id);
-      }
-    } catch (e) {
-      console.warn('[Steel] Failed to release session:', e.message);
-    }
+    await browser.close().catch(() => {});
+    await releaseSteelSession('success');
 
     return {
       tarife,
@@ -1004,18 +1011,9 @@ async function runSingleAttempt(input, config) {
     };
   } catch (error) {
     const tag = `error_attempt_${config.attempt}_${Date.now()}`;
-    const artifacts = await saveErrorArtifacts(page, config.errorDir, tag);
+    const artifacts = await saveErrorArtifacts(page, config.errorDir, tag).catch(() => ({}));
     await browser.close().catch(() => {});
-
-    // Always try to release Steel session even on error
-    try {
-      if (usingSteel && steelClient && steelSession) {
-        await steelClient.sessions.release(steelSession.id);
-        console.log('[Steel] Session released after error:', steelSession.id);
-      }
-    } catch (e) {
-      console.warn('[Steel] Failed to release session after error:', e.message);
-    }
+    await releaseSteelSession('error');
 
     const wrapped = new Error(error.message);
     wrapped.artifacts = artifacts;
